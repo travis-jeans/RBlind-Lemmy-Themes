@@ -77,8 +77,6 @@ The file `_variables.sccs` has the arguments:
 The `$font-size-root: 100%` has been changed to `120%`.
 `$min-contrast-ratio` is not a SCSS variable but is read by a bootstrap function `color-contrast()` in `/lemmy-ui/node_modules/bootstrap/scss/_functions.scss`.
 
-### Buttons
-
 ### Fonts
 
 #### Font Family
@@ -108,6 +106,9 @@ The `$font-size-root: 100%` has been changed to `120%`.
 - Added `small, .small {
   font-size: 1.25rem !important;
 }` which increases the post author line
+- Added `.post-title {
+  margin-bottom: 0.5rem;
+}` to increase the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line
 
 ### Links
 
@@ -119,6 +120,7 @@ The `$font-size-root: 100%` has been changed to `120%`.
     top: 0;
     left: 0 !important;
     text-align: left;
+    padding: 0.25rem !important;
 }` to force the <q>Jump to content</q> anchor link to always be visible 
 - Added `.z-3 {
     z-index: auto !important;
@@ -139,6 +141,46 @@ text-decoration: underline;
 - Added `.container-lg {
     margin-right: 0 !important;
     margin-left: 0 !important;
-}` which removes the margins on certain screen breakpoints
+}` which removes the white space margins on certain screen breakpoints
+
+### Buttons
+
+#### Sizes
+
+- Added `.btn {
+  border-radius: 0.5rem;
+}` to round the edges of buttons
+- Added `.icon {
+  height: 1em;
+  font-size: 1.2em !important;
+}` to increase the size of the button's icons
+- Added `.btn-sm, .btn, .btn-group-sm > .btn {
+  padding: 0.5rem 0.75rem !important;
+  outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}` to increase the padding on buttons to increase the target area above 44px and add an outline to make clear buttons with icons are buttons and not images
+
+#### Margins
+
+The following selectors are to specific some buttons, but not others (e.g. post style buttons).
+
+- Added `.comment-bottom-btns .btn,
+.post-title + div + div .btn,
+.post-title + p + div + div .btn,
+.comment .btn {
+  margin-right: 0.25rem;
+}` to increase the spacing between buttons for the comment and post title buttons
+- Added `a.person-listing ~ span + .btn,
+a.person-listing + .btn,
+.post-title .btn {
+  margin-left: 0.25rem;
+}` to increase spacing to the left of specific buttons: 
+1. Those following badges (e.g. <abbr title="Original Poster">OP</abbr>, <abbr title="Moderator">M</abbr>, or <abbr title="Administrator">A</abbr>) on the post author line
+2. Those following the post author when there are no badges
+3. The button following the post title
+- Added `.post-title,
+.post-title + div,
+.post-title + p + div {
+  margin-bottom: 0.5rem !important;
+}` to increase the spacing below the author line (**Note** If you try to apply this to `small, .small` it will apply to `.icon`)
 
 

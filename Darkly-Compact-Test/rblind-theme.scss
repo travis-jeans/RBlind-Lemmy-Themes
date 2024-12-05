@@ -93,14 +93,6 @@ small, .small {
     margin-left: 0 !important;
 }
 
-.skip-link {
-    display: block;
-    position: relative !important;
-    top: 0;
-    left: 0 !important;
-    text-align: left;
-}
-
 .z-3 {
     z-index: auto !important;
 }
@@ -109,5 +101,116 @@ small, .small {
 .skip-link:focus, .skip-link:focus-visible {
 text-decoration: underline;
 }
+
+// Buttons
+.btn {
+  border-radius: 0.5rem;
+}
+
+// buttons on posts
+// --bs-secondary-color is the button colour
+// original opacity was 0.75
+
+
+.btn-sm, .btn-group-sm > .btn, .btn,
+a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon,
+nav a.nav-link .icon {
+  padding: 0.7rem 0.7rem !important;
+  outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+/* not working 
+input[type="checkbox"] {
+  padding: 0.7rem 0.7rem !important;
+}
+  */
+
+  // when interacting with a label with a checkbox, change the cursor
+.form-check > * {
+  cursor: pointer;
+}
+
+.form-check[disabled] > * {
+  cursor: default;
+}
+
+.btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
+a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon,
+nav a.nav-link .icon {
+  height: 1em;
+  font-size: 1.2em !important;
+}
+
+nav a.nav-link {
+  padding: 0rem 0.5rem 0rem 0rem !important;
+}
+
+nav ul#navbarLinks {
+  margin-right: auto !important; // margin that determines the automatic spacing
+}
+
+// Align navigation links
+// specify nav or will apply to footer
+nav ul#navbarLinks a.nav-link {
+  margin-right: 0.75 !important; // was 0.5
+  font-size: 0.9rem !important;
+  margin-top: 0.9rem;
+}
+
+// Donate to Lemmy button sticks out from the rest
+nav ul#navbarLinks li:last-child a.nav-link {
+  margin-top: 0.4rem;
+}
+
+.btn-sm, .btn-group-sm > .btn, .btn {
+  box-sizing: content-box !important;
+}
+
+a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon,
+a.nav-link .icon {
+  box-sizing: content-box !important;
+}
+
+.comment-bottom-btns .btn,
+.post-title + div + div .btn,
+.post-title + p + div + div .btn,
+.comment .btn {
+  margin-right: 0.25rem;
+}
+
+a.person-listing ~ span + .btn,
+a.person-listing + .btn,
+.post-title .btn {
+  margin-left: 0.25rem;
+}
+
+// increase bottom margin of post-title
+.post-title,
+.post-title + div,
+.post-title + p + div {
+  margin-bottom: 0.5rem !important;
+}
+
+// Skip link should be defined after buttons, so it does not inherit their padding values
+.skip-link {
+  display: block;
+  position: relative !important;
+  top: 0;
+  left: 0 !important;
+  text-align: left;
+  border-radius: 0rem !important;
+  padding: 0.25rem !important;
+}
+
+/*
+.form-control {
+  min-height: 44px;
+}
+  */
 
 // for :active, will inherit the behaviour of .btn animations
