@@ -71,7 +71,7 @@ small, .small {
   font-size: 1.25rem !important;
 }
 
-.post-listing, p {
+.post-listing p {
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
 }
@@ -115,10 +115,49 @@ text-decoration: underline;
 .btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon,
-nav a.nav-link .icon {
+a[title="sorting help"] .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+
+// Allowed Instances and Blocked Instances button on the Site Configuraiton page has inline style width= 2rem; height: 2rem;
+// currently 38x38px but cannot go higher
+input#create_site_allowed_instances .btn {
+  padding: 0.7rem 0.7rem !important;
+}
+
+// the dropdown box Registration Mode on Site Settings, make the options share the same padding as the button
+// does not work - javascript required to change as the styling of the options is determined by the browser
+// unless it's set to overflow like the Language Select
+select option {
+  padding: 0.7rem 0.7rem !important;
+}
+
+// try change the size of the up and down arrows
+// Rate Limit options
+// does not work, requires javascript
+/*
+input#rate-limit::after {
+ min-height: 44px;
+ min-width: 44px;
+}
+*/
+
+// reduce padding next to the up and downvote container
+article.post-container > .flex-grow-0 {
+  padding: 0.25rem;
+}
+
+// give the svg icon links a focus indicator like other elements
+a.sort-select-icon:focus svg,
+a[title=RSS]:focus svg,
+a[title="sorting help"]:focus svg {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+// no outline on navigation bar buttons only
+nav a.nav-link .icon {
+  padding: 0.7rem 0.7rem !important;
 }
 /* not working 
 input[type="checkbox"] {
@@ -144,9 +183,60 @@ nav a.nav-link .icon {
   font-size: 1.2em !important;
 }
 
-nav a.nav-link {
-  padding: 0rem 0.5rem 0rem 0rem !important;
+// 0.5rem is a bit small but fits on a big screen
+nav ul#navbarLinks a.nav-link {
+  margin-right: 0.75rem !important;
 }
+
+// The Support Lemmy icon link should not have extra padding etc
+nav ul#navbarLinks a.nav-link:last-child {
+  padding: 0rem 0rem 0rem 0rem !important;
+}
+
+// treat the navbar icons differently
+nav ul#navbarIcons a.nav-link {
+  padding: 0rem 0rem 0rem 0rem !important;
+  margin: 0rem 0.5rem 0rem 0rem !important;
+}
+
+// default is var(--bs-btn-focus-box-shadow)
+// changed to the same value as the other buttons
+// this affects the Posts / Comments
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}
+
+.btn:focus-visible {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;; // default value var(--bs-btn-focus-box-shadow)
+}
+
+/*
+// toggle button is actually a check box
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg); // this just changes the toggle background colour
+  border-color: rgba(0, 188, 140, 0.25) !important; // default value was var(--bs-btn-active-border-color); // changes the border col
+}
+  */
+
+  // The username dropdown toggle "li id="dropdownUser" does not have a focus indicator
+  .dropdown-toggle:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  }
+
+
+/*
+.nav-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+  */
+
+
 
 nav ul#navbarLinks {
   margin-right: auto !important; // margin that determines the automatic spacing
@@ -166,7 +256,7 @@ nav ul#navbarLinks li:last-child a.nav-link {
 }
 
 .btn-sm, .btn-group-sm > .btn, .btn {
-  box-sizing: content-box !important;
+  box-sizing: border-box !important; // needed to switch from content-box to border-box because of button overflow
 }
 
 a.sort-select-icon .icon,
@@ -185,7 +275,8 @@ a.nav-link .icon {
 
 a.person-listing ~ span + .btn,
 a.person-listing + .btn,
-.post-title .btn {
+.post-title .btn,
+.card-header .btn {
   margin-left: 0.25rem;
 }
 
@@ -207,10 +298,111 @@ a.person-listing + .btn,
   padding: 0.25rem !important;
 }
 
+// Layout
+// remove the left margin on large layouts for Create Communities and Create Post pages
+// breakpoint is 1200px
+.offset-lg-3 {
+  margin-left: 0% !important; // default is 25%
+}
+
+// Make forms take up more space in the screen so labels aren't flowing onto a new line
+@media (min-width: 1200px) {
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 70% !important; // default value is 50%
+}
+}
+
+// make sure the navigation bar wraps properly with the larger font sizes
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-wrap: wrap !important;
+  }
+}
+
+// make the main content area "home container-lg" become 100% instead of stuck at 940px
+
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 100% !important;
+  }
+}
+
+// very long usernames or domains should overflow onto the next line
+// only the domain will overflow
+.person-listing picture + span + small {
+  word-break: break-all; // no default value
+}
+
+// increase the size of the thumbnail in the home feed
+.thumbnail {
+  width: 9rem; // default value 5rem;
+  height: 9rem; // default value is 5rem;
+}
+
+// add spacing above and below the vote number
+.post-score {
+  margin-top: 0.25rem; // no default value
+  margin-bottom: 0.25rem;
+}
+
+// align the vote up button with the top of the container
+.vote-bar {
+  margin-top: 0px; // original -6.5px
+}
+
+// add spacing above and below the post
+.post-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+// change tab button mark border, when navigating in Inspector it is a small rectangle in the corner of the button
+.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); // --bs-btn-focus-box-shadow default
+}
+
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+}
+.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+}
+
 /*
-.form-control {
-  min-height: 44px;
+// the eye/eye crossed out on the home page has no focus indicator so try to fix that
+#show-hidden.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important; //--bs-btn-focus-box-shadow default
+}
+
+#show-hidden.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, #show-hidden.btn:first-child:active:focus-visible, #show-hidden.btn.active:focus-visible, #show-hidden.btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+}
+#show-hidden.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
 }
   */
 
-// for :active, will inherit the behaviour of .btn animations
+  // focus-within gives the "eye" show hidden posts buttons a focus indicator whereas previously they had none
+  // tippy tooltip cannot be controlled unless using javascript
+  label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  }
+
+  // Added everything after .downvote:hover so the effects apply to when the button area is hovered not just the icon
+  // Also made this happen on focus too
+  .downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
+  .downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
+    color: var(--bs-danger);
+  }
+
+  .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
+  .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
+    color: var(--bs-info);
+  }

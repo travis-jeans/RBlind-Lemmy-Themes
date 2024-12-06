@@ -60,7 +60,7 @@ small, .small {
   font-size: 1.25rem !important;
 }
 
-.post-listing, p {
+.post-listing p {
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
 }
@@ -94,10 +94,37 @@ small, .small {
 .btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon,
-nav a.nav-link .icon {
+a[title="sorting help"] .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+
+input#create_site_allowed_instances .btn {
+  padding: 0.7rem 0.7rem !important;
+}
+
+select option {
+  padding: 0.7rem 0.7rem !important;
+}
+
+/*
+input#rate-limit::after {
+ min-height: 44px;
+ min-width: 44px;
+}
+*/
+article.post-container > .flex-grow-0 {
+  padding: 0.25rem;
+}
+
+a.sort-select-icon:focus svg,
+a[title=RSS]:focus svg,
+a[title="sorting help"]:focus svg {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+nav a.nav-link .icon {
+  padding: 0.7rem 0.7rem !important;
 }
 
 /* not working 
@@ -122,10 +149,49 @@ nav a.nav-link .icon {
   font-size: 1.2em !important;
 }
 
-nav a.nav-link {
-  padding: 0rem 0.5rem 0rem 0rem !important;
+nav ul#navbarLinks a.nav-link {
+  margin-right: 0.75rem !important;
 }
 
+nav ul#navbarLinks a.nav-link:last-child {
+  padding: 0rem 0rem 0rem 0rem !important;
+}
+
+nav ul#navbarIcons a.nav-link {
+  padding: 0rem 0rem 0rem 0rem !important;
+  margin: 0rem 0.5rem 0rem 0rem !important;
+}
+
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}
+
+.btn:focus-visible {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}
+
+/*
+// toggle button is actually a check box
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg); // this just changes the toggle background colour
+  border-color: rgba(0, 188, 140, 0.25) !important; // default value was var(--bs-btn-active-border-color); // changes the border col
+}
+  */
+.dropdown-toggle:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+/*
+.nav-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+  */
 nav ul#navbarLinks {
   margin-right: auto !important;
 }
@@ -141,7 +207,7 @@ nav ul#navbarLinks li:last-child a.nav-link {
 }
 
 .btn-sm, .btn-group-sm > .btn, .btn {
-  box-sizing: content-box !important;
+  box-sizing: border-box !important;
 }
 
 a.sort-select-icon .icon,
@@ -160,7 +226,8 @@ a.nav-link .icon {
 
 a.person-listing ~ span + .btn,
 a.person-listing + .btn,
-.post-title .btn {
+.post-title .btn,
+.card-header .btn {
   margin-left: 0.25rem;
 }
 
@@ -180,11 +247,93 @@ a.person-listing + .btn,
   padding: 0.25rem !important;
 }
 
+.offset-lg-3 {
+  margin-left: 0% !important;
+}
+
+@media (min-width: 1200px) {
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 70% !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    flex-wrap: wrap !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-wrap: wrap !important;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 100% !important;
+  }
+}
+.person-listing picture + span + small, .person-listing picture + span + .small {
+  word-break: break-all;
+}
+
+.thumbnail {
+  width: 9rem;
+  height: 9rem;
+}
+
+.post-score {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.vote-bar {
+  margin-top: 0px;
+}
+
+.post-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
 /*
-.form-control {
-  min-height: 44px;
+// the eye/eye crossed out on the home page has no focus indicator so try to fix that
+#show-hidden.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important; //--bs-btn-focus-box-shadow default
+}
+
+#show-hidden.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, #show-hidden.btn:first-child:active:focus-visible, #show-hidden.btn.active:focus-visible, #show-hidden.btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+}
+#show-hidden.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
 }
   */
+label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
+.downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
+  color: var(--bs-danger);
+}
+
+.upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
+.upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
+  color: var(--bs-info);
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12072,7 +12221,7 @@ small, .small {
   font-size: 1.25rem !important;
 }
 
-.post-listing, p {
+.post-listing p {
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
 }
@@ -12106,10 +12255,37 @@ small, .small {
 .btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon,
-nav a.nav-link .icon {
+a[title="sorting help"] .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+
+input#create_site_allowed_instances .btn {
+  padding: 0.7rem 0.7rem !important;
+}
+
+select option {
+  padding: 0.7rem 0.7rem !important;
+}
+
+/*
+input#rate-limit::after {
+ min-height: 44px;
+ min-width: 44px;
+}
+*/
+article.post-container > .flex-grow-0 {
+  padding: 0.25rem;
+}
+
+a.sort-select-icon:focus svg,
+a[title=RSS]:focus svg,
+a[title="sorting help"]:focus svg {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+nav a.nav-link .icon {
+  padding: 0.7rem 0.7rem !important;
 }
 
 /* not working 
@@ -12134,10 +12310,49 @@ nav a.nav-link .icon {
   font-size: 1.2em !important;
 }
 
-nav a.nav-link {
-  padding: 0rem 0.5rem 0rem 0rem !important;
+nav ul#navbarLinks a.nav-link {
+  margin-right: 0.75rem !important;
 }
 
+nav ul#navbarLinks a.nav-link:last-child {
+  padding: 0rem 0rem 0rem 0rem !important;
+}
+
+nav ul#navbarIcons a.nav-link {
+  padding: 0rem 0rem 0rem 0rem !important;
+  margin: 0rem 0.5rem 0rem 0rem !important;
+}
+
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}
+
+.btn:focus-visible {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}
+
+/*
+// toggle button is actually a check box
+.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg); // this just changes the toggle background colour
+  border-color: rgba(0, 188, 140, 0.25) !important; // default value was var(--bs-btn-active-border-color); // changes the border col
+}
+  */
+.dropdown-toggle:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+/*
+.nav-link:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+  */
 nav ul#navbarLinks {
   margin-right: auto !important;
 }
@@ -12153,7 +12368,7 @@ nav ul#navbarLinks li:last-child a.nav-link {
 }
 
 .btn-sm, .btn-group-sm > .btn, .btn {
-  box-sizing: content-box !important;
+  box-sizing: border-box !important;
 }
 
 a.sort-select-icon .icon,
@@ -12172,7 +12387,8 @@ a.nav-link .icon {
 
 a.person-listing ~ span + .btn,
 a.person-listing + .btn,
-.post-title .btn {
+.post-title .btn,
+.card-header .btn {
   margin-left: 0.25rem;
 }
 
@@ -12192,10 +12408,91 @@ a.person-listing + .btn,
   padding: 0.25rem !important;
 }
 
+.offset-lg-3 {
+  margin-left: 0% !important;
+}
+
+@media (min-width: 1200px) {
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 70% !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    flex-wrap: wrap !important;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-wrap: wrap !important;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 100% !important;
+  }
+}
+.person-listing picture + span + small, .person-listing picture + span + .small {
+  word-break: break-all;
+}
+
+.thumbnail {
+  width: 9rem;
+  height: 9rem;
+}
+
+.post-score {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.vote-bar {
+  margin-top: 0px;
+}
+
+.post-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
 /*
-.form-control {
-  min-height: 44px;
+// the eye/eye crossed out on the home page has no focus indicator so try to fix that
+#show-hidden.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important; //--bs-btn-focus-box-shadow default
+}
+
+#show-hidden.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, #show-hidden.btn:first-child:active:focus-visible, #show-hidden.btn.active:focus-visible, #show-hidden.btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+}
+#show-hidden.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
 }
   */
+label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
+.downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
+  color: var(--bs-danger);
+}
+
+.upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
+.upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
+  color: var(--bs-info);
+}
 
 /*# sourceMappingURL=darkly-compact.css.map */
