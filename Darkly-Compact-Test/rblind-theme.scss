@@ -76,6 +76,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.post-title + p.small {
+  margin-bottom: 0.5rem !important;
+}
+
 // image margin on Image Posts
 .offset-sm-3 {
   margin-left: 0% !important;

@@ -65,6 +65,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.post-title + p.small {
+  margin-bottom: 0.5rem !important;
+}
+
 .offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
@@ -571,20 +575,20 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: calc(1.525rem + 3.3vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.525rem + 3.3vw);
+  font-size: calc(1.475rem + 2.7vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -8559,11 +8563,11 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.625rem + 4.5vw) !important;
+  font-size: calc(1.525rem + 3.3vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.525rem + 3.3vw) !important;
+  font-size: calc(1.475rem + 2.7vw) !important;
 }
 
 .fs-3 {
@@ -12122,10 +12126,10 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
   }
   .fs-2 {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
   }
   .fs-3 {
     font-size: 3rem !important;
@@ -12233,6 +12237,10 @@ small, .small {
 .post-listing p {
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
+}
+
+.post-title + p.small {
+  margin-bottom: 0.5rem !important;
 }
 
 .offset-sm-3 {
