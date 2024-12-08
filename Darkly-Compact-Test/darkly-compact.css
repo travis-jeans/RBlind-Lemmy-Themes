@@ -89,6 +89,7 @@ small, .small {
 
 .skip-link {
   font-size: small;
+  background-color: unset !important;
 }
 
 .btn {
@@ -12254,6 +12255,7 @@ small, .small {
 
 .skip-link {
   font-size: small;
+  background-color: unset !important;
 }
 
 .btn {
