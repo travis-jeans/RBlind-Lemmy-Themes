@@ -339,6 +339,10 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   color: var(--bs-info);
 }
 
+.skip-link {
+  outline: unset !important;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12503,6 +12507,10 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
 .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
   color: var(--bs-info);
+}
+
+.skip-link {
+  outline: unset !important;
 }
 
 /*# sourceMappingURL=darkly-compact.css.map */

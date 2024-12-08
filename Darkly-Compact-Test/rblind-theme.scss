@@ -412,3 +412,8 @@ a.person-listing + .btn,
   .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
     color: var(--bs-info);
   }
+
+  // need to add this below button style definition
+  .skip-link {
+  outline: unset !important;
+  }
