@@ -446,3 +446,8 @@ a.person-listing + .btn,
   .md-div h6 {
     font-size: 1.1rem;
   }
+
+  // increase the spacing between wrapping list buttons in the sidebar
+  .community-sidebar ul li .btn {
+    margin-bottom: 0.25rem;
+  }

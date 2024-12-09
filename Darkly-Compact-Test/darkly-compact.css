@@ -367,6 +367,10 @@ main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile 
   font-size: 1.1rem;
 }
 
+.community-sidebar ul li .btn {
+  margin-bottom: 0.25rem;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12559,6 +12563,10 @@ main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile 
 
 .md-div h6, .md-div .h6 {
   font-size: 1.1rem;
+}
+
+.community-sidebar ul li .btn {
+  margin-bottom: 0.25rem;
 }
 
 /*# sourceMappingURL=darkly-compact.css.map */
