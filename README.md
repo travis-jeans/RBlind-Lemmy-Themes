@@ -246,6 +246,9 @@ text-decoration: underline;
 - Ensure text reflow for very long usernames in the Sidebar. Added `.person-listing picture + span + small {
   word-break: break-all;
 }`
+- Stop flex display from making overflowing usernames from becoming stuck in their containers. Added `.person-listing {
+  display: inline !important;`
+}
 - Prevent the toggle button in the Subscribed sidebar from overflowing from its container. Added `#sidebarSubscribedHeader {
     flex-wrap: wrap;
   }`

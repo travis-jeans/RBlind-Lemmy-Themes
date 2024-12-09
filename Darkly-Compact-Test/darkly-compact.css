@@ -261,6 +261,10 @@ a.person-listing + .btn,
   word-break: break-all;
 }
 
+.person-listing {
+  display: inline !important;
+}
+
 .thumbnail {
   width: 9rem;
   height: 9rem;
@@ -12432,6 +12436,10 @@ a.person-listing + .btn,
 }
 .person-listing picture + span + small, .person-listing picture + span + .small {
   word-break: break-all;
+}
+
+.person-listing {
+  display: inline !important;
 }
 
 .thumbnail {

@@ -319,6 +319,11 @@ a.person-listing + .btn,
   word-break: break-all; // no default value
 }
 
+// stop flex display from making overflowing letters from becoming stuck in their containers
+.person-listing {
+  display: inline !important;
+}
+
 // increase the size of the thumbnail in the home feed
 .thumbnail {
   width: 9rem; // default value 5rem;
