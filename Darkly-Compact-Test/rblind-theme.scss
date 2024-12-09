@@ -428,6 +428,11 @@ a.person-listing + .btn,
     text-decoration: underline;
   }
 
+    // make sure links that appear as buttons don't have an underline
+  main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+    text-decoration: none;
+  }
+
   .communities a {
     text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)); // 
   }
