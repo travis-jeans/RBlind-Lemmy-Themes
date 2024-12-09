@@ -123,6 +123,11 @@ The file `_variables.sccs` has the arguments:
 - Give an underline to the Skip Link when focused. Addded `.skip-link:focus, .skip-link:focus-visible {
 text-decoration: underline;
 }`
+- Reduce the Skip Link font size and make the background colour match the body. Added `.skip-link {
+  font-size: small;
+  background-color: unset !important;
+}`
+
 
 ### Images
 
@@ -158,8 +163,11 @@ text-decoration: underline;
   height: 1em;
   font-size: 1.2em !important;
 }`
-- Increased the padding on buttons to increase the target area above 44px and add an outline to make clear buttons with icons are buttons and not images. Added `.btn-sm, .btn, .btn-group-sm > .btn {
-  padding: 0.5rem 0.75rem !important;
+- Increased the padding on buttons to increase the target area above 44px and add an outline to make clear buttons with icons are buttons and not images. Icons that behave as links also get an outline and are selected specifically by title (RSS and Sorting Help). Added `.btn-sm, .btn-group-sm > .btn, .btn,
+a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon {
+  padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }`
 
@@ -187,4 +195,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }`  (**Note** If you try to apply this to `small, .small` it will apply to `.icon`)
 
+### Cannot be changed
+- Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher.
 

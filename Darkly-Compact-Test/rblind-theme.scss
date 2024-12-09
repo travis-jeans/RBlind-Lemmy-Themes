@@ -97,6 +97,7 @@ small, .small {
     margin-left: 0 !important;
 }
 
+// .skip-link is on the same plane as other content
 .z-3 {
     z-index: auto !important;
 }
@@ -106,7 +107,7 @@ small, .small {
 text-decoration: underline;
 }
 
-// change font size of .skip-link
+// change font size of .skip-link and remove the background colour
 .skip-link {
   font-size: small;
   background-color: unset !important;
@@ -128,12 +129,6 @@ a[title=RSS] .icon,
 a[title="sorting help"] .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
-}
-
-// Allowed Instances and Blocked Instances button on the Site Configuraiton page has inline style width= 2rem; height: 2rem;
-// currently 38x38px but cannot go higher
-input#create_site_allowed_instances .btn {
-  padding: 0.7rem 0.7rem !important;
 }
 
 // the dropdown box Registration Mode on Site Settings, make the options share the same padding as the button
