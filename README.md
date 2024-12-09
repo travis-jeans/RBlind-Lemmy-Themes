@@ -55,9 +55,9 @@ If the bootstrap source is loaded too early, custom styles will not be applied.
 Conversley, if the bootstrap source is loaded last, the upstream bootstrap `!important` styles will override your custom CSS classes.
 To fix this, an order of uploading files in `darkly-compact.scss` is:
 1. `@import "variables.darkly-compact";`
-2. Custom code
+2. `@import "rblind-theme.scss";` our custom code
 3. `@import "/lemmy-ui/node_modules/bootstrap/scss/bootstrap";`
-4. Repeated custom code
+4. `@import "rblind-theme.scss";` our custom code
 
 This will insert your custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
 
