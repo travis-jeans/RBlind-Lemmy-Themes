@@ -152,11 +152,6 @@ a[title="sorting help"]:focus svg {
 nav a.nav-link .icon {
   padding: 0.7rem 0.7rem !important;
 }
-/* not working 
-input[type="checkbox"] {
-  padding: 0.7rem 0.7rem !important;
-}
-  */
 
   // when interacting with a label with a checkbox, change the cursor
 .form-check > * {
@@ -181,8 +176,14 @@ nav ul#navbarLinks a.nav-link {
   margin-right: 0.75rem !important;
 }
 
-// The Support Lemmy icon link should not have extra padding etc
-nav ul#navbarLinks a.nav-link:last-child {
+// The text links in the navigation bar should have enough padding to ensure their target size is large enough
+// but also the padding should align the text with the Lemmy community banner and the Support Lemmy icon button
+nav ul#navbarLinks a.nav-link {
+  padding: 0.9rem 0rem 0.1rem 0rem !important;
+}
+
+// The Support lemmy link should not have extra padding
+nav ul#navbarLinks li:last-child a.nav-link {
   padding: 0rem 0rem 0rem 0rem !important;
 }
 
@@ -199,6 +200,7 @@ nav ul#navbarIcons a.nav-link {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
 }
 
+/*
 .btn:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
@@ -206,6 +208,7 @@ nav ul#navbarIcons a.nav-link {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;; // default value var(--bs-btn-focus-box-shadow)
 }
+  */
 
 /*
 // toggle button is actually a check box
@@ -221,35 +224,20 @@ nav ul#navbarIcons a.nav-link {
     box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
   }
 
-
-/*
-.nav-link:focus-visible {
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
-}
-  */
-
-
-
+// margin that determines the automatic spacing
 nav ul#navbarLinks {
-  margin-right: auto !important; // margin that determines the automatic spacing
+  margin-right: auto !important; 
 }
 
 // Align navigation links
 // specify nav or will apply to footer
 nav ul#navbarLinks a.nav-link {
-  margin-right: 0.75 !important; // was 0.5
   font-size: 0.9rem !important;
-  margin-top: 0.9rem;
 }
 
 // Donate to Lemmy button sticks out from the rest
 nav ul#navbarLinks li:last-child a.nav-link {
   margin-top: 0.4rem;
-}
-
-.btn-sm, .btn-group-sm > .btn, .btn {
-  box-sizing: border-box !important; // needed to switch from content-box to border-box because of button overflow
 }
 
 a.sort-select-icon .icon,
@@ -289,6 +277,7 @@ a.person-listing + .btn,
   text-align: left;
   border-radius: 0rem !important;
   padding: 0.25rem !important;
+  padding-left: 1rem !important;
 }
 
 // Layout
@@ -356,20 +345,29 @@ a.person-listing + .btn,
   margin-bottom: 1rem;
 }
 
-// change tab button mark border, when navigating in Inspector it is a small rectangle in the corner of the button
+// change the Comments / unselected tab focus outline to be the same as the others
 .btn-check:focus-visible + .btn {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); // --bs-btn-focus-box-shadow default
 }
 
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+// change secondary buttons (e.g. Next on home page) to have the same box-shadow focus indicator colour
+.btn-secondary:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); // --bs-btn-focus-box-shadow default
 }
+
+// Change the colour of the focus indicator on Languages select cross button on Create Community page
+.btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}
+
+// Ensures the currently selected tab  (Posts) focus indicator is the same as the others
 .btn-check:checked:focus-visible + .btn {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
 }
 
   // focus-within gives the "eye" show hidden posts buttons a focus indicator whereas previously they had none
   // tippy tooltip cannot be controlled unless using javascript
+  // eye and no eye
   label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
     box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
   }

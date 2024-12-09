@@ -91,8 +91,12 @@ The file `_variables.sccs` has the arguments:
 - Added `h4-font-size` changed from `1.5rem` to `2.5rem`
 - Added `h5-font-size` changed from `1.25rem` to `2rem`
 - Added `h6-font-size` changed from `1rem` to `1.5rem`
+- Overwrite `h6` value in posts since without this it is larger than `h5`. Added `.md-div h6 {
+    font-size: 1.1rem;
+  }`
 
-#### Font Size
+
+#### Size
 - Increased the root font size from `100%` to `120%`. Added `$font-size-root` from `_variables.scss`.
 - Increases the post author line size. Added `small, .small {
   font-size: 1.25rem !important;
@@ -106,16 +110,78 @@ The file `_variables.sccs` has the arguments:
 }`
 
 ### Links
+#### Main
+For links in the main area, ignoring the navigation bar and the footer.
+
+- Add an underline text decoration to all links in the main area of the document. Where pages are missing a `<main>` element, apply to the broadest relevant named class. Added ` main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
+    text-decoration: underline;
+  }`
+- Ensure that links inside buttons do not have an underline. Added `main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+    text-decoration: none;
+  }`
+- Ensure links share the same link colour as the text. Add `.communities a, .person-listing a small {
+    text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important; // 
+  }`
+- Make post title link underline and link post link underline the same as the text when visited. Added ` .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
+    text-decoration-color: var(--bs-gray) !important;
+  }`
+-
+
+#### Navigation
+- As outlines were added to icons that behaved as user interface elements to make them look more like buttons (see [Buttons (Sizes)](#Sizes)), navigation icon links have these outlines removed to remove clutter as it is assumed users understand that icons in the navigation bar are functional. Added `nav a.nav-link .icon {
+  padding: 0.7rem 0.7rem !important;
+}`
+- Change navigation link spacing `nav ul#navbarLinks a.nav-link {
+  margin-right: 0.75rem !important;
+}` 
+- Increase the padding so the navigation links are above 44x44px but so the links are aligned with the Support Lemmy icon button and the instance banner. Added `nav ul#navbarLinks a.nav-link {
+  padding: 0.9rem 0rem 0.1rem 0rem !important;
+}`
+- Remove padding from the Support Lemmy icon link specifically so it does not become misaligned with other navigation links. Added `nav ul#navbarLinks li:last-child a.nav-link {
+  padding: 0rem 0rem 0rem 0rem !important;
+}`
+- As icon buttons and links already have enough padding, make sure the navigation icon links only have enough margins to separate them from each other. Added `nav ul#navbarIcons a.nav-link {
+  padding: 0rem 0rem 0rem 0rem !important;
+  margin: 0rem 0.5rem 0rem 0rem !important;
+}`
+- Change the focus colour and add a focus indicator to tabs and buttons that previously had no focus indicator like the Posts/Comments and Show Hidden Posts / Hide Hidden Posts tabs. Added `.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+}`
+- Added a focus indicator to the User Profile toggle dropdown. Added `.dropdown-toggle:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  }`
+- Ensure the navigation bar is correctly spaced. Added `nav ul#navbarLinks {
+  margin-right: auto !important; 
+}`
+- Make the navigation link text smaller than the root font size. Added `nav ul#navbarLinks a.nav-link {
+  font-size: 0.9rem !important;
+}`
+- Align the Support Lemmy icon button (heart) with the rest of the navigation links. Added `nav ul#navbarLinks li:last-child a.nav-link {
+  margin-top: 0.4rem;
+}`
+- Make sure the navigation bar wraps properly with the larger font sizes. Added `@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    flex-wrap: wrap !important;
+  }
+}`
+- Do the same with another part of the navigation. Added `@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-wrap: wrap !important;
+  }
+}`
+
 
 #### Skip Link
+**Note** many of the Skip Link's properties must be defined after redefining buttons or it will inherit button styling.
 
-- Make the <q>Jump to content</q> anchor link to always be visible. Added `.skip-link {
+- Make the <q>Jump to content</q> anchor link to always be visible and adjust the padding so it takes up less space than a button and is aligned with the document left-margin. Added `.skip-link {
     display: block;
     position: relative !important;
     top: 0;
     left: 0 !important;
     text-align: left;
     padding: 0.25rem !important;
+    padding-left: 1rem !important;
 }`
 - Make the skip link to be on the same z-plane as other content. Added `.z-3 {
     z-index: auto !important;
@@ -127,6 +193,9 @@ text-decoration: underline;
   font-size: small;
   background-color: unset !important;
 }`
+- Remove the button outline from the Skip Link. Added `  .skip-link {
+  outline: unset !important;
+  }`
 
 
 ### Images
@@ -134,6 +203,10 @@ text-decoration: underline;
 - Images embedded in Image Post previews are left-aligned instead of right-aligned. Added `.offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
+}`
+- Increase the size of the thumbnail in the home feed. Added `.thumbnail {
+  width: 9rem;
+  height: 9rem;
 }`
 
 ### Layout
@@ -151,11 +224,35 @@ text-decoration: underline;
 - Reduced the left margin for nested posts. Added `.ms-1 {
   margin-left: 0.2rem !important;
 }` 
+- Make forms take up more space on the screen so labels aren't flowing onto a new line. Added `@media (min-width: 1200px) {
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 70% !important;
+}
+}`
+- Make the main content area take up the whole screen at smaller screen sizes as the default behaviour of the compact layout adds white space. Added `@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 100% !important;
+  }
+}`
+- Ensure text reflow for very long usernames in the Sidebar. Added `.person-listing picture + span + small {
+  word-break: break-all;
+}`
+- Prevent the toggle button in the Subscribed sidebar from overflowing from its container. Added `#sidebarSubscribedHeader {
+    flex-wrap: wrap;
+  }`
+
 
 ### Buttons
 
 #### Sizes
 
+- Changed the box size properties of icon links so the added padding (below) does not squish the icons to become invisible. Added `a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon,
+a.nav-link .icon {
+  box-sizing: content-box !important;
+}`
 - Rounded the edges of buttons. Added `.btn {
   border-radius: 0.5rem;
 }` 
@@ -170,11 +267,20 @@ a[title="sorting help"] .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }`
+- Increased the size of icons when they behave as links. Added `.btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
+a.sort-select-icon .icon,
+a[title=RSS] .icon,
+a[title="sorting help"] .icon,
+nav a.nav-link .icon {
+  height: 1em;
+  font-size: 1.2em !important;
+}` **Note** This is dissociated from the above change to `.icon` as this class is shared by buttons without icons and buttons with icons. If padding was added to all `.icon`s, buttons containing icons would have a duplicate amount of padding.
 
-#### Margins
+#### Spacing
 
 The following selectors are to specific some buttons, but not others (e.g. post style buttons).
 
+##### Margins
 - Increased the spacing between buttons for the comment and post title buttons. Added `.comment-bottom-btns .btn,
 .post-title + div + div .btn,
 .post-title + p + div + div .btn,
@@ -194,6 +300,65 @@ a.person-listing + .btn,
 .post-title + p + div {
   margin-bottom: 0.5rem !important;
 }`  (**Note** If you try to apply this to `small, .small` it will apply to `.icon`)
+- Add spacing above and below the vote number. Added `.post-score {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}`
+- Align the vote up button with the top of the container by reducing the top margin from `-6.5px` to `0px`. Added `.vote-bar {
+  margin-top: 0px;
+}`
+- Add spacing above and below posts. Added `.post-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}`
+- Increase the spacing between wrapping list buttons in the sidebar. Added `.community-sidebar ul li .btn {
+    margin-bottom: 0.25rem;
+  }`
+
+##### Padding
+- Reduce the spacing between the upvote and downvote widget next to post listings in the home feed. Added `article.post-container > .flex-grow-0 {
+  padding: 0.25rem;
+}`
+
+##### Functionality
+
+- Gave icon links a focus indicator to match the focus indicator of buttons. Added `a.sort-select-icon:focus svg,
+a[title=RSS]:focus svg,
+a[title="sorting help"]:focus svg {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}`
+- Made so the down vote icon changes colour when the button area is hovered, not just the icon. Made this happen when the button is focused as well. Added `.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
+  .downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
+    color: var(--bs-danger);
+  }`
+- Same as above but with the upvote button. Added `.upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
+  .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
+    color: var(--bs-info);
+  }`
+- Give unselected tabs (like Comment) the same focus outline as other buttons. Added `.btn-check:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}`
+- Change the focus outline of secondary buttons like Next on the homepage to have the same colour as other buttons. Added `.btn-secondary:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}`
+- Change the colour of the focus indicator on Languages select cross button on Create Community page. Added `.btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}`
+- Make the currently selected tab focus indicator the same colour as other buttons. Added `.btn-check:checked:focus-visible + .btn {
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+}`
+- Add a focus indicator to the eye icon tabs (Show / Hide Posts). Added `label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  }`
+
+
+### Forms
+- Change the cursor to a pointer when interacting with a label with a checkbox. This is to try compensate for how some checkboxes are dissociated from their labels (On Create Community page, has a legend `Only moderators can post to this community` with a single checkbox). Added: `.form-check > * {
+  cursor: pointer;
+}`
+- Disable cursor change to pointer when buttons are disabled. Added `.form-check[disabled] > * {
+  cursor: default;
+}`
 
 ### Cannot be changed
 - Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
