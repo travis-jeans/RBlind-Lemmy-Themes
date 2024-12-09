@@ -64,7 +64,7 @@ This will insert your custom code at the beginning **and** the end of the output
 ## Theme Variables and Classes
 
 All variables defined with the SASS variable indicator `$` are in `_variables.darkly.scss`.
-All classes defined are in `darkly-compact.scss`.
+All classes defined are in `rblind-theme.scss`.
 
 
 ### Colour Contrast
