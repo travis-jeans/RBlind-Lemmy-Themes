@@ -125,7 +125,9 @@ For links in the main area, ignoring the navigation bar and the footer.
 - Make post title link underline and link post link underline the same as the text when visited. Added ` .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
     text-decoration-color: var(--bs-gray) !important;
   }`
--
+- Remove the underline on post titles specifically, as it is assumed users are familiar with the convention of clicking the title of a post to visit the post. Added `.post-title a {
+    text-decoration: none;
+  }`
 
 #### Navigation
 - As outlines were added to icons that behaved as user interface elements to make them look more like buttons (see [Buttons (Sizes)](#Sizes)), navigation icon links have these outlines removed to remove clutter as it is assumed users understand that icons in the navigation bar are functional. Added `nav a.nav-link .icon {
@@ -136,6 +138,10 @@ For links in the main area, ignoring the navigation bar and the footer.
 }` 
 - Increase the padding so the navigation links are above 44x44px but so the links are aligned with the Support Lemmy icon button and the instance banner. Added `nav ul#navbarLinks a.nav-link {
   padding: 0.9rem 0rem 0.1rem 0rem !important;
+}`
+- The Log In and Sign Up buttons are misaligned. This fixes them. Add `nav ul#navbarIcons a.nav-link[title=Login],
+nav ul#navbarIcons a.nav-link[title="Sign Up"] {
+  padding: 0.7rem 0rem 0.3rem 0rem !important;
 }`
 - Remove padding from the Support Lemmy icon link specifically so it does not become misaligned with other navigation links. Added `nav ul#navbarLinks li:last-child a.nav-link {
   padding: 0rem 0rem 0rem 0rem !important;
@@ -153,7 +159,9 @@ For links in the main area, ignoring the navigation bar and the footer.
 - Ensure the navigation bar is correctly spaced. Added `nav ul#navbarLinks {
   margin-right: auto !important; 
 }`
-- Make the navigation link text smaller than the root font size. Added `nav ul#navbarLinks a.nav-link {
+- Make the navigation link text smaller than the root font size. Added `nav ul#navbarLinks a.nav-link,
+nav ul#navbarIcons a.nav-link[title=Login],
+nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   font-size: 0.9rem !important;
 }`
 - Align the Support Lemmy icon button (heart) with the rest of the navigation links. Added `nav ul#navbarLinks li:last-child a.nav-link {
@@ -359,6 +367,9 @@ a[title="sorting help"]:focus svg {
 - Disable cursor change to pointer when buttons are disabled. Added `.form-check[disabled] > * {
   cursor: default;
 }`
+- Increased size of the alone checkbox on Create Community page with a missing label. **Note** A temporary measure until the label can be associated with the checkbox, thereby increasing the target size. Added `.form-check > input#community-only-mods-can-post[type=checkbox] {
+  padding: 22px; // half of minimum AAA target size 44px
+}`
 
 ### Cannot be changed
 - Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
@@ -367,4 +378,7 @@ a[title="sorting help"]:focus svg {
  min-height: 44px;
  min-width: 44px;
 }`
+- Post nesting left-border width is defined inline and inserted by Javascript. See `/lemmy-ui/src/shared/components/comment/comment-node.tsx` on line 386 `border-left: 2px ${moreRepliesBorderColor} solid !important`. Border colour is defined on line 182-184: `const moreRepliesBorderColor = this.props.node.depth
+      ? colorList[this.props.node.depth % colorList.length]
+      : colorList[0];` Colour can be changed by altering colorList values
 

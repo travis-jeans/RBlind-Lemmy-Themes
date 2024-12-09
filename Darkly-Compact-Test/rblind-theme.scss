@@ -162,6 +162,11 @@ nav a.nav-link .icon {
   cursor: default;
 }
 
+// increase size of the alone checkbox on Create Community page
+.form-check > input#community-only-mods-can-post[type=checkbox] {
+  padding: 22px; // half of minimum AAA target size 44px
+}
+
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
@@ -172,14 +177,23 @@ nav a.nav-link .icon {
 }
 
 // 0.5rem is a bit small but fits on a big screen
-nav ul#navbarLinks a.nav-link {
+nav ul#navbarLinks a.nav-link,
+nav ul#navbarIcons a.nav-link[title=Login],
+nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   margin-right: 0.75rem !important;
 }
 
 // The text links in the navigation bar should have enough padding to ensure their target size is large enough
 // but also the padding should align the text with the Lemmy community banner and the Support Lemmy icon button
-nav ul#navbarLinks a.nav-link {
+nav ul#navbarLinks a.nav-link,
+nav ul#navbarIcons a.nav-link {
   padding: 0.9rem 0rem 0.1rem 0rem !important;
+}
+
+// The Log in and Sign Up are slightly misaligned, this fixes it
+nav ul#navbarIcons a.nav-link[title=Login],
+nav ul#navbarIcons a.nav-link[title="Sign Up"] {
+  padding: 0.7rem 0rem 0.3rem 0rem !important;
 }
 
 // The Support lemmy link should not have extra padding
@@ -212,7 +226,9 @@ nav ul#navbarLinks {
 
 // Align navigation links
 // specify nav or will apply to footer
-nav ul#navbarLinks a.nav-link {
+nav ul#navbarLinks a.nav-link,
+nav ul#navbarIcons a.nav-link[title=Login],
+nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   font-size: 0.9rem !important;
 }
 
@@ -378,6 +394,11 @@ a.person-listing + .btn,
 
     // make sure links that appear as buttons don't have an underline
   main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+    text-decoration: none;
+  }
+
+  // remove underline from post title specifically as it is assumed users understand that clicking the post title will navigate to the post
+  .post-title a {
     text-decoration: none;
   }
 
