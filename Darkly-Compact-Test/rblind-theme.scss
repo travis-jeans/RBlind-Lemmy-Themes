@@ -423,7 +423,8 @@ a.person-listing + .btn,
   }
 
   // every other page is missing a <main> element, so classes need to be added individually
-  main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
+  // need to verify .inbox, .person-reports, .registration-applications a
+  main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
     text-decoration: underline;
   }
 
