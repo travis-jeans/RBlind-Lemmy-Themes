@@ -347,7 +347,7 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   outline: unset !important;
 }
 
-main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
+main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
   text-decoration: underline;
 }
 
@@ -363,12 +363,8 @@ main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile 
   flex-wrap: wrap;
 }
 
-.settings-tab-pane + div + .row {
-  padding-right: 0rem !important;
-}
-
-.settings-tab-pane ~ .row ~ .row {
-  padding-left: 0rem !important;
+.md-div h6, .md-div .h6 {
+  font-size: 1.1rem;
 }
 
 /*!
@@ -12545,7 +12541,7 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   outline: unset !important;
 }
 
-main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
+main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
   text-decoration: underline;
 }
 
@@ -12559,6 +12555,10 @@ main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile 
 
 #sidebarSubscribedHeader {
   flex-wrap: wrap;
+}
+
+.md-div h6, .md-div .h6 {
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=darkly-compact.css.map */

@@ -441,3 +441,8 @@ a.person-listing + .btn,
   #sidebarSubscribedHeader {
     flex-wrap: wrap;
   }
+
+  // overwrite h6 value in post since without this it is larger than h5
+  .md-div h6 {
+    font-size: 1.1rem;
+  }
