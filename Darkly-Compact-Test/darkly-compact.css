@@ -347,8 +347,12 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   outline: unset !important;
 }
 
-main a, .community-sidebar a {
+main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
   text-decoration: underline;
+}
+
+.communities a {
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
@@ -12533,8 +12537,12 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   outline: unset !important;
 }
 
-main a, .community-sidebar a {
+main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
   text-decoration: underline;
+}
+
+.communities a {
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {

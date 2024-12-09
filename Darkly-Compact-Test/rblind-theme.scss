@@ -422,8 +422,13 @@ a.person-listing + .btn,
   outline: unset !important;
   }
 
-  main a, .community-sidebar a {
+  // every other page is missing a <main> element, so classes need to be added individually
+  main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a {
     text-decoration: underline;
+  }
+
+  .communities a {
+    text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)); // 
   }
 
   // make post title link underline and link post link underline the same as the text when visited
