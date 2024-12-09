@@ -74,7 +74,6 @@ The file `_variables.sccs` has the arguments:
 - `$min-contrast-ratio: 3;`
 - `$font-size-root: 100%;`
 
-The `$font-size-root: 100%` has been changed to `120%`.
 `$min-contrast-ratio` is not a SCSS variable but is read by a bootstrap function `color-contrast()` in `/lemmy-ui/node_modules/bootstrap/scss/_functions.scss`.
 
 ### Fonts
@@ -93,6 +92,9 @@ The `$font-size-root: 100%` has been changed to `120%`.
 - Added `h5-font-size` changed from `1.25rem` to `2rem`
 - Added `h6-font-size` changed from `1rem` to `1.5rem`
 
+#### Font Size
+- Added `$font-size-root` from `_variables.scss` and changed from `100%` to `120%`
+
 #### Paragraphs
 
 - Added `.post-listing, p {
@@ -102,13 +104,12 @@ The `$font-size-root: 100%` has been changed to `120%`.
 
 #### Other
 
-- Added `$font-size-root` added from `_variables.scss` and changed from `100%` to `120%`
-- Added `small, .small {
+- Added ``small, .small {
   font-size: 1.25rem !important;
-}` which increases the post author line
-- Added `.post-title {
+}`` which increases the post author line
+- Added ``.post-title {
   margin-bottom: 0.5rem;
-}` to increase the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line
+}`` to increase the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line
 
 ### Links
 

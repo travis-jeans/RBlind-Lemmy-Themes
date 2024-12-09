@@ -385,20 +385,6 @@ a.person-listing + .btn,
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
 }
 
-/*
-// the eye/eye crossed out on the home page has no focus indicator so try to fix that
-#show-hidden.btn-check:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important; //--bs-btn-focus-box-shadow default
-}
-
-#show-hidden.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, #show-hidden.btn:first-child:active:focus-visible, #show-hidden.btn.active:focus-visible, #show-hidden.btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
-}
-#show-hidden.btn-check:checked:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
-}
-  */
-
   // focus-within gives the "eye" show hidden posts buttons a focus indicator whereas previously they had none
   // tippy tooltip cannot be controlled unless using javascript
   label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
