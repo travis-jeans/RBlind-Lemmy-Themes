@@ -430,3 +430,8 @@ a.person-listing + .btn,
   .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
     text-decoration-color: var(--bs-gray) !important; // the visited underline is otherwise not the same colour as the text
   }
+
+  // make sure the toggle button in the sidebar "Subscribed" does not overflow the container
+  #sidebarSubscribedHeader {
+    flex-wrap: wrap;
+  }
