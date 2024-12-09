@@ -421,3 +421,7 @@ a.person-listing + .btn,
   .skip-link {
   outline: unset !important;
   }
+
+  main a, .community-sidebar a {
+    text-decoration: underline;
+  }

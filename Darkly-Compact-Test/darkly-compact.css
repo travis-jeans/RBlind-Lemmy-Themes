@@ -347,6 +347,11 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   outline: unset !important;
 }
 
+main a, .community-sidebar a {
+  text-decoration: underline;
+  text-decoration-color: inherit;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12519,6 +12524,11 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 
 .skip-link {
   outline: unset !important;
+}
+
+main a, .community-sidebar a {
+  text-decoration: underline;
+  text-decoration-color: inherit;
 }
 
 /*# sourceMappingURL=darkly-compact.css.map */
