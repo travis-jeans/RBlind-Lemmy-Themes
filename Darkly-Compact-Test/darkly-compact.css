@@ -355,8 +355,8 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   text-decoration: none;
 }
 
-.communities a {
-  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+.communities a, .person-listing a small, .person-listing a .small {
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
 }
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
@@ -12557,8 +12557,8 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   text-decoration: none;
 }
 
-.communities a {
-  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+.communities a, .person-listing a small, .person-listing a .small {
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
 }
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
