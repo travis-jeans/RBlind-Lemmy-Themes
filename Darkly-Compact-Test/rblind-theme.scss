@@ -131,22 +131,10 @@ a[title="sorting help"] .icon {
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }
 
-// the dropdown box Registration Mode on Site Settings, make the options share the same padding as the button
-// does not work - javascript required to change as the styling of the options is determined by the browser
-// unless it's set to overflow like the Language Select
+// The Language Select select option buttons can be made larger as they are set to overflow, but others cannot be changed.
 select option {
   padding: 0.7rem 0.7rem !important;
 }
-
-// try change the size of the up and down arrows
-// Rate Limit options
-// does not work, requires javascript
-/*
-input#rate-limit::after {
- min-height: 44px;
- min-width: 44px;
-}
-*/
 
 // reduce padding next to the up and downvote container
 article.post-container > .flex-grow-0 {
