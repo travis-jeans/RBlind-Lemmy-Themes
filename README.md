@@ -94,6 +94,9 @@ The file `_variables.sccs` has the arguments:
 
 #### Font Size
 - Added `$font-size-root` from `_variables.scss` and changed from `100%` to `120%`
+- Added ``small, .small {
+  font-size: 1.25rem !important;
+}`` which increases the post author line
 
 #### Paragraphs
 
@@ -101,15 +104,6 @@ The file `_variables.sccs` has the arguments:
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
 }` to increase the paragraph line spacing and between paragraph spacing
-
-#### Other
-
-- Added ``small, .small {
-  font-size: 1.25rem !important;
-}`` which increases the post author line
-- Added ``.post-title {
-  margin-bottom: 0.5rem;
-}`` to increase the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line
 
 ### Links
 
@@ -139,10 +133,20 @@ text-decoration: underline;
 
 ### Layout
 
+- Added `.post-title {
+  margin-bottom: 0.5rem;
+}` to increase the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line
+- Added `.post-title + p.small {
+  margin-bottom: 0.75rem !important;
+}` to reduce the spacing beneath the extra link after the post title on link posts
 - Added `.container-lg {
     margin-right: 0 !important;
     margin-left: 0 !important;
 }` which removes the white space margins on certain screen breakpoints
+- Added `.ms-1 {
+  margin-left: 0.2rem !important;
+}` to reduce the left margin for nested posts
+- 
 
 ### Buttons
 
