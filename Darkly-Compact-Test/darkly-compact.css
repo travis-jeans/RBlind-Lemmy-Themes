@@ -83,17 +83,13 @@ small, .small {
   margin-left: 0 !important;
 }
 
-.z-3 {
-  z-index: auto !important;
-}
-
 .skip-link:focus, .skip-link:focus-visible {
   text-decoration: underline;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
 .skip-link {
-  font-size: small;
-  background-color: unset !important;
+  top: -60px;
 }
 
 .btn {
@@ -221,17 +217,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }
 
-.skip-link {
-  display: block;
-  position: relative !important;
-  top: 0;
-  left: 0 !important;
-  text-align: left;
-  border-radius: 0rem !important;
-  padding: 0.25rem !important;
-  padding-left: 1rem !important;
-}
-
 .offset-lg-3 {
   margin-left: 0% !important;
 }
@@ -312,10 +297,6 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
 .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
   color: var(--bs-info);
-}
-
-.skip-link {
-  outline: unset !important;
 }
 
 main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
@@ -12252,17 +12233,13 @@ small, .small {
   margin-left: 0 !important;
 }
 
-.z-3 {
-  z-index: auto !important;
-}
-
 .skip-link:focus, .skip-link:focus-visible {
   text-decoration: underline;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
 .skip-link {
-  font-size: small;
-  background-color: unset !important;
+  top: -60px;
 }
 
 .btn {
@@ -12390,17 +12367,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }
 
-.skip-link {
-  display: block;
-  position: relative !important;
-  top: 0;
-  left: 0 !important;
-  text-align: left;
-  border-radius: 0rem !important;
-  padding: 0.25rem !important;
-  padding-left: 1rem !important;
-}
-
 .offset-lg-3 {
   margin-left: 0% !important;
 }
@@ -12481,10 +12447,6 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
 .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
   color: var(--bs-info);
-}
-
-.skip-link {
-  outline: unset !important;
 }
 
 main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {

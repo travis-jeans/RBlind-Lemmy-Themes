@@ -97,20 +97,15 @@ small, .small {
     margin-left: 0 !important;
 }
 
-// .skip-link is on the same plane as other content
-.z-3 {
-    z-index: auto !important;
-}
-
 // give skip-link the same focus style as .btn:focus-visible
 .skip-link:focus, .skip-link:focus-visible {
 text-decoration: underline;
+box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
-// change font size of .skip-link and remove the background colour
+// force the skip link out of view until focused
 .skip-link {
-  font-size: small;
-  background-color: unset !important;
+  top: -60px;
 }
 
 // Buttons
@@ -265,18 +260,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }
 
-// Skip link should be defined after buttons, so it does not inherit their padding values
-.skip-link {
-  display: block;
-  position: relative !important;
-  top: 0;
-  left: 0 !important;
-  text-align: left;
-  border-radius: 0rem !important;
-  padding: 0.25rem !important;
-  padding-left: 1rem !important;
-}
-
 // Layout
 // remove the left margin on large layouts for Create Communities and Create Post pages
 // breakpoint is 1200px
@@ -384,11 +367,6 @@ a.person-listing + .btn,
   .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
   .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
     color: var(--bs-info);
-  }
-
-  // need to add this below button style definition
-  .skip-link {
-  outline: unset !important;
   }
 
   // every other page is missing a <main> element, so classes need to be added individually
