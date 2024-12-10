@@ -76,6 +76,11 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+// reduce padding on posts
+.post-listing {
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
+}
+
 .post-title + p.small {
   margin-bottom: 0.75rem !important;
 }
@@ -99,6 +104,8 @@ small, .small {
 
 // give skip-link the same focus style as .btn:focus-visible
 .skip-link:focus, .skip-link:focus-visible {
+top: 0.25rem;
+left: 0.25rem !important;
 text-decoration: underline;
 box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }

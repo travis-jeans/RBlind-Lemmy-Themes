@@ -85,12 +85,12 @@ The file `_variables.sccs` has the arguments:
 
 #### Headings
 
-- `$h1-font-size` changed from `3rem` to `5rem`
-- `$h2-font-size` changed from `2.5rem` to `4rem`
-- `$h3-font-size` changed from `2rem` to `3rem`
-- Added `h4-font-size` changed from `1.5rem` to `2.5rem`
-- Added `h5-font-size` changed from `1.25rem` to `2rem`
-- Added `h6-font-size` changed from `1rem` to `1.5rem`
+- `$h1-font-size` changed from `3rem` to `3.5rem`
+- `$h2-font-size` changed from `2.5rem` to `3rem`
+- `$h3-font-size` changed from `2rem` to `2.5rem`
+- Added `h4-font-size` changed from `1.5rem` to `2rem`
+- Added `h5-font-size` changed from `1.25rem` to `1.5rem`
+- Added `h6-font-size` changed from `1rem` to `1.25rem`
 - Overwrite `h6` value in posts since without this it is larger than `h5`. Added `.md-div h6 {
     font-size: 1.1rem;
   }`
@@ -180,30 +180,16 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
 
 
 #### Skip Link
-**Note** many of the Skip Link's properties must be defined after redefining buttons or it will inherit button styling.
 
-- Make the <q>Jump to content</q> anchor link to always be visible and adjust the padding so it takes up less space than a button and is aligned with the document left-margin. Added `.skip-link {
-    display: block;
-    position: relative !important;
-    top: 0;
-    left: 0 !important;
-    text-align: left;
-    padding: 0.25rem !important;
-    padding-left: 1rem !important;
+- Due to increasing button sizes, the Skip Link needs to be moved further up or the button will be partially visible before being brought into focus. Added `.skip-link {
+  top: -60px;
 }`
-- Make the skip link to be on the same z-plane as other content. Added `.z-3 {
-    z-index: auto !important;
-}` 
-- Give an underline to the Skip Link when focused. Addded `.skip-link:focus, .skip-link:focus-visible {
+- Give the skip link button a focus indicator and underline the link upon focus. Offset the top and left sides by the width of the box shadow. Added `.skip-link:focus, .skip-link:focus-visible {
+  top: 0.25rem;
+left: 0.25rem !important;
 text-decoration: underline;
+box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }`
-- Reduce the Skip Link font size and make the background colour match the body. Added `.skip-link {
-  font-size: small;
-  background-color: unset !important;
-}`
-- Remove the button outline from the Skip Link. Added `  .skip-link {
-  outline: unset !important;
-  }`
 
 
 ### Images
@@ -252,6 +238,9 @@ text-decoration: underline;
 - Prevent the toggle button in the Subscribed sidebar from overflowing from its container. Added `#sidebarSubscribedHeader {
     flex-wrap: wrap;
   }`
+- Reduce padding on posts. `.post-listing {
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
+}`
 
 
 ### Buttons
