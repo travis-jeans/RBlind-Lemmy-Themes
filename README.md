@@ -374,6 +374,26 @@ a[title="sorting help"]:focus svg {
   padding: 22px; // half of minimum AAA target size 44px
 }`
 
+### Breakpoints
+
+Due to the larger font and button sizes, the breakpoints were altered so resolutions suitable for smaller screens occur at larger screen sizes.
+
+- `$grid-breakpoints: (
+        xs: 0,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px,
+        xl: 1900px,
+        xxl: 2200px
+);`
+- `$container-max-widths: (
+        sm: 960px,
+        md: 1140px,
+        lg: 1610px,
+        xl: 2200,
+        xxl: 2400
+);`
+
 ### Cannot be changed
 - Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
 - The dropdown box Registration Mode on Site Settings cannot be edited by changing the padding values in `select option`, Javascript is required to change as the styling of the options is determined by the browser
