@@ -116,7 +116,7 @@ a[title="sorting help"] .icon,
   border-radius: var(--bs-border-radius);
 }
 
-.icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75);
 }
 
@@ -12282,7 +12282,7 @@ a[title="sorting help"] .icon,
   border-radius: var(--bs-border-radius);
 }
 
-.icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75);
 }
 

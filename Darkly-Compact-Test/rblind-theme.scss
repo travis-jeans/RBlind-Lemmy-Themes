@@ -142,7 +142,7 @@ a[title="sorting help"] .icon,
 
 // Fix colour inheritance problem with the icon on the inbox page (show/hide svg which is missing a .btn class)
 // color is determined by fill: currentColor which points to black on this particular icon for some reason
-.icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75); 
 }
 
