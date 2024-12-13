@@ -347,7 +347,8 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   text-decoration: none;
 }
 
-.post-title a {
+.post-title a,
+.post-metadata-card .card-body .card-title a {
   text-decoration: none;
 }
 
@@ -12537,7 +12538,8 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   text-decoration: none;
 }
 
-.post-title a {
+.post-title a,
+.post-metadata-card .card-body .card-title a {
   text-decoration: none;
 }
 

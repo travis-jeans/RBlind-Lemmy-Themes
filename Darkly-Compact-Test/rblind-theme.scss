@@ -439,7 +439,10 @@ a.person-listing + .btn,
   }
 
   // remove underline from post title specifically as it is assumed users understand that clicking the post title will navigate to the post
-  .post-title a {
+  // remove underline from the link title (not the URL) in Link Posts to improve legibility of links with long names
+  // Link title and URL go to the same locations and they are right next to each other
+  .post-title a,
+  .post-metadata-card .card-body .card-title a {
     text-decoration: none;
   }
 
