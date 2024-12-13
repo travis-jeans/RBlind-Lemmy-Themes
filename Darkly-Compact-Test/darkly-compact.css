@@ -105,9 +105,19 @@ small, .small {
 .btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon {
+a[title="sorting help"] .icon,
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+  box-sizing: content-box;
+  border-radius: var(--bs-border-radius);
+}
+
+.icon {
+  color: rgba(222, 226, 230, 0.75);
 }
 
 select option {
@@ -12261,9 +12271,19 @@ small, .small {
 .btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon {
+a[title="sorting help"] .icon,
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}
+
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+  box-sizing: content-box;
+  border-radius: var(--bs-border-radius);
+}
+
+.icon {
+  color: rgba(222, 226, 230, 0.75);
 }
 
 select option {
