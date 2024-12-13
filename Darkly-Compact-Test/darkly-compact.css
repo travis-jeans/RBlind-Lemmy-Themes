@@ -120,6 +120,10 @@ a[title="sorting help"] .icon,
   color: rgba(222, 226, 230, 0.75);
 }
 
+.markdown-textarea .d-flex button:first-child {
+  border-top-left-radius: var(--bs-border-radius) !important;
+}
+
 select option {
   padding: 0.7rem 0.7rem !important;
 }
@@ -12284,6 +12288,10 @@ a[title="sorting help"] .icon,
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75);
+}
+
+.markdown-textarea .d-flex button:first-child {
+  border-top-left-radius: var(--bs-border-radius) !important;
 }
 
 select option {
