@@ -106,18 +106,30 @@ small, .small {
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
 a[title="sorting help"] .icon,
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }
 
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   box-sizing: content-box;
   border-radius: var(--bs-border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75);
+}
+
+.navbar-toggler,
+#navMessages a {
+  padding: 0rem !important;
+  outline: 0rem !important;
+}
+
+.navbar-toggler .icon {
+  outline: 0rem !important;
 }
 
 .markdown-textarea .d-flex button:first-child {
@@ -134,7 +146,8 @@ article.post-container > .flex-grow-0 {
 
 a.sort-select-icon:focus svg,
 a[title=RSS]:focus svg,
-a[title="sorting help"]:focus svg {
+a[title="sorting help"]:focus svg,
+.navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
@@ -12276,18 +12289,30 @@ small, .small {
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
 a[title="sorting help"] .icon,
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }
 
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   box-sizing: content-box;
   border-radius: var(--bs-border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75);
+}
+
+.navbar-toggler,
+#navMessages a {
+  padding: 0rem !important;
+  outline: 0rem !important;
+}
+
+.navbar-toggler .icon {
+  outline: 0rem !important;
 }
 
 .markdown-textarea .d-flex button:first-child {
@@ -12304,7 +12329,8 @@ article.post-container > .flex-grow-0 {
 
 a.sort-select-icon:focus svg,
 a[title=RSS]:focus svg,
-a[title="sorting help"]:focus svg {
+a[title="sorting help"]:focus svg,
+.navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 

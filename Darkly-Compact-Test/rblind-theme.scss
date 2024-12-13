@@ -129,13 +129,16 @@ box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
 a[title="sorting help"] .icon,
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }
 
 // Fix box model of the icon in the inbox and round the outline
-.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+// and the navbar-toggler which is also missing a btn style
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
   box-sizing: content-box;
   border-radius: var(--bs-border-radius); // must refer to border-radius as --bs-border-radius
 }
@@ -145,6 +148,21 @@ a[title="sorting help"] .icon,
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(222, 226, 230, 0.75); 
 }
+
+// remove padding from the navbar toggler
+// must have !important
+// there seem like there are two navbar Messages, one for desktop and one for mobile, so need to overwrite the styling of the mobile one
+.navbar-toggler,
+#navMessages a {
+  padding: 0rem !important;
+  outline: 0rem !important;
+}
+
+// remove the outline from the navbar-toggler .icon
+.navbar-toggler .icon {
+  outline: 0rem !important;
+}
+
 
 // .d-flex is the name of the div container with the style buttons, other classes include flex-wrap, border-bottom, d-flex
 // Add a border radius only to the top left corner so it does not overlap with the text box area.
@@ -164,11 +182,14 @@ article.post-container > .flex-grow-0 {
 }
 
 // give the svg icon links a focus indicator like other elements
+// include the navbar toggler since it has a unique focus indicator
 a.sort-select-icon:focus svg,
 a[title=RSS]:focus svg,
-a[title="sorting help"]:focus svg {
+a[title="sorting help"]:focus svg,
+.navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
+// navbar toggler focus ring default is box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 
 // no outline on navigation bar buttons only
 nav a.nav-link .icon {
