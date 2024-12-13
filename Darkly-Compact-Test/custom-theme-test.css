@@ -65,6 +65,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.post-listing {
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+}
+
 .post-title + p.small {
   margin-bottom: 0.75rem !important;
 }
@@ -83,17 +87,15 @@ small, .small {
   margin-left: 0 !important;
 }
 
-.z-3 {
-  z-index: auto !important;
-}
-
 .skip-link:focus, .skip-link:focus-visible {
+  top: 0.25rem;
+  left: 0.25rem !important;
   text-decoration: underline;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
 .skip-link {
-  font-size: small;
-  background-color: unset !important;
+  top: -60px;
 }
 
 .btn {
@@ -221,17 +223,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }
 
-.skip-link {
-  display: block;
-  position: relative !important;
-  top: 0;
-  left: 0 !important;
-  text-align: left;
-  border-radius: 0rem !important;
-  padding: 0.25rem !important;
-  padding-left: 1rem !important;
-}
-
 .offset-lg-3 {
   margin-left: 0% !important;
 }
@@ -312,10 +303,6 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
 .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
   color: var(--bs-info);
-}
-
-.skip-link {
-  outline: unset !important;
 }
 
 main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
@@ -578,57 +565,52 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.525rem + 3.3vw);
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 4rem;
-  }
-}
-
-h2, .h2 {
   font-size: calc(1.475rem + 2.7vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
+  h1, .h1 {
     font-size: 3.5rem;
   }
 }
 
-h3, .h3 {
+h2, .h2 {
   font-size: calc(1.425rem + 2.1vw);
 }
 @media (min-width: 1200px) {
-  h3, .h3 {
+  h2, .h2 {
     font-size: 3rem;
   }
 }
 
-h4, .h4 {
+h3, .h3 {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h4, .h4 {
+  h3, .h3 {
     font-size: 2.5rem;
   }
 }
 
-h5, .h5 {
+h4, .h4 {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h5, .h5 {
+  h4, .h4 {
     font-size: 2rem;
   }
 }
 
-h6, .h6 {
+h5, .h5 {
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
-  h6, .h6 {
+  h5, .h5 {
     font-size: 1.5rem;
   }
+}
+
+h6, .h6 {
+  font-size: 1.25rem;
 }
 
 p {
@@ -8566,27 +8548,27 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.525rem + 3.3vw) !important;
-}
-
-.fs-2 {
   font-size: calc(1.475rem + 2.7vw) !important;
 }
 
-.fs-3 {
+.fs-2 {
   font-size: calc(1.425rem + 2.1vw) !important;
 }
 
-.fs-4 {
+.fs-3 {
   font-size: calc(1.375rem + 1.5vw) !important;
 }
 
-.fs-5 {
+.fs-4 {
   font-size: calc(1.325rem + 0.9vw) !important;
 }
 
-.fs-6 {
+.fs-5 {
   font-size: calc(1.275rem + 0.3vw) !important;
+}
+
+.fs-6 {
+  font-size: 1.25rem !important;
 }
 
 .fst-italic {
@@ -12129,21 +12111,18 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 4rem !important;
-  }
-  .fs-2 {
     font-size: 3.5rem !important;
   }
-  .fs-3 {
+  .fs-2 {
     font-size: 3rem !important;
   }
-  .fs-4 {
+  .fs-3 {
     font-size: 2.5rem !important;
   }
-  .fs-5 {
+  .fs-4 {
     font-size: 2rem !important;
   }
-  .fs-6 {
+  .fs-5 {
     font-size: 1.5rem !important;
   }
 }
@@ -12242,6 +12221,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.post-listing {
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+}
+
 .post-title + p.small {
   margin-bottom: 0.75rem !important;
 }
@@ -12260,17 +12243,15 @@ small, .small {
   margin-left: 0 !important;
 }
 
-.z-3 {
-  z-index: auto !important;
-}
-
 .skip-link:focus, .skip-link:focus-visible {
+  top: 0.25rem;
+  left: 0.25rem !important;
   text-decoration: underline;
+  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }
 
 .skip-link {
-  font-size: small;
-  background-color: unset !important;
+  top: -60px;
 }
 
 .btn {
@@ -12398,17 +12379,6 @@ a.person-listing + .btn,
   margin-bottom: 0.5rem !important;
 }
 
-.skip-link {
-  display: block;
-  position: relative !important;
-  top: 0;
-  left: 0 !important;
-  text-align: left;
-  border-radius: 0rem !important;
-  padding: 0.25rem !important;
-  padding-left: 1rem !important;
-}
-
 .offset-lg-3 {
   margin-left: 0% !important;
 }
@@ -12489,10 +12459,6 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
 .upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
 .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
   color: var(--bs-info);
-}
-
-.skip-link {
-  outline: unset !important;
 }
 
 main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
