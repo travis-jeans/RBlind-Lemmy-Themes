@@ -130,7 +130,8 @@ a.sort-select-icon .icon,
 a[title=RSS] .icon,
 a[title="sorting help"] .icon,
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
-.navbar-toggler .icon {
+.navbar-toggler .icon,
+#navMessages {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
 }
@@ -152,8 +153,10 @@ a[title="sorting help"] .icon,
 // remove padding from the navbar toggler
 // must have !important
 // there seem like there are two navbar Messages, one for desktop and one for mobile, so need to overwrite the styling of the mobile one
+// navmessages has multiple instances of padding
 .navbar-toggler,
-#navMessages a {
+#navMessages a,
+#navMessages {
   padding: 0rem !important;
   outline: 0rem !important;
 }
@@ -313,6 +316,13 @@ a.person-listing + .btn,
 // breakpoint is 1200px
 .offset-lg-3 {
   margin-left: 0% !important; // default is 25%
+}
+
+// make navbar taller on small screens so border-box does not overlap
+@media (max-width: 1200px) {
+  #navbar {
+    padding-top: 0.25rem !important;
+  }
 }
 
 // Make forms take up more space in the screen so labels aren't flowing onto a new line
