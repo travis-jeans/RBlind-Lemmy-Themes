@@ -234,6 +234,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   background-color: var(--bs-gray-900);
 }
 
+// Fix colour contrast on the .mark class
 .mark {
   color: var(--bs-white);
   background-color: var(--bs-gray-800);

@@ -151,11 +151,18 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   padding: 0rem 0rem 0rem 0rem !important;
   margin: 0rem 0.5rem 0rem 0rem !important;
 }`
+- Overwrite the colour of the focus indicator. Added `.btn:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+}`
+- Overwrite the colour of the focus indicator on form controls. Added `.form-select:focus,
+.form-control:focus {
+  border-color: var(--rblind-focus-indicator);
+}`
 - Change the focus colour and add a focus indicator to tabs and buttons that previously had no focus indicator like the Posts/Comments and Show Hidden Posts / Hide Hidden Posts tabs. Added `.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Added a focus indicator to the User Profile toggle dropdown. Added `.dropdown-toggle:focus-visible {
-    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   }`
 - Ensure the navigation bar is correctly spaced. Added `nav ul#navbarLinks {
   margin-right: auto !important; 
@@ -189,7 +196,7 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   top: 0.25rem;
 left: 0.25rem !important;
 text-decoration: underline;
-box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 
 
@@ -355,7 +362,7 @@ a.person-listing + .btn,
 a[title=RSS]:focus svg,
 a[title="sorting help"]:focus svg,
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Made so the down vote icon changes colour when the button area is hovered, not just the icon. Made this happen when the button is focused as well. Added `.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
   .downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
@@ -366,19 +373,19 @@ a[title="sorting help"]:focus svg,
     color: var(--bs-info);
   }`
 - Give unselected tabs (like Comment) the same focus outline as other buttons. Added `.btn-check:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Change the focus outline of secondary buttons like Next on the homepage to have the same colour as other buttons. Added `.btn-secondary:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Change the colour of the focus indicator on Languages select cross button on Create Community page. Added `.btn-outline-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Make the currently selected tab focus indicator the same colour as other buttons. Added `.btn-check:checked:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Add a focus indicator to the eye icon tabs (Show / Hide Posts). Added `label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
-    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   }`
 
 
@@ -392,6 +399,137 @@ a[title="sorting help"]:focus svg,
 - Increased size of the alone checkbox on Create Community page with a missing label. **Note** A temporary measure until the label can be associated with the checkbox, thereby increasing the target size. Added `.form-check > input#community-only-mods-can-post[type=checkbox] {
   padding: 22px; // half of minimum AAA target size 44px
 }`
+
+### Colours
+These colours are referring to the Dark theme. The Light theme has these values replaced with different values.
+#### Root
+Root variables are defined in the `_variables` `scss` file.
+##### Grays
+- Change `$white` (bs-white, bs-emphasis, bs-table, border-white, text-light): `#eeeeeeff;`
+- Change `$gray-200` (secondary button background) ` #ddddddff;`
+- Change `$gray-300`(bs-dark, bs-dark-emphasis and more): ` #ccccccff;`
+- Change `$gray-400` (bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc): `#bbbbbbff;`
+- Change `$gray-600` (blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray): `#676767ff;`
+- Change `$gray-700` (card header background): `#242424ff;`
+- Change `$gray-800` (card background, bs-light): `#131313ff;`
+- Change `$gray-900` (background colour): `#030303ff;`
+##### Hues
+For the dark theme, the colours are based on Paul Tol's Light palette except for `$cyan` which is an rBlind colour.
+- Change `$blue` `#77aaddff;`
+- Change `$red` (bs-danger, danger red):`#ffaabbff;`
+- Change `$yellow` (bs-alert): `#eedd88ff;`
+- Change `$green` (form check input background and border): `#44bb99ff;`
+- Change `$cyan` (bs-info): `#6fcfffff;`
+- Added `$orange` (for Atom highlighting): `#ee8866ff;`
+- Added `$teal` (for Atom highlighting): `bbcc33ff;`
+##### Other
+- Change check in checkbox to black instead of white due to colour contrast issues. Added `$form-check-input-checked-color: $gray-900;`
+- Make custom code yellow instead of a poorly contrasting red (note: may be overwritten by Atom variables): `$code-color: $yellow;`
+###### Hover
+Invert the colours on dropdown menu hovers or focus.
+- Added `$dropdown-link-active-color: $gray-900;`
+- Added `$dropdown-link-active-bg: $gray-200;`
+- Added `$dropdown-link-hover-bg: $gray-200;`
+- Added `$dropdown-link-hover-color: $gray-900;`
+
+###### Focus
+- Added ` --rblind-focus-indicator: #7764d8;`
+- Added `$box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;`
+- Added `$focus-ring-color: var(--rblind-focus-indicator);`
+
+#### Atom
+Atom styles control the colours within `<code>` snippets as a part of syntax highlighting. These variables were borrowed from a different style sheet (Atom One: `/lemmy-ui/dist/assets/css/code-themes`).
+- Added `pre code.hljs {
+  display:block;
+  overflow-x:auto;
+  padding:1em
+}`
+- Added `code.hljs {
+  padding:3px 5px
+}`
+- Added `.hljs {
+  color: var(--bs-gray-200);
+  background: var(--bs-gray-700);
+}`
+- Added `.hljs-comment,
+.hljs-quote {
+  color: var(--bs-gray-600);
+  font-style:italic
+}`
+- Added `.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: var(--bs-teal);
+}`
+- Added `.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color:var(--bs-red);
+}`
+- Added `.hljs-literal {
+  color:var(--bs-cyan);
+}`
+- Added `.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+  color: var(--bs-green);
+}`
+- Added `.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: var(--bs-orange);
+}`
+- Added `.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: var(--bs-blue);
+}`
+- Added `.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: var(--bs-yellow);
+}`
+- Added `.hljs-emphasis {
+  font-style:italic
+}`
+- Added `.hljs-strong {
+  font-weight:700
+}`
+- Added `.hljs-link {
+  text-decoration:underline
+}`
+
+#### Overide
+- Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select.sort-select {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}`
+- Fix colour contrast issue on Browse... File selection button. Added `.form-control::file-selector-button {
+  background-color: var(--bs-gray-800);
+}`
+- Fix the hover style on the Browse... File selection button. Added `.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: var(--bs-gray-700);
+}`
+- Remove the opacity from the mini overlay so the icons have higher contrast. Added `.mini-overlay {
+  background: var(--bs-gray-900);
+  background-color: var(--bs-gray-900);
+}`
+- Fix colour contrast on the Mark class. Added `.mark {
+  color: var(--bs-white);
+  background-color: var(--bs-gray-800);
+}`
+
 
 ### Breakpoints
 
