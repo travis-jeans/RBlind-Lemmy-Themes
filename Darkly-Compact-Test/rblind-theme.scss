@@ -213,11 +213,105 @@ nav a.nav-link .icon {
   padding: 22px; // half of minimum AAA target size 44px
 }
 
+// make the down arrow on the dropdown select buttons white instead of gray
+.form-select.sort-select {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+// change Browse... button
+.form-control::file-selector-button {
+  background-color: var(--bs-gray-800);
+}
+
+// fix the hover style for the same button
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: var(--bs-gray-700);
+}
+
 // Remove the opacity from the mini overlay so the icons have higher contrast
 .mini-overlay {
   background: var(--bs-gray-900);
   background-color: var(--bs-gray-900);
 }
+
+.mark {
+  color: var(--bs-white);
+  background-color: var(--bs-gray-800);
+}
+
+// Redefine Atom One styles
+pre code.hljs {
+  display:block;
+  overflow-x:auto;
+  padding:1em
+}
+code.hljs {
+  padding:3px 5px
+}
+.hljs {
+  color: var(--bs-gray-200);
+  background: var(--bs-gray-700);
+}
+.hljs-comment,
+.hljs-quote {
+  color: var(--bs-gray-600);
+  font-style:italic
+}
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: var(--bs-teal);
+}
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color:var(--bs-red);
+}
+.hljs-literal {
+  color:var(--bs-cyan);
+}
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+  color: var(--bs-green);
+}
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: var(--bs-orange);
+}
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: var(--bs-blue);
+}
+.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+  color: var(--bs-yellow);
+}
+.hljs-emphasis {
+  font-style:italic
+}
+.hljs-strong {
+  font-weight:700
+}
+.hljs-link {
+  text-decoration:underline
+}
+
 
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,

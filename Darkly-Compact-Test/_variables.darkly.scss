@@ -95,6 +95,8 @@ $red: #ffaabbff; // bs-danger, danger red, auto converted to rgb values in custo
 $yellow: #eedd88ff; // bs-warning
 $green: #44bb99ff; // form check input background and border
 $cyan: #6fcfffff; // bs-info
+$orange: #ee8866ff;
+$teal: #bbcc33ff; // more green than teal
 
 $primary: $green;
 $secondary: $gray-500;
@@ -198,3 +200,5 @@ $dropdown-link-active-color: $gray-900;
 $dropdown-link-active-bg: $gray-200;
 $dropdown-link-hover-bg: $gray-200;
 $dropdown-link-hover-color: $gray-900;
+$code-color: $yellow;
+$tertiary-bg: $gray-800; // Browse... button background needs to be changed

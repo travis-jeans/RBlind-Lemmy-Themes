@@ -423,4 +423,5 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
 - Post nesting left-border width is defined inline and inserted by Javascript. See `/lemmy-ui/src/shared/components/comment/comment-node.tsx` on line 386 `border-left: 2px ${moreRepliesBorderColor} solid !important`. Border colour is defined on line 182-184: `const moreRepliesBorderColor = this.props.node.depth
       ? colorList[this.props.node.depth % colorList.length]
       : colorList[0];` Colour can be changed by altering colorList values
+. Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts`
 
