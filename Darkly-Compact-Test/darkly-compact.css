@@ -173,6 +173,11 @@ nav a.nav-link .icon {
   padding: 22px;
 }
 
+.mini-overlay {
+  background: var(--bs-gray-900);
+  background-color: var(--bs-gray-900);
+}
+
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
@@ -2744,10 +2749,10 @@ textarea.form-control-lg {
   border-color: #44bb99;
 }
 .form-check-input:checked[type=checkbox] {
-  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23030303' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 .form-check-input:checked[type=radio] {
-  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='black'/%3e%3c/svg%3e");
+  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23030303'/%3e%3c/svg%3e");
 }
 .form-check-input[type=checkbox]:indeterminate {
   background-color: #44bb99;
@@ -3725,10 +3730,10 @@ textarea.form-control-lg {
   --bs-dropdown-divider-margin-y: 0.5rem;
   --bs-dropdown-box-shadow: var(--bs-box-shadow);
   --bs-dropdown-link-color: #eeeeee;
-  --bs-dropdown-link-hover-color: #eeeeee;
-  --bs-dropdown-link-hover-bg: #44bb99;
-  --bs-dropdown-link-active-color: #eeeeee;
-  --bs-dropdown-link-active-bg: #44bb99;
+  --bs-dropdown-link-hover-color: #030303;
+  --bs-dropdown-link-hover-bg: #dddddd;
+  --bs-dropdown-link-active-color: #030303;
+  --bs-dropdown-link-active-bg: #dddddd;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -3992,8 +3997,8 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-color: #eeeeee;
   --bs-dropdown-divider-bg: #242424;
   --bs-dropdown-link-hover-bg: rgba(238, 238, 238, 0.15);
-  --bs-dropdown-link-active-color: #eeeeee;
-  --bs-dropdown-link-active-bg: #44bb99;
+  --bs-dropdown-link-active-color: #030303;
+  --bs-dropdown-link-active-bg: #dddddd;
   --bs-dropdown-link-disabled-color: #bbbbbb;
   --bs-dropdown-header-color: #bbbbbb;
 }
@@ -12371,6 +12376,11 @@ nav a.nav-link .icon {
 
 .form-check > input#community-only-mods-can-post[type=checkbox] {
   padding: 22px;
+}
+
+.mini-overlay {
+  background: var(--bs-gray-900);
+  background-color: var(--bs-gray-900);
 }
 
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,

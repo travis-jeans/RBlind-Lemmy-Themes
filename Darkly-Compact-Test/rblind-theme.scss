@@ -213,6 +213,12 @@ nav a.nav-link .icon {
   padding: 22px; // half of minimum AAA target size 44px
 }
 
+// Remove the opacity from the mini overlay so the icons have higher contrast
+.mini-overlay {
+  background: var(--bs-gray-900);
+  background-color: var(--bs-gray-900);
+}
+
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
