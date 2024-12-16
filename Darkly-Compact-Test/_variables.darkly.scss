@@ -48,6 +48,14 @@ $h6-font-size: 1.25rem;
 
 $font-size-root: 120%;
 
+:root {
+ --rblind-focus-indicator: #7764d8;
+
+ // Manual override of variables defined within the .btn classes
+// --bs-btn-focus-box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;  // overwrite focus indicators
+//--bs-btn-focus-shadow-rgb: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+
+}
 // Breakpoints
 // Override default BT variables:
 $grid-breakpoints: (
@@ -69,8 +77,9 @@ $container-max-widths: (
 );
 
 // $navbar-brand-padding-y: 0.25rem;
-$box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important; //--bs-btn-focus-box-shadow default
-;
+$box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; //--bs-btn-focus-box-shadow default
+$focus-ring-color: var(--rblind-focus-indicator);
+$form-check-input-checked-color: black; // change checkbox check from white to black
 
 // rBlind Colours
 // Colors

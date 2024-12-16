@@ -107,7 +107,7 @@ small, .small {
 top: 0.25rem;
 left: 0.25rem !important;
 text-decoration: underline;
-box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
 // force the skip link out of view until focused
@@ -190,7 +190,7 @@ a.sort-select-icon:focus svg,
 a[title=RSS]:focus svg,
 a[title="sorting help"]:focus svg,
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 // navbar toggler focus ring default is box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
 
@@ -253,16 +253,26 @@ nav ul#navbarIcons a.nav-link {
   margin: 0rem 0.5rem 0rem 0rem !important;
 }
 
+// overwrite button focus
+.btn:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--rblind-focus-indicator);
+}
+
 // default is var(--bs-btn-focus-box-shadow)
 // changed to the same value as the other buttons
 // this affects the Posts / Comments
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25) !important;
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
   // The username dropdown toggle "li id="dropdownUser" does not have a focus indicator
   .dropdown-toggle:focus-visible {
-    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   }
 
 // margin that determines the automatic spacing
@@ -390,29 +400,29 @@ a.person-listing + .btn,
 
 // change the Comments / unselected tab focus outline to be the same as the others
 .btn-check:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); // --bs-btn-focus-box-shadow default
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; // --bs-btn-focus-box-shadow default
 }
 
 // change secondary buttons (e.g. Next on home page) to have the same box-shadow focus indicator colour
 .btn-secondary:focus-visible {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); // --bs-btn-focus-box-shadow default
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; // --bs-btn-focus-box-shadow default
 }
 
 // Change the colour of the focus indicator on Languages select cross button on Create Community page
 .btn-outline-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
 // Ensures the currently selected tab  (Posts) focus indicator is the same as the others
 .btn-check:checked:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25); //--bs-btn-focus-box-shadow default
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; //--bs-btn-focus-box-shadow default
 }
 
   // focus-within gives the "eye" show hidden posts buttons a focus indicator whereas previously they had none
   // tippy tooltip cannot be controlled unless using javascript
   // eye and no eye
   label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
-    box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   }
 
   // Added everything after .downvote:hover so the effects apply to when the button area is hovered not just the icon
