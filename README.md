@@ -274,7 +274,7 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+  outline: 1px solid rgba(222, 226, 230, 0.4) !important;
 }`
 - Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
