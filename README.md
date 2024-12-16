@@ -125,7 +125,8 @@ For links in the main area, ignoring the navigation bar and the footer.
 - Make post title link underline and link post link underline the same as the text when visited. Added ` .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
     text-decoration-color: var(--bs-gray) !important;
   }`
-- Remove the underline on post titles specifically, as it is assumed users are familiar with the convention of clicking the title of a post to visit the post. Added `.post-title a {
+- Remove the underline on post titles specifically both in the main feed and as metadata under link posts, as it is assumed users are familiar with the convention of clicking the title of a post to visit the post. Added `  .post-title a,
+  .post-metadata-card .card-body .card-title a {
     text-decoration: none;
   }`
 
@@ -229,6 +230,11 @@ box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
     max-width: 100% !important;
   }
 }`
+- Make navbar taller on small screens so border-box in the navbar-toggler does not overlap. Added `@media (max-width: 1200px) {
+  #navbar {
+    padding-top: 0.25rem !important;
+  }
+}`
 - Ensure text reflow for very long usernames in the Sidebar. Added `.person-listing picture + span + small {
   word-break: break-all;
 }`
@@ -260,12 +266,26 @@ a.nav-link .icon {
   height: 1em;
   font-size: 1.2em !important;
 }`
-- Increased the padding on buttons to increase the target area above 44px and add an outline to make clear buttons with icons are buttons and not images. Icons that behave as links also get an outline and are selected specifically by title (RSS and Sorting Help). Added `.btn-sm, .btn-group-sm > .btn, .btn,
+- Increased the padding on buttons to increase the target area above 44px and add an outline to make clear buttons with icons are buttons and not images. Icons that behave as links also get an outline and are selected specifically by title (RSS and Sorting Help). this includes a lone button not styled with the .btn class on the inbox page and the navbar toggler icon (menu icon). Added `.btn-sm, .btn-group-sm > .btn, .btn,
 a.sort-select-icon .icon,
 a[title=RSS] .icon,
-a[title="sorting help"] .icon {
+a[title="sorting help"] .icon,
+.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon,
+#navMessages {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(222, 226, 230, 0.2) !important;
+}`
+- Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
+.navbar-toggler .icon {
+  box-sizing: content-box;
+  border-radius: var(--bs-border-radius); // must refer to border-radius as --bs-border-radius
+}`
+- Remove the outline from the navbar-toggler .icon. Added `.navbar-toggler .icon {
+  outline: 0rem !important;
+}`
+- Fix colour inheritance problem with the icon on the inbox page (show/hide svg which is missing a .btn class). Color is determined by fill: currentColor which points to black on this particular icon for some reason. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
+  color: rgba(222, 226, 230, 0.75); 
 }`
 - Increased the size of icons when they behave as links. Added `.btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,
@@ -275,6 +295,9 @@ nav a.nav-link .icon {
   height: 1em;
   font-size: 1.2em !important;
 }` **Note** This is dissociated from the above change to `.icon` as this class is shared by buttons without icons and buttons with icons. If padding was added to all `.icon`s, buttons containing icons would have a duplicate amount of padding.
+- Add a border radius only to the top left corner of the post style buttons so it does not overlap with the text box area. Needs important as .rounded-0 sets radius to 0 as important. Added `.markdown-textarea .d-flex button:first-child {
+  border-top-left-radius: var(--bs-border-radius) !important;
+}`
 
 #### Spacing
 
@@ -319,12 +342,19 @@ a.person-listing + .btn,
 - Reduce the spacing between the upvote and downvote widget next to post listings in the home feed. Added `article.post-container > .flex-grow-0 {
   padding: 0.25rem;
 }`
+- Remove padding from the navbar toggler. Must have `!important`. There seem like there are two navbar Messages, one for desktop and one for mobile, so need to overwrite the styling of the mobile one. Navmessages has multiple instances of padding. Added `.navbar-toggler,
+#navMessages a,
+#navMessages {
+  padding: 0rem !important;
+  outline: 0rem !important;
+}`
 
 ##### Functionality
 
-- Gave icon links a focus indicator to match the focus indicator of buttons. Added `a.sort-select-icon:focus svg,
+- Gave icon links and the navbar toggler a focus indicator to match the focus indicator of buttons. Added `a.sort-select-icon:focus svg,
 a[title=RSS]:focus svg,
-a[title="sorting help"]:focus svg {
+a[title="sorting help"]:focus svg,
+.navbar-toggler:focus {
   box-shadow: 0 0 0 0.25rem rgba(0, 188, 140, 0.25);
 }`
 - Made so the down vote icon changes colour when the button area is hovered, not just the icon. Made this happen when the button is focused as well. Added `.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
