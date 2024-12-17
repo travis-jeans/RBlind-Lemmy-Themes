@@ -204,7 +204,7 @@ color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
 
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
-  background-color: var(--bs-gray-300);
+  background-color: var(--bs-gray-200);
   color: var(--bs-black) !important; // prevent overwriting by other classes
 }
 

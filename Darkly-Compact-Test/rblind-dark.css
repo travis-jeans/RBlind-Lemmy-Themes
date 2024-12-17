@@ -72,7 +72,8 @@ small, .small {
   line-height: 1.5em;
 }
 
-.card {
+.card, .card-body {
+  color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
 }
 
@@ -170,7 +171,7 @@ a[title="sorting help"] .icon,
 
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
-  background-color: var(--bs-gray-300);
+  background-color: var(--bs-gray-200);
   color: var(--bs-black) !important;
 }
 
@@ -12435,7 +12436,8 @@ small, .small {
   line-height: 1.5em;
 }
 
-.card {
+.card, .card-body {
+  color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
 }
 
@@ -12533,7 +12535,7 @@ a[title="sorting help"] .icon,
 
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
-  background-color: var(--bs-gray-300);
+  background-color: var(--bs-gray-200);
   color: var(--bs-black) !important;
 }
 

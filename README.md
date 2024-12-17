@@ -449,8 +449,10 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Changed the background color of disabled buttons and made the text italic as an additional visual indicator. Added `
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
-  background-color: var(--bs-gray-300);
+  background-color: var(--bs-gray-200);
 }`
+- Add variables to define disabled buttons (redundant) and change opacity to `0.8` for light mode only. `$btn-disabled-color: $gray-200;
+$btn-disabled-opacity: 0.65; // default`
 - Make disabled checkbox labels italic and improve colour contrast. Added `.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
   cursor: default;
   opacity: 0.8;
@@ -593,9 +595,10 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   color: var(--bs-white);
   background-color: var(--bs-gray-800);
 }`
-- Darken the card background (used behind post meta summaries and side panel text area) `.card {
+- Darken the card background and lighten text (used behind post meta summaries and side panel text area) `.card, .card-body {
+  color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
-}`
+}
 - Make table colors visible. Added: `$table-color: $gray-200;`
 
 
