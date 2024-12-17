@@ -595,6 +595,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 - Darken the card background (used behind post meta summaries and side panel text area) `.card {
   background-color: var(--bs-gray-800) !important;
 }`
+- Make table colors visible. Added: `$table-color: $gray-200;`
 
 
 ### Breakpoints
