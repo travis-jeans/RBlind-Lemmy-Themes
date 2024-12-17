@@ -66,16 +66,18 @@ Once you have made your desired changes to the scss variables, run one of the fo
 
 ### Order of Inheritance
 
-Each sccs variables file will import variables to be added to the output CSS file.
+The `loader` files will import variables to be added to the output CSS file.
 If the bootstrap source is loaded too early, custom styles will not be applied. 
 Conversley, if the bootstrap source is loaded last, the upstream bootstrap `!important` styles will override your custom CSS classes.
-To fix this, an order of uploading files in `darkly-compact.scss` is:
+To fix this, an order of uploading files using the dark theme as an example `rblind-dark-loader.scss` is:
 1. `@import "variables.darkly-compact";`
-2. `@import "rblind-theme.scss";` our custom code
-3. `@import "/lemmy-ui/node_modules/bootstrap/scss/bootstrap";`
-4. `@import "rblind-theme.scss";` our custom code
+2. `@import "./variables.rblind-dark";`
+3. `@import "./rblind-theme.scss";` our custom code
+4. `@import "/lemmy-ui/node_modules/bootstrap/scss/bootstrap";`
+5. `@import "rblind-theme.scss";` our custom code
 
 This will insert your custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
+Note that both `loader` files have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
 
 ## Theme Variables and Classes
 
