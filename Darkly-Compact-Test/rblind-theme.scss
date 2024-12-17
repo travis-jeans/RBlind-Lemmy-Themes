@@ -89,6 +89,8 @@ small, .small {
   color: var(--bs-gray-200) !important;
 }
 
+
+
 // reduce padding on posts
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
@@ -204,6 +206,12 @@ a[title="sorting help"] .icon,
 .navbar,
 .nav-link {
 color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
+border-color: var(--bs-white);
+}
+
+// fix low contrast on light theme nav link hover
+.nav-link:hover, .nav-link:focus {
+  color: var(--bs-gray-200);
 }
 
 .btn:disabled, fieldset:disabled .btn {

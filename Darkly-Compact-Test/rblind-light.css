@@ -171,6 +171,11 @@ a[title="sorting help"] .icon,
 .navbar,
 .nav-link {
   color: rgba(var(--bs-white-rgb), 0.8);
+  border-color: var(--bs-white);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--bs-gray-200);
 }
 
 .btn:disabled, fieldset:disabled .btn {
@@ -12538,6 +12543,11 @@ a[title="sorting help"] .icon,
 .navbar,
 .nav-link {
   color: rgba(var(--bs-white-rgb), 0.8);
+  border-color: var(--bs-white);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--bs-gray-200);
 }
 
 .btn:disabled, fieldset:disabled .btn {
