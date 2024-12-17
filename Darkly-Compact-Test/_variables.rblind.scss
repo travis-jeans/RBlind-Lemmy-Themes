@@ -1,0 +1,246 @@
+@import "./variables";
+
+// Colors
+$white: #fff; // bs-white, bs-emphasis, bs-table, border-white, text-light
+$gray-200: #ebebeb; // secondary button background
+$gray-300: #dee2e6; // bs-dark, bs-dark-emphasis and more
+$gray-500: #adb5bd; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
+$gray-600: #888; // blockquote footer, disabled form, disabled button, dropdown header colour
+$gray-700: #444; // card header background
+$gray-800: #303030; // card background, bs-light
+$gray-900: #222; // Background colour
+
+$blue: #375a7f; // bs-blue
+$red: #e74c3c; // bs-danger, danger red, auto converted to rgb values in custom theme
+$yellow: #f39c12; // bs-warning
+$green: #00bc8c; // form check input background and border
+$cyan: #3498db; // bs-info
+
+$primary: $green;
+$secondary: $gray-500;
+$success: $green;
+$dark: $gray-300;
+
+$body-color: $gray-300;
+$body-bg: $gray-900;
+$link-color: $success;
+$border-color: rgba($body-color, 0.25);
+$mark-bg: #333;
+$mark-bg-dark: #333;
+$text-muted: $gray-600;
+$yiq-contrasted-threshold: 175;
+
+/* 
+RBLIND THEME
+*/
+$font-family-sans-serif:
+Verdana, 
+sans-serif;
+$font-family-monospace:
+"Courier New", 
+monospace;
+$h1-font-size: 3.5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1.25rem;
+
+$font-size-root: 120%;
+
+:root {
+ --rblind-focus-indicator: #7764d8;
+ --gray-200-rgb: 221, 221, 221;
+ // Manual override of variables defined within the .btn classes
+// --bs-btn-focus-box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;  // overwrite focus indicators
+//--bs-btn-focus-shadow-rgb: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+}
+// Breakpoints
+// Override default BT variables:
+$grid-breakpoints: (
+        xs: 0,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px,
+        xl: 1900px,
+        xxl: 2200px
+);
+
+// override default BT container sizes
+$container-max-widths: (
+        sm: 960px,
+        md: 1140px,
+        lg: 1610px,
+        xl: 2200,
+        xxl: 2400
+);
+
+// $navbar-brand-padding-y: 0.25rem;
+
+
+// rBlind Colours
+// Colors
+$white: #eeeeeeff; // bs-white, bs-emphasis, bs-table, border-white, text-light
+$gray-200: #ddddddff; // secondary button background
+$gray-300: #ccccccff; // bs-dark, bs-dark-emphasis and more
+$gray-500: #bbbbbbff; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
+$gray-600: #676767ff; // blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray
+$gray-700: #242424ff; // card header background
+$gray-800: #131313ff; // card background, bs-light
+$gray-900: #030303ff; // Background colour
+
+$blue: #77aaddff; // bs-blue
+$red: #ffaabbff; // bs-danger, danger red, auto converted to rgb values in custom theme
+$yellow: #eedd88ff; // bs-warning
+$green: #44bb99ff; // form check input background and border
+$cyan: #6fcfffff; // bs-info
+$orange: #ee8866ff;
+$teal: #bbcc33ff; // more green than teal
+
+$primary: $green;
+$secondary: $gray-500;
+$success: $green;
+$dark: $gray-300;
+
+$body-color: $gray-300;
+$body-bg: $gray-900;
+$link-color: $cyan;
+$border-color: rgba($body-color, 0.25);
+$mark-bg: #333;
+$mark-bg-dark: #333;
+$text-muted: $gray-600;
+$yiq-contrasted-threshold: 175;
+
+/* Redefine opacity effects */
+/*
+.link-opacity-10 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-10-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-25 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-25-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-50 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-50-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-75 {
+  --bs-link-opacity: 0.75;
+}
+
+.link-opacity-75-hover:hover {
+  --bs-link-opacity: 0.75;
+}
+
+.link-opacity-100 {
+  --bs-link-opacity: 1;
+}
+
+.link-opacity-100-hover:hover {
+  --bs-link-opacity: 1;
+}*/
+
+/*
+DARKLY
+*/
+$card-cap-bg: $gray-700;
+$card-bg: $gray-800;
+
+$navbar-padding-y: 1rem;
+$navbar-dark-color: rgba($white, 0.6);
+$navbar-dark-hover-color: $white;
+$navbar-light-color: rgba($white, 0.6);
+$navbar-light-hover-color: $white;
+$navbar-light-active-color: $white;
+$navbar-light-toggler-border-color: rgba($gray-900, 0.1);
+$navbar-light-brand-color: $white;
+$navbar-light-brand-hover-color: $navbar-light-brand-color;
+
+$nav-link-padding-x: 2rem;
+$nav-link-disabled-color: $gray-500;
+
+$nav-tabs-border-color: $gray-700;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color $nav-tabs-border-color
+  transparent;
+$nav-tabs-link-active-color: $white;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color
+  $nav-tabs-border-color transparent;
+
+$input-bg: $gray-700;
+$input-color: $white;
+$input-disabled-bg: darken($gray-700, 10%);
+$input-border-color: $body-bg;
+$input-group-addon-color: $gray-500;
+$input-group-addon-bg: $gray-700;
+
+$hr-border-color: rgba($body-color, 0.25);
+
+$table-border-color: $gray-700;
+
+$custom-file-color: $gray-500;
+$custom-file-border-color: $body-bg;
+
+$dropdown-bg: $gray-900;
+$dropdown-border-color: $gray-700;
+$dropdown-divider-bg: $gray-700;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary;
+
+$pagination-color: $white;
+$pagination-bg: $success;
+$pagination-border-width: 0;
+$pagination-border-color: transparent;
+$pagination-hover-color: $white;
+$pagination-hover-bg: lighten($success, 10%);
+$pagination-hover-border-color: transparent;
+$pagination-active-bg: $pagination-hover-bg;
+$pagination-active-border-color: transparent;
+$pagination-disabled-color: $white;
+$pagination-disabled-bg: darken($success, 15%);
+$pagination-disabled-border-color: transparent;
+
+$jumbotron-bg: $gray-800;
+$popover-bg: $gray-800;
+$popover-header-bg: $gray-700;
+$toast-background-color: $gray-700;
+$toast-header-background-color: $gray-800;
+$modal-content-bg: $gray-800;
+$modal-content-border-color: $gray-700;
+$modal-header-border-color: $gray-700;
+$progress-bg: $gray-700;
+$list-group-bg: $gray-800;
+$list-group-border-color: $gray-700;
+$list-group-hover-bg: $gray-700;
+$breadcrumb-bg: $gray-700;
+$close-color: $white;
+$close-text-shadow: none;
+$pre-color: inherit;
+$custom-select-bg: $gray-700;
+$custom-select-color: $white;
+$light: $gray-800;
+
+// Custom RBlind Colours
+$box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; //--bs-btn-focus-box-shadow default
+$focus-ring-color: var(--rblind-focus-indicator);
+$form-check-input-checked-color: $gray-900; // change checkbox check from white to black
+$dropdown-link-active-color: $gray-900;
+$dropdown-link-active-bg: $gray-200;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-hover-color: $gray-900;
+$code-color: $yellow;
+$border-color: $gray-500 !important;
+
