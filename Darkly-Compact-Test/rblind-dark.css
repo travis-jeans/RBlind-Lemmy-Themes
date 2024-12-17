@@ -77,6 +77,10 @@ small, .small {
   background-color: var(--bs-gray-800) !important;
 }
 
+.card .btn-outline-dark {
+  color: var(--bs-gray-200) !important;
+}
+
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
 }
@@ -12439,6 +12443,10 @@ small, .small {
 .card, .card-body {
   color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
+}
+
+.card .btn-outline-dark {
+  color: var(--bs-gray-200) !important;
 }
 
 .post-listing {

@@ -478,6 +478,9 @@ color: var(--bs-info);
 - Fix text decoration contrast on light mode `.link-dark:hover, .link-dark:focus {
     text-decoration-color: var(--bs-gray-200) !important;
   }`
+  - Fix poor contrasting buttons on Light mode. Added `.card .btn-outline-dark {
+  color: var(--bs-gray-200) !important;
+}`
 
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.

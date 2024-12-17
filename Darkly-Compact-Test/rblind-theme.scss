@@ -85,6 +85,10 @@ small, .small {
   background-color: var(--bs-gray-800) !important;
 }
 
+.card .btn-outline-dark {
+  color: var(--bs-gray-200) !important;
+}
+
 // reduce padding on posts
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
