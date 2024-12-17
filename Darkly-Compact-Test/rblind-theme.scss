@@ -378,6 +378,11 @@ nav ul#navbarIcons a.nav-link {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
+// give form controls an outline to meet 3:1 contrast requirement
+.form-control {
+  border: var(--bs-border-width) solid var(--bs-gray-600); // 100 higher than the checkbox outline - may be too low when disabled
+}
+
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);

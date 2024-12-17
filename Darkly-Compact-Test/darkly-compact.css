@@ -381,6 +381,10 @@ nav ul#navbarIcons a.nav-link {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
+.form-control {
+  border: var(--bs-border-width) solid var(--bs-gray-600);
+}
+
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
@@ -660,7 +664,7 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   --bs-highlight-bg: #333;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: rgba(204, 204, 204, 0.25);
+  --bs-border-color: #bbbbbb !important;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.375rem;
   --bs-border-radius-sm: 0.25rem;
@@ -12707,6 +12711,10 @@ nav ul#navbarIcons a.nav-link {
 
 .btn:focus-visible {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+}
+
+.form-control {
+  border: var(--bs-border-width) solid var(--bs-gray-600);
 }
 
 .form-select:focus,

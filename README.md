@@ -434,6 +434,10 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
   opacity: 0.8;
   font-style: italic;
 }`
+- Gave checkboxes a light outline. This is the lowest colour you can go without the disabled checkbox outline style dropping below 3:1 contrast. `$border-color: $gray-500 !important;`
+- Give form controls an outline to meet 3:1 contrast requirement. Added `.form-control {
+  border: var(--bs-border-width) solid var(--bs-gray-600); // 100 higher than the checkbox outline - may be too low when disabled
+}`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
