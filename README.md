@@ -63,7 +63,6 @@ Once you have made your desired changes to the scss variables, run one of the fo
 1. `sass rblind-light-loader.scss rblind-light.css`
 2. `sass rblind-dark-loader.scss rblind-dark.css`
 
-
 ### Order of Inheritance
 
 The `loader` files will import variables to be added to the output CSS file.
