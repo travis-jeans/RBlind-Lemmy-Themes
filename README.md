@@ -177,6 +177,7 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
 - Overwrite the colour of the focus indicator on form controls. Added `.form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Change the focus colour and add a focus indicator to tabs and buttons that previously had no focus indicator like the Posts/Comments and Show Hidden Posts / Hide Hidden Posts tabs. Added `.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
@@ -463,6 +464,12 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 }`
 - Give placeholder text a higher contrast to the background. Added `.form-control::placeholder {
   color: var(--bs-gray-500);
+}`
+- Override :dark or :light theme link colour variables. Added `a {
+color: var(--bs-info);
+}`
+- Fix bug in light mode where post titles and links become invisible due to a white color. Added `.link-dark {
+  color: var(--bs-gray-200) !important;
 }`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.

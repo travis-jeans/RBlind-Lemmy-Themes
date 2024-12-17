@@ -1,5 +1,5 @@
 @import "./variables";
-@import "./variables.darkly";
+@import "./variables.litely";
 
 /* 
 RBLIND THEME
@@ -21,8 +21,8 @@ $font-size-root: 120%;
 
 :root {
  --rblind-focus-indicator: #7764d8;
- --gray-200-rgb: 221, 221, 221;
- --icon-outline-opacity: 0.5;
+ --gray-200-rgb: 21, 21, 21;
+ --icon-outline-opacity: 0.7;
  // Manual override of variables defined within the .btn classes
 // --bs-btn-focus-box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;  // overwrite focus indicators
 //--bs-btn-focus-shadow-rgb: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
@@ -52,27 +52,29 @@ $container-max-widths: (
 
 // rBlind Colours
 // Colors
-$white: #eeeeeeff; // bs-white, bs-emphasis, bs-table, border-white, text-light
-$gray-200: #ddddddff; // secondary button background
-$gray-300: #ccccccff; // bs-dark, bs-dark-emphasis and more
-$gray-500: #bbbbbbff; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
+$white: #030303ff; // bs-white, bs-emphasis, bs-table, border-white, text-light
+$gray-200: #151515ff; // secondary button background
+$gray-300: #272727ff; // bs-dark, bs-dark-emphasis and more
+$gray-500: #393939ff; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
 $gray-600: #676767ff; // blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray
-$gray-700: #242424ff; // card header background
-$gray-800: #131313ff; // card background, bs-light
-$gray-900: #030303ff; // Background colour
+$gray-700: #c9c9c9ff; // card header background
+$gray-800: #dbdbdbff; // card background, bs-light
+$gray-900: #edededff; // Background colour
+$black: #ffffffff;
 
-$blue: #77aaddff; // bs-blue
-$red: #ffaabbff; // bs-danger, danger red, auto converted to rgb values in custom theme
-$yellow: #eedd88ff; // bs-warning
-$green: #44bb99ff; // form check input background and border
-$cyan: #6fcfffff; // bs-info
-$orange: #ee8866ff;
-$teal: #bbcc33ff; // more green than teal
+$blue: #332288ff; // bs-blue
+$red: #882255ff; // bs-danger, danger red, auto converted to rgb values in custom theme
+$yellow: #5f5525ff; // bs-warning
+$green: #0e652bff; // form check input background and border
+$cyan: #1b3e76; // bs-info
+$info: $cyan;
+$orange: #7c3e49ff;
+$teal: #1f4d45ff; // more green than teal
 
 $primary: $green;
-$secondary: $gray-500;
+$secondary: $gray-200; // changed for light
 $success: $green;
-$dark: $gray-300;
+// $secondary-color: $secondary !important; // causing bugs with icon
 
 $body-color: $gray-300;
 $body-bg: $gray-900;
@@ -80,7 +82,6 @@ $link-color: $cyan;
 $border-color: rgba($body-color, 0.25);
 $mark-bg: #333;
 $mark-bg-dark: #333;
-$text-muted: $gray-600;
 $yiq-contrasted-threshold: 175;
 
 // Custom RBlind Colours
@@ -93,4 +94,4 @@ $dropdown-link-hover-bg: $gray-200;
 $dropdown-link-hover-color: $gray-900;
 $code-color: $yellow;
 $border-color: $gray-500 !important;
-
+$nav-tabs-link-active-color: $white; // for light theme only

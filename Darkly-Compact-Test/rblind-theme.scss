@@ -141,7 +141,7 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
+  outline: 1px solid rgba(var(--gray-200-rgb), var(--icon-outline-opacity)) !important;
 }
 
 // Fix box model of the icon in the inbox and round the outline
@@ -156,6 +156,11 @@ a[title="sorting help"] .icon,
 // color is determined by fill: currentColor which points to black on this particular icon for some reason
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
   color: rgba(var(--gray-200-rgb), 0.75); 
+}
+
+// fix text-muted which is too light on light theme
+.text-muted {
+  color: var(--bs-secondary-color) !important;
 }
 
 // remove padding from the navbar toggler
@@ -177,6 +182,11 @@ a[title="sorting help"] .icon,
 // Change visited link colour due to low contrast default is --bs-gray
 .post-title a:visited:not(:hover) {
   color: var(--bs-gray-500) !important;
+}
+
+// fix bug in light mode where post titles and links become invisible due to a white color
+.link-dark {
+  color: var(--bs-gray-200) !important;
 }
 
 // change hover link colours
@@ -239,11 +249,6 @@ nav a.nav-link .icon {
 // increase size of the alone checkbox on Create Community page
 .form-check > input#community-only-mods-can-post[type=checkbox] {
   padding: 22px; // half of minimum AAA target size 44px
-}
-
-// make the down arrow on the dropdown select buttons white instead of gray
-.form-select {
-background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 // change Browse... button
@@ -395,6 +400,12 @@ nav ul#navbarIcons a.nav-link {
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
+  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
+}
+
+// to prevent :dark or :light theme overwrite
+a {
+color: var(--bs-info);
 }
 
 .placeholder {
