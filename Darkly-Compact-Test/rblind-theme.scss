@@ -71,9 +71,13 @@ small, .small {
   font-size: 1.25rem !important;
 }
 
-.post-listing p {
+.post-listing p  {
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
+}
+
+.card-text {
+  line-height: 1.5em;
 }
 
 // reduce padding on posts
@@ -185,6 +189,7 @@ color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
   background-color: var(--bs-gray-300);
+  color: var(--bs-black) !important; // prevent overwriting by other classes
 }
 
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {

@@ -108,6 +108,10 @@ The file `_variables.sccs` has the arguments:
   line-height: 1.5em !important;
   margin-bottom: 1.5em !important;
 }`
+- Increase the line height of post cards as they are wrapped in `<div>` tags not `<p>` tags. Added:
+`.card-text {
+  line-height: 1.5em;
+}`
 
 ### Links
 #### Main

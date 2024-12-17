@@ -111,6 +111,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.card-text {
+  line-height: 1.5em;
+}
+
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
 }
@@ -197,6 +201,7 @@ a[title="sorting help"] .icon,
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
   background-color: var(--bs-gray-300);
+  color: var(--bs-black) !important;
 }
 
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
@@ -12451,6 +12456,10 @@ small, .small {
   margin-bottom: 1.5em !important;
 }
 
+.card-text {
+  line-height: 1.5em;
+}
+
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
 }
@@ -12537,6 +12546,7 @@ a[title="sorting help"] .icon,
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
   background-color: var(--bs-gray-300);
+  color: var(--bs-black) !important;
 }
 
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
