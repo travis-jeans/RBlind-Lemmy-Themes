@@ -187,6 +187,7 @@ a[title="sorting help"] .icon,
 // fix bug in light mode where post titles and links become invisible due to a white color
 .link-dark {
   color: var(--bs-gray-200) !important;
+  text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
 }
 
 // change hover link colours
@@ -616,6 +617,11 @@ a.person-listing + .btn,
   // make post title link underline and link post link underline the same as the text when visited
   .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
     text-decoration-color: var(--bs-gray) !important; // the visited underline is otherwise not the same colour as the text
+  }
+
+  // Fix text decoration contrast on light mode
+  .link-dark:hover, .link-dark:focus {
+    text-decoration-color: var(--bs-gray-200) !important;
   }
 
   // make sure the toggle button in the sidebar "Subscribed" does not overflow the container

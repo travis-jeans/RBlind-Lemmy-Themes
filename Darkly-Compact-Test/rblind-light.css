@@ -155,6 +155,7 @@ a[title="sorting help"] .icon,
 
 .link-dark {
   color: var(--bs-gray-200) !important;
+  text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-dark:hover, .link-dark:focus,
@@ -528,6 +529,10 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
   text-decoration-color: var(--bs-gray) !important;
+}
+
+.link-dark:hover, .link-dark:focus {
+  text-decoration-color: var(--bs-gray-200) !important;
 }
 
 #sidebarSubscribedHeader {
@@ -12512,6 +12517,7 @@ a[title="sorting help"] .icon,
 
 .link-dark {
   color: var(--bs-gray-200) !important;
+  text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-dark:hover, .link-dark:focus,
@@ -12885,6 +12891,10 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
 
 .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
   text-decoration-color: var(--bs-gray) !important;
+}
+
+.link-dark:hover, .link-dark:focus {
+  text-decoration-color: var(--bs-gray-200) !important;
 }
 
 #sidebarSubscribedHeader {

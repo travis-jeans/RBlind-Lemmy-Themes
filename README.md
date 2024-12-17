@@ -470,7 +470,12 @@ color: var(--bs-info);
 }`
 - Fix bug in light mode where post titles and links become invisible due to a white color. Added `.link-dark {
   color: var(--bs-gray-200) !important;
+    text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
 }`
+- Fix text decoration contrast on light mode `.link-dark:hover, .link-dark:focus {
+    text-decoration-color: var(--bs-gray-200) !important;
+  }`
+
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
