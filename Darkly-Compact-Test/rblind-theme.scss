@@ -379,13 +379,21 @@ nav ul#navbarIcons a.nav-link {
 }
 
 // give form controls an outline to meet 3:1 contrast requirement
-.form-control {
-  border: var(--bs-border-width) solid var(--bs-gray-600); // 100 higher than the checkbox outline - may be too low when disabled
+.form-control, .form-select {
+  border: var(--bs-border-width) solid var(--bs-gray-600) !important; // 100 higher than the checkbox outline - may be too low when disabled
 }
 
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
+}
+
+.placeholder {
+  opacity: 1; // default is 0.5
+}
+
+.form-control::placeholder {
+  color: var(--bs-gray-500);
 }
 
 // default is var(--bs-btn-focus-box-shadow)

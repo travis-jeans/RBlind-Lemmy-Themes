@@ -381,13 +381,21 @@ nav ul#navbarIcons a.nav-link {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
-.form-control {
-  border: var(--bs-border-width) solid var(--bs-gray-600);
+.form-control, .form-select {
+  border: var(--bs-border-width) solid var(--bs-gray-600) !important;
 }
 
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
+}
+
+.placeholder {
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: var(--bs-gray-500);
 }
 
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
@@ -12713,13 +12721,21 @@ nav ul#navbarIcons a.nav-link {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
-.form-control {
-  border: var(--bs-border-width) solid var(--bs-gray-600);
+.form-control, .form-select {
+  border: var(--bs-border-width) solid var(--bs-gray-600) !important;
 }
 
 .form-select:focus,
 .form-control:focus {
   border-color: var(--rblind-focus-indicator);
+}
+
+.placeholder {
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: var(--bs-gray-500);
 }
 
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {

@@ -438,6 +438,12 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Give form controls an outline to meet 3:1 contrast requirement. Added `.form-control {
   border: var(--bs-border-width) solid var(--bs-gray-600); // 100 higher than the checkbox outline - may be too low when disabled
 }`
+- Make placeholder colours opaque since many placeholders have multiple instances of reducing opacity. Added `.placeholder {
+  opacity: 1; // default is 0.5
+}`
+- Give placeholder text a higher contrast to the background. Added `.form-control::placeholder {
+  color: var(--bs-gray-500);
+}`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
