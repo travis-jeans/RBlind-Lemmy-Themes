@@ -71,6 +71,10 @@ small, .small {
   line-height: 1.5em;
 }
 
+.card {
+  background-color: var(--bs-gray-800) !important;
+}
+
 .post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
 }
@@ -12414,6 +12418,10 @@ small, .small {
 
 .card-text {
   line-height: 1.5em;
+}
+
+.card {
+  background-color: var(--bs-gray-800) !important;
 }
 
 .post-listing {

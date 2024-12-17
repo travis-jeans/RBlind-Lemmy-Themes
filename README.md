@@ -33,6 +33,10 @@ This is a backup of the default Darkly Compact theme.
 
 Make an additional copy and rename it to something else. This duplicate directory will be the one we edit.
 
+### Required files
+- The default `darkly-compact.css` and its variable and scss files
+- The default `darkly.css` and its variable and scss files
+
 ### Paths
 
 So the sass command will build, all paths need to be pointing to the correct locations.
@@ -42,11 +46,23 @@ In line 59, `darkly-compact.scss` change the relative location of the bootstrap 
 From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
 
 **IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
+### Theme Files
+#### Dark
+- rblind-theme.scss
+- rblind-dark-loader.scss
+- _variables.rblind-dark.scss
 
-### Building the output CSS file
+#### Light
+- rblind-theme.scss
+- rblind-light-loader.scss
+- _variables.rblind-light.scss
 
-Once you have made your desired changes to the scss variables, run the following command from the same directory using your terminal: 
-`sass darkly-compact.scss darkly-compact.css`
+#### Building the output CSS file
+
+Once you have made your desired changes to the scss variables, run one of the following commands from the same directory using your terminal: 
+1. `sass rblind-light-loader.scss rblind-light.css`
+2. `sass rblind-dark-loader.scss rblind-dark.css`
+
 
 ### Order of Inheritance
 
@@ -564,6 +580,9 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   color: var(--bs-white);
   background-color: var(--bs-gray-800);
 }`
+- Darken the card background (used behind post meta summaries and side panel text area) `.card {
+  background-color: var(--bs-gray-800) !important;
+}`
 
 
 ### Breakpoints
@@ -597,4 +616,13 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
       ? colorList[this.props.node.depth % colorList.length]
       : colorList[0];` Colour can be changed by altering colorList values
 . Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts`
+
+### Bugs
+- Adding a focus indicator to `.form-select` added a focus indicator to the Language Select form in Settings however this also applies the focus indicator colour to the background of the selected rows, which leads to low contrast. Cannot be corrected with: `.form-select#language-select:focus,
+.form-select#language-select:focus-visible, 
+.form-select#language-select:focus-within {
+  background: var(--bs-gray-900);
+  box-shadow: none !important;
+}
+`
 
