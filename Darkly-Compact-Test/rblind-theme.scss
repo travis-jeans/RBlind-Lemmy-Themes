@@ -182,13 +182,6 @@ a[title="sorting help"] .icon,
 color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
 }
 
-// .d-flex is the name of the div container with the style buttons, other classes include flex-wrap, border-bottom, d-flex
-// Add a border radius only to the top left corner so it does not overlap with the text box area.
-// Needs important as .rounded-0 sets radius to 0 as important
-.markdown-textarea .d-flex button:first-child {
-  border-top-left-radius: var(--bs-border-radius) !important;
-}
-
 // The Language Select select option buttons can be made larger as they are set to overflow, but others cannot be changed.
 select option {
   padding: 0.7rem 0.7rem !important;

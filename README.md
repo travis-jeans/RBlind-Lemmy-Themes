@@ -302,9 +302,6 @@ nav a.nav-link .icon {
   height: 1em;
   font-size: 1.2em !important;
 }` **Note** This is dissociated from the above change to `.icon` as this class is shared by buttons without icons and buttons with icons. If padding was added to all `.icon`s, buttons containing icons would have a duplicate amount of padding.
-- Add a border radius only to the top left corner of the post style buttons so it does not overlap with the text box area. Needs important as .rounded-0 sets radius to 0 as important. Added `.markdown-textarea .d-flex button:first-child {
-  border-top-left-radius: var(--bs-border-radius) !important;
-}`
 
 #### Spacing
 

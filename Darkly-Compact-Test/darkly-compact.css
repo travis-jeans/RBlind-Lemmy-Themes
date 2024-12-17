@@ -194,10 +194,6 @@ a[title="sorting help"] .icon,
   color: rgba(var(--bs-white-rgb), 0.8);
 }
 
-.markdown-textarea .d-flex button:first-child {
-  border-top-left-radius: var(--bs-border-radius) !important;
-}
-
 select option {
   padding: 0.7rem 0.7rem !important;
 }
@@ -12513,10 +12509,6 @@ a[title="sorting help"] .icon,
 .navbar,
 .nav-link {
   color: rgba(var(--bs-white-rgb), 0.8);
-}
-
-.markdown-textarea .d-flex button:first-child {
-  border-top-left-radius: var(--bs-border-radius) !important;
 }
 
 select option {
