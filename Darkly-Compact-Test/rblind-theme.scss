@@ -176,6 +176,11 @@ a[title="sorting help"] .icon,
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
 }
+// .nav-link
+.navbar,
+.nav-link {
+color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
+}
 
 // .d-flex is the name of the div container with the style buttons, other classes include flex-wrap, border-bottom, d-flex
 // Add a border radius only to the top left corner so it does not overlap with the text box area.

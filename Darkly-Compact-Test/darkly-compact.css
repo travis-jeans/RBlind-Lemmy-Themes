@@ -189,6 +189,11 @@ a[title="sorting help"] .icon,
   color: var(--bs-gray-200) !important;
 }
 
+.navbar,
+.nav-link {
+  color: rgba(var(--bs-white-rgb), 0.8);
+}
+
 .markdown-textarea .d-flex button:first-child {
   border-top-left-radius: var(--bs-border-radius) !important;
 }
@@ -12503,6 +12508,11 @@ a[title="sorting help"] .icon,
 .link-dark:hover, .link-dark:focus,
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
+}
+
+.navbar,
+.nav-link {
+  color: rgba(var(--bs-white-rgb), 0.8);
 }
 
 .markdown-textarea .d-flex button:first-child {

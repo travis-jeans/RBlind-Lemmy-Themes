@@ -441,6 +441,10 @@ Change link visited colours for post titles.
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
 }`
+- Improve colour contrast on navigation links when not hovered. Added `.navbar,
+.nav-link {
+color: rgba(var(--bs-white-rgb), 0.8);
+}`
 
 ###### Focus
 - Added ` --rblind-focus-indicator: #7764d8;`
