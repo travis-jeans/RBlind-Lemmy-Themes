@@ -18,7 +18,7 @@ The Lemmy rBlind theme is based off the Darkly Compact theme.
 
 ### Setting Up Your Working Directory
 
-To work locally in a different directory to the lemmy-ui files, copy the following files and paste them in your chosen directory (e.g. Darkly-Compact):
+To work locally in a different directory to the lemmy-ui files, copy the following files for darkly-compact and litely-compact and paste them in your chosen directory (e.g. Darkly-Compact):
 
 - `darkly-compact.css`    
 - `darkly-compact.cssls.map`  
@@ -29,7 +29,7 @@ To work locally in a different directory to the lemmy-ui files, copy the followi
 - `_variables.darkly-compact.scss`  
 - `_variables.scss`
 
-This is a backup of the default Darkly Compact theme.
+This is a backup of the default Darkly Compact theme. Do the same for the Litely Compact theme for the Light mode.
 
 Make an additional copy and rename it to something else. This duplicate directory will be the one we edit.
 
@@ -37,15 +37,6 @@ Make an additional copy and rename it to something else. This duplicate director
 - The default `darkly-compact.css` and its variable and scss files
 - The default `darkly.css` and its variable and scss files
 
-### Paths
-
-So the sass command will build, all paths need to be pointing to the correct locations.
-
-In line 59, `darkly-compact.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
-
-From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
-
-**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
 ### Theme Files
 #### Dark
 - rblind-theme.scss
@@ -56,6 +47,16 @@ From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your
 - rblind-theme.scss
 - rblind-light-loader.scss
 - _variables.rblind-light.scss
+
+### Paths
+
+So the sass command will build, all paths need to be pointing to the correct locations.
+
+In line 5, `rblind-dark-loader.scss` or `rblind-light-loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
+
+From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
+
+**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
 
 #### Building the output CSS file
 
