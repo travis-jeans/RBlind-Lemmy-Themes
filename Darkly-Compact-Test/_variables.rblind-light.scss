@@ -53,10 +53,10 @@ $container-max-widths: (
 // rBlind Colours
 // Colors
 $white: #030303ff; // bs-white, bs-emphasis, bs-table, border-white, text-light
-$gray-200: #151515ff; // secondary button background
-$gray-300: #272727ff; // bs-dark, bs-dark-emphasis and more
-$gray-500: #393939ff; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
-$gray-600: #676767ff; // blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray
+$gray-200: #131313ff; // secondary button background
+$gray-300: #242424ff; // bs-dark, bs-dark-emphasis and more
+$gray-500: #353535ff; // bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc
+$gray-600: #464646ff; // blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray
 $gray-700: #c9c9c9ff; // card header background
 $gray-800: #dbdbdbff; // card background, bs-light
 $gray-900: #edededff; // Background colour
@@ -65,7 +65,7 @@ $black: #ffffffff;
 $blue: #332288ff; // bs-blue
 $red: #530d1aff; // bs-danger, danger red, auto converted to rgb values in custom theme
 $yellow: #5f5525ff; // bs-warning
-$green: #0e652bff; // form check input background and border
+$green: #0c5625ff; // form check input background and border
 $cyan: #1b3e76; // bs-info
 $info: $cyan;
 $orange: #7c3e49ff;
