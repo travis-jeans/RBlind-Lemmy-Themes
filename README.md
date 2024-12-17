@@ -424,6 +424,11 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Change check in checkbox to black instead of white due to colour contrast issues. Added `$form-check-input-checked-color: $gray-900;`
 - Make custom code yellow instead of a poorly contrasting red (note: may be overwritten by Atom variables): `$code-color: $yellow;`
 - Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
+- Changed the background color of disabled buttons and made the text italic as an additional visual indicator. Added `
+.btn:disabled, fieldset:disabled .btn {
+  font-style: italic;
+  background-color: var(--bs-gray-300);
+}`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`

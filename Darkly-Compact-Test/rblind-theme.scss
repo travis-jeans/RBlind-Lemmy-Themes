@@ -182,6 +182,11 @@ a[title="sorting help"] .icon,
 color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
 }
 
+.btn:disabled, fieldset:disabled .btn {
+  font-style: italic;
+  background-color: var(--bs-gray-300);
+}
+
 // The Language Select select option buttons can be made larger as they are set to overflow, but others cannot be changed.
 select option {
   padding: 0.7rem 0.7rem !important;

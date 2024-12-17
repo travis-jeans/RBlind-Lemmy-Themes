@@ -194,6 +194,11 @@ a[title="sorting help"] .icon,
   color: rgba(var(--bs-white-rgb), 0.8);
 }
 
+.btn:disabled, fieldset:disabled .btn {
+  font-style: italic;
+  background-color: var(--bs-gray-300);
+}
+
 select option {
   padding: 0.7rem 0.7rem !important;
 }
@@ -12509,6 +12514,11 @@ a[title="sorting help"] .icon,
 .navbar,
 .nav-link {
   color: rgba(var(--bs-white-rgb), 0.8);
+}
+
+.btn:disabled, fieldset:disabled .btn {
+  font-style: italic;
+  background-color: var(--bs-gray-300);
 }
 
 select option {
