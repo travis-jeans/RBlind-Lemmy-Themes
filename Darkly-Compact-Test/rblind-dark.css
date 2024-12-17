@@ -250,20 +250,20 @@ code.hljs {
 }
 
 .hljs {
-  color: var(--bs-gray-200);
-  background: var(--bs-gray-700);
+  color: var(--bs-gray-200) !important;
+  background: var(--bs-black) !important;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: var(--bs-gray-600);
+  color: var(--bs-black) !important;
   font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-formula,
 .hljs-keyword {
-  color: var(--bs-teal);
+  color: var(--bs-teal) !important;
 }
 
 .hljs-deletion,
@@ -271,11 +271,11 @@ code.hljs {
 .hljs-section,
 .hljs-selector-tag,
 .hljs-subst {
-  color: var(--bs-red);
+  color: var(--bs-red) !important;
 }
 
 .hljs-literal {
-  color: var(--bs-cyan);
+  color: var(--bs-cyan) !important;
 }
 
 .hljs-addition,
@@ -283,7 +283,7 @@ code.hljs {
 .hljs-meta .hljs-string,
 .hljs-regexp,
 .hljs-string {
-  color: var(--bs-green);
+  color: var(--bs-green) !important;
 }
 
 .hljs-attr,
@@ -294,7 +294,7 @@ code.hljs {
 .hljs-template-variable,
 .hljs-type,
 .hljs-variable {
-  color: var(--bs-orange);
+  color: var(--bs-orange) !important;
 }
 
 .hljs-bullet,
@@ -303,13 +303,13 @@ code.hljs {
 .hljs-selector-id,
 .hljs-symbol,
 .hljs-title {
-  color: var(--bs-blue);
+  color: var(--bs-blue) !important;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title,
 .hljs-title.class_ {
-  color: var(--bs-yellow);
+  color: var(--bs-yellow) !important;
 }
 
 .hljs-emphasis {
@@ -474,6 +474,7 @@ a.person-listing + .btn,
 .thumbnail {
   width: 9rem;
   height: 9rem;
+  outline: 1px solid var(--bs-gray-600);
 }
 
 .post-score {
@@ -12623,20 +12624,20 @@ code.hljs {
 }
 
 .hljs {
-  color: var(--bs-gray-200);
-  background: var(--bs-gray-700);
+  color: var(--bs-gray-200) !important;
+  background: var(--bs-black) !important;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: var(--bs-gray-600);
+  color: var(--bs-black) !important;
   font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-formula,
 .hljs-keyword {
-  color: var(--bs-teal);
+  color: var(--bs-teal) !important;
 }
 
 .hljs-deletion,
@@ -12644,11 +12645,11 @@ code.hljs {
 .hljs-section,
 .hljs-selector-tag,
 .hljs-subst {
-  color: var(--bs-red);
+  color: var(--bs-red) !important;
 }
 
 .hljs-literal {
-  color: var(--bs-cyan);
+  color: var(--bs-cyan) !important;
 }
 
 .hljs-addition,
@@ -12656,7 +12657,7 @@ code.hljs {
 .hljs-meta .hljs-string,
 .hljs-regexp,
 .hljs-string {
-  color: var(--bs-green);
+  color: var(--bs-green) !important;
 }
 
 .hljs-attr,
@@ -12667,7 +12668,7 @@ code.hljs {
 .hljs-template-variable,
 .hljs-type,
 .hljs-variable {
-  color: var(--bs-orange);
+  color: var(--bs-orange) !important;
 }
 
 .hljs-bullet,
@@ -12676,13 +12677,13 @@ code.hljs {
 .hljs-selector-id,
 .hljs-symbol,
 .hljs-title {
-  color: var(--bs-blue);
+  color: var(--bs-blue) !important;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title,
 .hljs-title.class_ {
-  color: var(--bs-yellow);
+  color: var(--bs-yellow) !important;
 }
 
 .hljs-emphasis {
@@ -12847,6 +12848,7 @@ a.person-listing + .btn,
 .thumbnail {
   width: 9rem;
   height: 9rem;
+  outline: 1px solid var(--bs-gray-600);
 }
 
 .post-score {

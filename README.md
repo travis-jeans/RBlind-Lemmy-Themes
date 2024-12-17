@@ -228,9 +228,10 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   margin-left: 0% !important;
   margin-right: 25% !important;
 }`
-- Increase the size of the thumbnail in the home feed. Added `.thumbnail {
+- Increase the size of the thumbnail in the home feed and add an outline to help distinguish it from the surroundings. Added `.thumbnail {
   width: 9rem;
   height: 9rem;
+  outline: 1px solid var(--bs-gray-600);
 }`
 
 ### Layout
@@ -521,35 +522,35 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
   padding:3px 5px
 }`
 - Added `.hljs {
-  color: var(--bs-gray-200);
-  background: var(--bs-gray-700);
+  color: var(--bs-gray-200) !important;
+  background: var(--bs-black) !important;
 }`
 - Added `.hljs-comment,
 .hljs-quote {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-600) !important;
   font-style:italic
 }`
 - Added `.hljs-doctag,
 .hljs-formula,
 .hljs-keyword {
-  color: var(--bs-teal);
+  color: var(--bs-teal) !important;
 }`
 - Added `.hljs-deletion,
 .hljs-name,
 .hljs-section,
 .hljs-selector-tag,
 .hljs-subst {
-  color:var(--bs-red);
+  color:var(--bs-red) !important;
 }`
 - Added `.hljs-literal {
-  color:var(--bs-cyan);
+  color:var(--bs-cyan) !important;
 }`
 - Added `.hljs-addition,
 .hljs-attribute,
 .hljs-meta .hljs-string,
 .hljs-regexp,
 .hljs-string {
-  color: var(--bs-green);
+  color: var(--bs-green) !important;
 }`
 - Added `.hljs-attr,
 .hljs-number,
@@ -559,7 +560,7 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 .hljs-template-variable,
 .hljs-type,
 .hljs-variable {
-  color: var(--bs-orange);
+  color: var(--bs-orange) !important;
 }`
 - Added `.hljs-bullet,
 .hljs-link,
@@ -567,21 +568,21 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 .hljs-selector-id,
 .hljs-symbol,
 .hljs-title {
-  color: var(--bs-blue);
+  color: var(--bs-blue) !important;
 }`
 - Added `.hljs-built_in,
 .hljs-class .hljs-title,
 .hljs-title.class_ {
-  color: var(--bs-yellow);
+  color: var(--bs-yellow) !important;
 }`
 - Added `.hljs-emphasis {
-  font-style:italic
+  font-style:italic;
 }`
 - Added `.hljs-strong {
-  font-weight:700
+  font-weight:700;
 }`
 - Added `.hljs-link {
-  text-decoration:underline
+  text-decoration:underline;
 }`
 
 #### Overide
