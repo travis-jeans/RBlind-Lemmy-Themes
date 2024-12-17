@@ -202,16 +202,16 @@ a[title="sorting help"] .icon,
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
 }
-// .nav-link
+// fix poor contrast on navigation tabs Site Configuration page
 .navbar,
 .nav-link {
 color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
-border-color: var(--bs-white);
 }
 
 // fix low contrast on light theme nav link hover
 .nav-link:hover, .nav-link:focus {
   color: var(--bs-gray-200);
+  border-color: var(--bs-white) !important;
 }
 
 .btn:disabled, fieldset:disabled .btn {

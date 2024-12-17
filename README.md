@@ -481,10 +481,9 @@ color: var(--bs-info);
   - Fix poor contrasting buttons on Light mode. Added `.card .btn-outline-dark {
   color: var(--bs-gray-200) !important;
 }`
-- Fix poor contrasting tabs in Administrator Settings on Light mode. Added `.navbar,
-.nav-link {
-color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
-border-color: var(--bs-white);
+- Fix poor contrasting tabs in Administrator Settings on Light mode. Added `.nav-link:hover, .nav-link:focus {
+  color: var(--bs-gray-200);
+  border-color: var(--bs-white) !important;
 }`
 
 ###### Hover
