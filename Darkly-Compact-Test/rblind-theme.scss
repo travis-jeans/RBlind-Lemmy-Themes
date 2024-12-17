@@ -133,7 +133,7 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(--bs-gray-200-rgb 0.4) !important;
+  outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
 }
 
 // Fix box model of the icon in the inbox and round the outline
@@ -141,13 +141,13 @@ a[title="sorting help"] .icon,
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--bs-border-radius); // must refer to border-radius as --bs-border-radius
+  border-radius: var(--border-radius); // must refer to border-radius as --bs-border-radius
 }
 
 // Fix colour inheritance problem with the icon on the inbox page (show/hide svg which is missing a .btn class)
 // color is determined by fill: currentColor which points to black on this particular icon for some reason
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
-  color: rgba(--bs-gray-200-rgb, 0.75); 
+  color: rgba(var(--gray-200-rgb), 0.75); 
 }
 
 // remove padding from the navbar toggler
@@ -166,6 +166,16 @@ a[title="sorting help"] .icon,
   outline: 0rem !important;
 }
 
+// Change visited link colour due to low contrast default is --bs-gray
+.post-title a:visited:not(:hover) {
+  color: var(--bs-gray-500) !important;
+}
+
+// change hover link colours
+.link-dark:hover, .link-dark:focus,
+.link-primary:hover, .link-primary:focus {
+  color: var(--bs-gray-200) !important;
+}
 
 // .d-flex is the name of the div container with the style buttons, other classes include flex-wrap, border-bottom, d-flex
 // Add a border radius only to the top left corner so it does not overlap with the text box area.

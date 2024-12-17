@@ -4,8 +4,50 @@ RBLIND THEME
 */
 :root {
   --rblind-focus-indicator: #7764d8;
+  --gray-200-rgb: 221, 221, 221;
 }
 
+/* Redefine opacity effects */
+/*
+.link-opacity-10 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-10-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-25 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-25-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-50 {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-50-hover:hover {
+  --bs-link-opacity: 0.5 !important;
+}
+
+.link-opacity-75 {
+  --bs-link-opacity: 0.75;
+}
+
+.link-opacity-75-hover:hover {
+  --bs-link-opacity: 0.75;
+}
+
+.link-opacity-100 {
+  --bs-link-opacity: 1;
+}
+
+.link-opacity-100-hover:hover {
+  --bs-link-opacity: 1;
+}*/
 /*
 DARKLY
 */
@@ -114,17 +156,17 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(222, 226, 230, 0.4) !important;
+  outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--bs-border-radius);
+  border-radius: var(--border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
-  color: rgba(222, 226, 230, 0.75);
+  color: rgba(var(--gray-200-rgb), 0.75);
 }
 
 .navbar-toggler,
@@ -136,6 +178,15 @@ a[title="sorting help"] .icon,
 
 .navbar-toggler .icon {
   outline: 0rem !important;
+}
+
+.post-title a:visited:not(:hover) {
+  color: var(--bs-gray-500) !important;
+}
+
+.link-dark:hover, .link-dark:focus,
+.link-primary:hover, .link-primary:focus {
+  color: var(--bs-gray-200) !important;
 }
 
 .markdown-textarea .d-flex button:first-child {
@@ -587,11 +638,11 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #44bb99;
-  --bs-link-color-rgb: 68, 187, 153;
+  --bs-link-color: #6fcfff;
+  --bs-link-color-rgb: 111, 207, 255;
   --bs-link-decoration: none;
-  --bs-link-hover-color: rgb(54.4, 149.6, 122.4);
-  --bs-link-hover-color-rgb: 54, 150, 122;
+  --bs-link-hover-color: rgb(88.8, 165.6, 204);
+  --bs-link-hover-color-rgb: 89, 166, 204;
   --bs-code-color: #eedd88;
   --bs-highlight-color: #cccccc;
   --bs-highlight-bg: #333;
@@ -3728,7 +3779,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #676767;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: 0 0 0 #000;
-  --bs-btn-focus-shadow-rgb: 58, 159, 130;
+  --bs-btn-focus-shadow-rgb: 94, 176, 217;
   text-decoration: none;
 }
 .btn-link:focus-visible {
@@ -12421,17 +12472,17 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(222, 226, 230, 0.4) !important;
+  outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--bs-border-radius);
+  border-radius: var(--border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
-  color: rgba(222, 226, 230, 0.75);
+  color: rgba(var(--gray-200-rgb), 0.75);
 }
 
 .navbar-toggler,
@@ -12443,6 +12494,15 @@ a[title="sorting help"] .icon,
 
 .navbar-toggler .icon {
   outline: 0rem !important;
+}
+
+.post-title a:visited:not(:hover) {
+  color: var(--bs-gray-500) !important;
+}
+
+.link-dark:hover, .link-dark:focus,
+.link-primary:hover, .link-primary:focus {
+  color: var(--bs-gray-200) !important;
 }
 
 .markdown-textarea .d-flex button:first-child {

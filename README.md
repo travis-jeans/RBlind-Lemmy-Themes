@@ -281,7 +281,7 @@ a[title="sorting help"] .icon,
 .navbar-toggler .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
-  outline: 1px solid rgba(222, 226, 230, 0.4) !important;
+  outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
 }`
 - Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
@@ -292,7 +292,7 @@ a[title="sorting help"] .icon,
   outline: 0rem !important;
 }`
 - Fix colour inheritance problem with the icon on the inbox page (show/hide svg which is missing a .btn class). Color is determined by fill: currentColor which points to black on this particular icon for some reason. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
-  color: rgba(222, 226, 230, 0.75); 
+  color: rgba(var(--gray-200-rgb), 0.75);
 }`
 - Increased the size of icons when they behave as links. Added `.btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,
@@ -413,6 +413,7 @@ Root variables are defined in the `_variables` `scss` file.
 - Change `$gray-700` (card header background): `#242424ff;`
 - Change `$gray-800` (card background, bs-light): `#131313ff;`
 - Change `$gray-900` (background colour): `#030303ff;`
+- Add `--gray-200-rgb: 221, 221, 221;` to use the `gray-200` colour with opacity arguments with `rgba`
 ##### Hues
 For the dark theme, the colours are based on Paul Tol's Light palette except for `$cyan` which is an rBlind colour.
 - Change `$blue` `#77aaddff;`
@@ -425,12 +426,21 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 ##### Other
 - Change check in checkbox to black instead of white due to colour contrast issues. Added `$form-check-input-checked-color: $gray-900;`
 - Make custom code yellow instead of a poorly contrasting red (note: may be overwritten by Atom variables): `$code-color: $yellow;`
+- Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
 - Added `$dropdown-link-active-bg: $gray-200;`
 - Added `$dropdown-link-hover-bg: $gray-200;`
 - Added `$dropdown-link-hover-color: $gray-900;`
+Change link visited colours for post titles.
+- Change visited link colour due to low contrast default is --bs-gray. Added `.post-title a:visited:not(:hover) {
+  color: var(--bs-gray-500) !important;
+}`
+- Change hover link colours. Added `.link-dark:hover, .link-dark:focus,
+.link-primary:hover, .link-primary:focus {
+  color: var(--bs-gray-200) !important;
+}`
 
 ###### Focus
 - Added ` --rblind-focus-indicator: #7764d8;`
@@ -512,7 +522,7 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 }`
 
 #### Overide
-- Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select.sort-select {
+- Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select {
 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }`
 - Fix colour contrast issue on Browse... File selection button. Added `.form-control::file-selector-button {
