@@ -187,6 +187,12 @@ color: rgba(var(--bs-white-rgb), 0.8); // original opacity was 0.6
   background-color: var(--bs-gray-300);
 }
 
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  cursor: default;
+  opacity: 0.8; // default is 0.5
+  font-style: italic;
+}
+
 // The Language Select select option buttons can be made larger as they are set to overflow, but others cannot be changed.
 select option {
   padding: 0.7rem 0.7rem !important;

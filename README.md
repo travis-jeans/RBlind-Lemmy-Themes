@@ -429,6 +429,11 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
   font-style: italic;
   background-color: var(--bs-gray-300);
 }`
+- Make disabled checkbox labels italic and improve colour contrast. Added `.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  cursor: default;
+  opacity: 0.8;
+  font-style: italic;
+}`
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
