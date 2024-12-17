@@ -277,10 +277,10 @@ nav a.nav-link .icon {
 pre code.hljs {
   display:block;
   overflow-x:auto;
-  padding:1em
+  padding:1em;
 }
 code.hljs {
-  padding:3px 5px
+  padding:3px 5px;
 }
 .hljs {
   color: var(--bs-gray-200);
@@ -289,7 +289,7 @@ code.hljs {
 .hljs-comment,
 .hljs-quote {
   color: var(--bs-gray-600);
-  font-style:italic
+  font-style:italic;
 }
 .hljs-doctag,
 .hljs-formula,
@@ -337,13 +337,13 @@ code.hljs {
   color: var(--bs-yellow);
 }
 .hljs-emphasis {
-  font-style:italic
+  font-style:italic;
 }
 .hljs-strong {
-  font-weight:700
+  font-weight:700;
 }
 .hljs-link {
-  text-decoration:underline
+  text-decoration:underline;
 }
 
 
