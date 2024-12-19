@@ -197,11 +197,18 @@ a[title="sorting help"] .icon,
   text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
 }
 
+// change the link primary colour only for post titles
+.post-title .link-primary {
+  color: var(--bs-info) !important;
+}
+
+
 // change hover link colours
 .link-dark:hover, .link-dark:focus,
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
 }
+
 // fix poor contrast on navigation tabs Site Configuration page
 .navbar,
 .nav-link {

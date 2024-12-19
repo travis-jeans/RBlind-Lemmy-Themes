@@ -163,6 +163,10 @@ a[title="sorting help"] .icon,
   text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important;
 }
 
+.post-title .link-primary {
+  color: var(--bs-info) !important;
+}
+
 .link-dark:hover, .link-dark:focus,
 .link-primary:hover, .link-primary:focus {
   color: var(--bs-gray-200) !important;
@@ -12535,6 +12539,10 @@ a[title="sorting help"] .icon,
 .link-dark {
   color: var(--bs-gray-200) !important;
   text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.post-title .link-primary {
+  color: var(--bs-info) !important;
 }
 
 .link-dark:hover, .link-dark:focus,

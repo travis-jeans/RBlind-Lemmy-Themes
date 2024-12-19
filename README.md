@@ -487,6 +487,9 @@ color: var(--bs-info);
   color: var(--bs-gray-200);
   border-color: var(--bs-white) !important;
 }`
+- Change the link primary colour only for post titles (pinned posts have the .link-primary class while non-pinned posts have .link-dark). Added `.post-title .link-primary {
+  color: var(--bs-info) !important;
+}`
 
 ###### Hover
 Invert the colours on dropdown menu hovers or focus.
