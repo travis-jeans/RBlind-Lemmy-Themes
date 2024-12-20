@@ -256,6 +256,10 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   width: 70% !important;
 }
 }`
+- Left-align forms by removing the left margin. Added `.offset-lg-3 {
+  margin-left: 0% !important; // default is 25%
+}
+`
 - Make the main content area take up the whole screen at smaller screen sizes as the default behaviour of the compact layout adds white space. Added `@media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 100% !important;
