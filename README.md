@@ -650,13 +650,5 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
       ? colorList[this.props.node.depth % colorList.length]
       : colorList[0];` Colour can be changed by altering colorList values
 . Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts`
-
-### Bugs
-- Adding a focus indicator to `.form-select` added a focus indicator to the Language Select form in Settings however this also applies the focus indicator colour to the background of the selected rows, which leads to low contrast. Cannot be corrected with: `.form-select#language-select:focus,
-.form-select#language-select:focus-visible, 
-.form-select#language-select:focus-within {
-  background: var(--bs-gray-900);
-  box-shadow: none !important;
-}
-`
+- Cannot change the background colour of currently selected `select option` in the Language Select in Settings which leads to a low contrast colour combination.
 
