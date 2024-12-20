@@ -389,11 +389,6 @@ a {
   color: var(--bs-gray-500);
 }
 
-.alert {
-  color: var(--bs-warning-text-emphasis) !important;
-  background-color: var(--bs-warning-bg-subtle);
-}
-
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
@@ -12770,11 +12765,6 @@ a {
 
 .form-control::placeholder {
   color: var(--bs-gray-500);
-}
-
-.alert {
-  color: var(--bs-warning-text-emphasis) !important;
-  background-color: var(--bs-warning-bg-subtle);
 }
 
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
