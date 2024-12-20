@@ -75,6 +75,7 @@ small, .small {
 .card, .card-body {
   color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
+  border-radius: var(--bs-border-radius);
 }
 
 .card .btn-outline-dark {
@@ -132,7 +133,7 @@ a[title="sorting help"] .icon,
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--border-radius);
+  border-radius: var(--bs-border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {
@@ -12452,6 +12453,7 @@ small, .small {
 .card, .card-body {
   color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
+  border-radius: var(--bs-border-radius);
 }
 
 .card .btn-outline-dark {
@@ -12509,7 +12511,7 @@ a[title="sorting help"] .icon,
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--border-radius);
+  border-radius: var(--bs-border-radius);
 }
 
 .inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon {

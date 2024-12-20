@@ -314,7 +314,7 @@ a[title="sorting help"] .icon,
 - Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
-  border-radius: var(--bs-border-radius); // must refer to border-radius as --bs-border-radius
+  border-radius: var(--bs-border-radius);
 }`
 - Remove the outline from the navbar-toggler .icon. Added `.navbar-toggler .icon {
   outline: 0rem !important;
@@ -614,6 +614,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 - Darken the card background and lighten text (used behind post meta summaries and side panel text area) `.card, .card-body {
   color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
+  border-radius: var(--bs-border-radius);
 }
 - Make table colors visible. Added: `$table-color: $gray-200;`
 
