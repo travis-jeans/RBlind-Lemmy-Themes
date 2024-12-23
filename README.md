@@ -1,39 +1,161 @@
 # rblind-lemmy-themes
 
-The rBlind Lemmy themes rblind-dark and rblind-light are open source themes developed for the Lemmy instance rBlind.
+The rBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source themes developed for the Lemmy instance [rBlind](https://rblind.com/), run by [Our Blind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
+
+These themes are in alpha and currently being tested and developed further with feedback from the community.
+
+## About Our Blind
+
+To quote from [Our Blind](https://ourblind.com/):
+
+> OurBlind is a community of blind and visually impaired people, their family and friends, and allies, from around the world. Its members comprise the spectrum of age, gender, orientation, and geography, however we hold one thing in common: we live life with and around blindness in a sighted world. Though occasionally challenging, we know the blind can live fulfilling lives just as everyone else. Whether you’ve been blind or visually impaired since birth or are beginning your journey, or you’re sharing that journey with somebody else, we’re happy to have you.
 
 ## rBlind Dark Theme
 
+The rBlind Dark Theme is based on Darkly Compact.
+
+### Home Feed
+
+<img src="./images/rblind-dark-theme.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected and rblind-dark active."> 
+
+### Post and Comments
+
+<img src="./images/rblind-dark-theme-posts.jpg" width="1536" height="759" alt="Post and comment thread with rblind-dark active.">
+
 ## rBlind Light Theme
 
+The rBlind Light Theme is based on Litely Compact.
+
+### Home Feed
+
+<img src="./images/rblind-light-theme.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected and rblind-light active.">
+
+### Post and Comments
+
+<img src="./images/rblind-light-theme-posts.jpg" width="1536" height="759" alt="Post and comment thread with rblind-light active.">
 
 ## History
 
-A representative from rBlind hired the freelance graphic designer Travis J. to develop a light and dark mode CSS themes which aim to be as accessible as technically feasible to the vision impaired and blind community. 
+A representative from Our Blind hired the freelance graphic designer Travis J. to develop a light and dark mode CSS theme. It aims to improve accessibility of the interface to the vision impaired and to make the design consistent with the Our Blind website.
 
-rBlind is run by Our Blind.
+OurBlind released an ad seeking designers within the Our Blind community to develop the CSS themes. The designer was chosen and themes were developed in December 2024.
+
+The theme is being released to the public to get feedback from the Our Blind community, as well as making the source code available for others to adopt.
+
+While developing these themes, a couple of accessibility issues with `lemmy-ui` were identified and will be reported to `lemmy-ui` for possible correction for all users.
 
 ## Features
 
-These themes aim to improve the accessibility of the default Lemmy Compact theme and make them appealing to the vision impaired and blind community.
+These themes aim to improve the accessibility of the default Lemmy Compact theme and make them useful and appealing to the vision impaired and blind community.
 
-## Developers and Designers
+### Text
 
-This document is a guide to producing the CSS in the rBlind Lemmy themes and an overview of the visual changes.
+- Larger text and icons for enhanced legibility
+- High contrast text (most text contrast including text on buttons meets at least 7:1 or 4.5:1 for large text, icons or <abbr title="user interface">UI</abbr> elements are at least 3:1; [Contrast (Enhanced) (Level AAA)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced), [Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast))
 
-It might be helpful to those creating themes, or for people who would like to edit the existing rBlind theme.
+### Links
+
+- All links except post titles are underlined to help with identification [Consistent Identification (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
+- All buttons have an outline (e.g. buttons under posts, post style options) to help with visual identification and separation 
+- All icon links have an outline to make them appear as UI elements, tooltips remain without outlines (e.g. RSS link on the homepage)
+
+### Buttons
+
+- Buttons are larger (minimum 44px, unless inline; [Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/Understanding/target-size))
+- Disabled buttons indicated with italic text instead of soley contrast
+- Outlines on UI elements like buttons, radio buttons, checkboxes to help distinguish them from the background (**exception**: icons on the main navigation bar)
+- A prominent focus indicator for all interactive elements including adding a focus indicator to elements not present in the default Lemmy Compact themes
+
+### Layout
+
+- Larger post preview images
+- Improved contrast for the mini overlay on image thumbnails (icons in the top right of post previews to show post type, Default, Image, or Link)
+- Reduced margins on medium resolutions
+- Left-align forms and images attached to image posts
+- Some forms take up more space on the screen
+
+## Limitations
+
+Some accessibility issues or CSS styling cannot be corrected with CSS style sheets alone and require changes to the underlying Lemmy code. **Some** CSS-specific styling that cannot be changed without additional code or edits to `lemmy-ui` are listed in [Cannot Be Changed](#cannot-be-changed). 
+
+Styles that cannot be changed:
+
+- inline CSS inserted by Javascript
+- native HTML widgets whose default styles can only be edited with Javascript or are controlled by the browser
+
+Issues that cannot be changed with CSS:
+
+- [ARIA (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+- buttons missing programmatic labels
+- missing landmarks
+- non-accessible HTML code
+- and more
+
+Please report any accessibility issues with the underlying Lemmy codebase to [Lemmy UI Github Issues](https://github.com/LemmyNet/lemmy-ui/issues) tracker. To quick search `is:issue is:open accessibility OR accessible` see [Accessibility Issues Open on Lemmy UI's GitHub](https://github.com/LemmyNet/lemmy-ui/issues?q=is%3Aissue+is%3Aopen+accessibility+OR+accessible).
+
+## License
+
+This is open source software licensed under the [GNU General Public License (Version 3) (Markdown File)](./LICENSE.md).
+
+If you prefer to read a HTML version you can read it at [GNU General Public License (HTML Stand Alone version)](https://www.gnu.org/licenses/gpl-3.0-standalone.html).
+
+## For Designers
+
+A guide for designers for how the colour palette was developed and why we based the themes on the Compact theme.
+
+### Colours 
+
+The colours in the rBlind Lemmy Themes were a mixture of the following:
+
+- the colours from the Our Blind website's light and dark modes (background colour, foreground colour, focus indicator)
+- for dark mode, the Paul Tol Bright palette for the colour blind (luminance modified to improve contrast to the background)
+- for light mode, the Paul Tol Muted palette for the colour blind (luminance modified to improve contrast to the background)
+- the colour mixing that happens in the Bootstrap and upstream Lemmy `lemmy-ui` code that results in CSS `lighten` or `darken` or `opacity` operations being performed on colours to create `hover` or `focus` contrast effects and otherwise expand the colour palette. It would be labour intensive to manually override each colour so I aimed to provide a starting colour that was either light or dark enough that the CSS operations resulted in a sufficient level of contrast to the background.
+- for shades of gray, `Inkscape`'s Interpolation function was used to develop 15 shades between the rBlind darkest colour and lightest colour. A subset of these colours were used to overwrite the existing gray colours used by the Compact theme so they produce a reasonable level of contrast. A slightly different set of shades were used for the Light and Dark theme but the order is reversed for the Light theme (the `$black` variable is actually `white` and the darkest grey on the Dark theme is the lightest grey on the light theme).
+
+As a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text).
+
+For more details about specific changes see [For Developers](#for-developers), but if you like colour codes, see [Colours](#Colours).
+
+### Layout 
+
+We decided to base the theme on the Darkly and Litely Compact themes as these gave a good starting point for making use of the space on the screen. For users who might be using screen magnification, ensuring a more compact design with less inter-element or inter-column spacing means they do not have to scroll horizontally as much.
+
+Other considerations:
+
+- Increasing the size of text and buttons necessitated more room to hold those buttons
+- Further reducing the size of margins of the main content area additionally provides more space for the main content
+- The padding between buttons (e.g. on the home page) is small to try prevent as many buttons from wrapping to the next line when the screen size is small
+
+## For Developers
+
+This section is a guide to producing the CSS in the rBlind Lemmy themes and a code-specific overview of the visual changes.
+
+It might be helpful to those creating themes or for people who would like to edit the existing rBlind themes.
 
 ## Requirements
 
-- Any Operating System (OS)
-- A text editor of your choosing
-- A browser add on such as Stylus to transiently preview and apply CSS styles
+### Local Development
+
+If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder.
+
+Some general requirements:
+
+- Local instance of `lemmy-ui` and `lemmy`, which use [Bootstrap 5 code](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Sass](https://sass-lang.com/) installation to process the `.scss` and `_variables.css` files
+- A browser add on such as [Stylus](https://add0n.com/stylus.html) to transiently preview and apply CSS styles quickly during development
+
+### CSS Only
+
+If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the rBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)). 
+
+This doubling of code was to overwrite some Lemmy class settings and variables. Mainly because the Lemmy CSS themes include a lot of variables defined with `!important` or within specific classes (`.btn` is a good example, different button types like `Alert` or `Danger` will redefine variables) which you can only overwrite by placing them after. Conversely, there were a lot of variables that could be defined upstream instead without using `!important`.
+
+What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of rBlind theme custom code **twice**.
 
 ## Getting Started
 
-Always build the Lemmy theme with SASS variables so the theme files are forward-compatible. This ensures the theme will adopt updates to the underlying Bootstrap theme and upstream default Lemmy theme.
-
-The Lemmy rBlind theme is based off the Darkly Compact theme.
+If possible, build the Lemmy theme with Sass variables so the theme files are forward-compatible. This ensures the theme will adopt updates to the underlying Bootstrap theme and upstream `lemmy-ui` files.
 
 ### Setting Up Your Working Directory
 
@@ -53,23 +175,31 @@ This is a backup of the default Darkly Compact theme. Do the same for the Litely
 Make an additional copy and rename it to something else. This duplicate directory will be the one we edit.
 
 ### Required files
-- The default `darkly-compact.css` and its variable and scss files
-- The default `darkly.css` and its variable and scss files
 
-### Theme Files
+Once you have a copy of `lemmy-ui` copy the CSS theme files from `/lemmy-ui/src/assets/css/themes`
+
+- `darkly-compact.css` and its variable and scss files
+- `darkly.css` and its variable and scss files
+- `litely-compact.css` and its variable and scss files
+- `litely.css` and its variable and scss files
+
+### rBlind Theme Files
+
 #### Dark
+
 - rblind-theme.scss
 - rblind-dark-loader.scss
 - _variables.rblind-dark.scss
 
 #### Light
+
 - rblind-theme.scss
 - rblind-light-loader.scss
 - _variables.rblind-light.scss
 
 ### Paths
 
-So the sass command will build, all paths need to be pointing to the correct locations.
+So the `sass` command will build, all paths need to be pointing to the correct locations.
 
 In line 5, `rblind-dark-loader.scss` or `rblind-light-loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
 
@@ -79,7 +209,7 @@ From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your
 
 #### Building the output CSS file
 
-Once you have made your desired changes to the scss variables, run one of the following commands from the same directory using your terminal: 
+Once you have made your desired changes to the scss variables, run one of the following commands from the same directory as your theme and variable files using your terminal: 
 1. `sass rblind-light-loader.scss rblind-light.css`
 2. `sass rblind-dark-loader.scss rblind-dark.css`
 
@@ -103,16 +233,6 @@ Note that both `loader` files have a small amount of code afterward to redefine 
 All variables defined with the SASS variable indicator `$` are in `_variables.darkly.scss`.
 All classes defined are in `rblind-theme.scss`.
 
-
-### Colour Contrast
-
-The file `_variables.sccs` has the arguments: 
-- `$link-decoration: none;`
-- `$min-contrast-ratio: 3;`
-- `$font-size-root: 100%;`
-
-`$min-contrast-ratio` is not a SCSS variable but is read by a bootstrap function `color-contrast()` in `/lemmy-ui/node_modules/bootstrap/scss/_functions.scss`.
-
 ### Fonts
 
 #### Font Family
@@ -132,7 +252,6 @@ The file `_variables.sccs` has the arguments:
     font-size: 1.1rem;
   }`
 
-
 #### Size
 - Increased the root font size from `100%` to `120%`. Added `$font-size-root` from `_variables.scss`.
 - Increases the post author line size. Added `small, .small {
@@ -151,7 +270,9 @@ The file `_variables.sccs` has the arguments:
 }`
 
 ### Links
+
 #### Main
+
 For links in the main area, ignoring the navigation bar and the footer.
 
 - Add an underline text decoration to all links in the main area of the document. Where pages are missing a `<main>` element, apply to the broadest relevant named class. Added ` main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
@@ -172,6 +293,7 @@ For links in the main area, ignoring the navigation bar and the footer.
   }`
 
 #### Navigation
+
 - As outlines were added to icons that behaved as user interface elements to make them look more like buttons (see [Buttons (Sizes)](#Sizes)), navigation icon links have these outlines removed to remove clutter as it is assumed users understand that icons in the navigation bar are functional. Added `nav a.nav-link .icon {
   padding: 0.7rem 0.7rem !important;
 }`
@@ -355,6 +477,7 @@ nav a.nav-link .icon {
 The following selectors are to specific some buttons, but not others (e.g. post style buttons).
 
 ##### Margins
+
 - Increased the spacing between buttons for the comment and post title buttons. Added `.comment-bottom-btns .btn,
 .post-title + div + div .btn,
 .post-title + p + div + div .btn,
@@ -390,6 +513,7 @@ a.person-listing + .btn,
   }`
 
 ##### Padding
+
 - Reduce the spacing between the upvote and downvote widget next to post listings in the home feed. Added `article.post-container > .flex-grow-0 {
   padding: 0.25rem;
 }`
@@ -434,6 +558,7 @@ a[title="sorting help"]:focus svg,
 
 
 ### Forms
+
 - Change the cursor to a pointer when interacting with a label with a checkbox. This is to try compensate for how some checkboxes are dissociated from their labels (On Create Community page, has a legend `Only moderators can post to this community` with a single checkbox). Added: `.form-check > * {
   cursor: pointer;
 }`
@@ -445,20 +570,27 @@ a[title="sorting help"]:focus svg,
 }`
 
 ### Colours
+
 These colours are referring to the Dark theme. The Light theme has these values replaced with different values.
+
 #### Root
+
 Root variables are defined in the `_variables` `scss` file.
+
 ##### Grays
+
 - Change `$white` (bs-white, bs-emphasis, bs-table, border-white, text-light): `#eeeeeeff;`
 - Change `$gray-200` (secondary button background) ` #ddddddff;`
 - Change `$gray-300`(bs-dark, bs-dark-emphasis and more): ` #ccccccff;`
-- Change `$gray-400` (bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc): `#bbbbbbff;`
+- Change `$gray-400` (bs-button-bg, and other button styles, input group text (defined in the class by hex code not variable, bs button disabled, etc): `#bbbbbbff;`)
 - Change `$gray-600` (blockquote footer, disabled form, disabled button, dropdown header colour, bs-gray): `#676767ff;`
 - Change `$gray-700` (card header background): `#242424ff;`
 - Change `$gray-800` (card background, bs-light): `#131313ff;`
 - Change `$gray-900` (background colour): `#030303ff;`
 - Add `--gray-200-rgb: 221, 221, 221;` to use the `gray-200` colour with opacity arguments with `rgba`
+
 ##### Hues
+
 For the dark theme, the colours are based on Paul Tol's Light palette except for `$cyan` which is an rBlind colour.
 - Change `$blue` `#77aaddff;`
 - Change `$red` (bs-danger, danger red):`#ffaabbff;`
@@ -467,7 +599,9 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Change `$cyan` (bs-info): `#6fcfffff;`
 - Added `$orange` (for Atom highlighting): `#ee8866ff;`
 - Added `$teal` (for Atom highlighting): `bbcc33ff;`
+
 ##### Other
+
 - Change check in checkbox to black instead of white due to colour contrast issues. Added `$form-check-input-checked-color: $gray-900;`
 - Make custom code yellow instead of a poorly contrasting red (note: may be overwritten by Atom variables): `$code-color: $yellow;`
 - Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
@@ -515,6 +649,7 @@ color: var(--bs-info);
 }`
 
 ###### Hover
+
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
 - Added `$dropdown-link-active-bg: $gray-200;`
@@ -534,12 +669,15 @@ color: rgba(var(--bs-white-rgb), 0.8);
 }`
 
 ###### Focus
+
 - Added ` --rblind-focus-indicator: #7764d8;`
 - Added `$box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;`
 - Added `$focus-ring-color: var(--rblind-focus-indicator);`
 
 #### Atom
-Atom styles control the colours within `<code>` snippets as a part of syntax highlighting. These variables were borrowed from a different style sheet (Atom One: `/lemmy-ui/dist/assets/css/code-themes`).
+
+Atom styles control the colours within `<code>` snippets as a part of syntax highlighting. These variables were borrowed from a different style sheet (Atom One: `/lemmy-ui/dist/assets/css/code-themes`). They are loaded by Lemmy as a separate style sheet, but we can overwrite them.
+
 - Added `pre code.hljs {
   display:block;
   overflow-x:auto;
@@ -613,6 +751,7 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 }`
 
 #### Overide
+
 - Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select {
 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }`
@@ -659,6 +798,7 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
 );`
 
 ### Cannot be changed
+
 - Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
 - The dropdown box Registration Mode on Site Settings cannot be edited by changing the padding values in `select option`, Javascript is required to change as the styling of the options is determined by the browser
 - The Rate Limit change up and down buttons within the input box cannot be changed and requires Javascript. The following code does not work `input#rate-limit::after {
@@ -671,3 +811,13 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
 . Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts`
 - Cannot change the background colour of currently selected `select option` in the Language Select in Settings which leads to a low contrast colour combination.
 
+### Other
+
+As a side note, there is an in-built function to automatically generate contrast pairs with a minimum of 3:1. I did not try changing this since I manually determined high contrasting pairs depending on context (not all colours need to be high contrasting pairs, but those for text should be).
+
+The file `_variables.sccs` has the arguments: 
+- `$link-decoration: none;`
+- `$min-contrast-ratio: 3;`
+- `$font-size-root: 100%;`
+
+`$min-contrast-ratio` is not a SCSS variable but is read by a bootstrap function `color-contrast()` in `/lemmy-ui/node_modules/bootstrap/scss/_functions.scss`.
