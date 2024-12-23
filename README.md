@@ -1,6 +1,25 @@
-# Read Me
+# rblind-lemmy-themes
 
-This document is a guide to producing the CSS in the rBlind Lemmy theme.
+The rBlind Lemmy themes rblind-dark and rblind-light are open source themes developed for the Lemmy instance rBlind.
+
+## rBlind Dark Theme
+
+## rBlind Light Theme
+
+
+## History
+
+A representative from rBlind hired the freelance graphic designer Travis J. to develop a light and dark mode CSS themes which aim to be as accessible as technically feasible to the vision impaired and blind community. 
+
+rBlind is run by Our Blind.
+
+## Features
+
+These themes aim to improve the accessibility of the default Lemmy Compact theme and make them appealing to the vision impaired and blind community.
+
+## Developers and Designers
+
+This document is a guide to producing the CSS in the rBlind Lemmy themes and an overview of the visual changes.
 
 It might be helpful to those creating themes, or for people who would like to edit the existing rBlind theme.
 
