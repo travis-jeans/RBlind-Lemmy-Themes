@@ -89,7 +89,7 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 
 ### Buttons
 
-- Buttons are larger (minimum 44px, unless inline; [Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/Understanding/target-size))
+- Buttons are larger (most 44px or larger, unless inline; others at least 24px; [Target Size (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) [Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/Understanding/target-size))
 - Disabled buttons indicated with italic text instead of soley contrast
 - Outlines on UI elements like buttons, radio buttons, checkboxes to help distinguish them from the background (**exception**: icons on the main navigation bar)
 - A prominent focus indicator for all interactive elements including adding a focus indicator to elements not present in the default Lemmy Compact themes
