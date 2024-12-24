@@ -6,7 +6,7 @@ These themes are in alpha and currently being tested and developed further with 
 
 ## About Our Blind
 
-To quote from [Our Blind](https://ourblind.com/):
+From [Our Blind](https://ourblind.com/):
 
 > OurBlind is a community of blind and visually impaired people, their family and friends, and allies, from around the world. Its members comprise the spectrum of age, gender, orientation, and geography, however we hold one thing in common: we live life with and around blindness in a sighted world. Though occasionally challenging, we know the blind can live fulfilling lives just as everyone else. Whether you’ve been blind or visually impaired since birth or are beginning your journey, or you’re sharing that journey with somebody else, we’re happy to have you.
 
@@ -16,11 +16,19 @@ The rBlind Dark Theme is based on Darkly Compact.
 
 ### Home Feed
 
-<img src="./images/rblind-dark-theme.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected and rblind-dark active."> 
+<img src="./images/rblind-dark-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
 
 ### Post and Comments
 
-<img src="./images/rblind-dark-theme-posts.jpg" width="1536" height="759" alt="Post and comment thread with rblind-dark active.">
+<img src="./images/rblind-dark-post.jpg" width="1536" height="759" alt="Pinned post.">
+
+<img src="./images/rblind-dark-comments.jpg" width="1536" height="759" alt="Comment thread.">
+
+### Forms
+
+### Focus
+
+<img src="./images/rblind-dark-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
 
 ## rBlind Light Theme
 
@@ -28,11 +36,19 @@ The rBlind Light Theme is based on Litely Compact.
 
 ### Home Feed
 
-<img src="./images/rblind-light-theme.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected and rblind-light active.">
+<img src="./images/rblind-light-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
 
 ### Post and Comments
 
-<img src="./images/rblind-light-theme-posts.jpg" width="1536" height="759" alt="Post and comment thread with rblind-light active.">
+<img src="./images/rblind-light-post.jpg" width="1536" height="759" alt="Pinned post.">
+
+<img src="./images/rblind-light-comments.jpg" width="1536" height="759" alt="Comment thread.">
+
+### Forms
+
+### Focus
+
+<img src="./images/rblind-light-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
 
 ## History
 
