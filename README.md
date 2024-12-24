@@ -206,7 +206,7 @@ In the above image, from top to bottom, are the following colour swatches:
 
 For the new themes, the greys were defined first so all foreground colours (text, buttons, UI) were in reference to those background colours. 
 
-Editing the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser to check against the background was the usual process before replacing the Lemmy Darkly named variables. 
+The usual process was to edit the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser [Contrast (from Flathub)](https://flathub.org/apps/org.gnome.design.Contrast) to check against the background before replacing the Lemmy Darkly named variables. Once loaded in the browser, the Waterfox Inspect Accessibility Properties was also used to check text contrast.
 
 As a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text).
 
