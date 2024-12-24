@@ -105,7 +105,7 @@ The rBlind Light Theme is based on Litely Compact.
 
 ## Background
 
-A representative from Our Blind hired the freelance graphic designer Travis J. to develop a light and dark mode CSS theme. It aims to improve accessibility of the interface to the vision impaired and to make the design consistent with the Our Blind website.
+A representative from Our Blind hired the freelance graphic designer Travis to develop a light and dark mode CSS theme. It aims to improve accessibility of the interface to the vision impaired and to make the design consistent with the Our Blind website.
 
 OurBlind released an ad seeking designers within the Our Blind community to develop the CSS themes. The designer was chosen and themes were developed in December 2024.
 
@@ -234,7 +234,7 @@ It might be helpful to those creating themes or for people who would like to edi
 
 If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder.
 
-Some general requirements:
+Requirements:
 
 - Local instance of `lemmy-ui` and `lemmy`, which use [Bootstrap 5 code](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Sass](https://sass-lang.com/) installation to process the `.scss` and `_variables.css` files
@@ -314,6 +314,7 @@ The `loader` files will import variables to be added to the output CSS file.
 If the bootstrap source is loaded too early, custom styles will not be applied. 
 Conversley, if the bootstrap source is loaded last, the upstream bootstrap `!important` styles will override your custom CSS classes.
 To fix this, an order of uploading files using the dark theme as an example `rblind-dark-loader.scss` is:
+
 1. `@import "variables.darkly-compact";`
 2. `@import "./variables.rblind-dark";`
 3. `@import "./rblind-theme.scss";` our custom code
@@ -519,6 +520,26 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
 }`
 
+#### Breakpoints
+
+Due to the larger font and button sizes, the breakpoints were altered so resolutions suitable for smaller screens occur at larger screen sizes.
+
+- `$grid-breakpoints: (
+        xs: 0,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px,
+        xl: 1900px,
+        xxl: 2200px
+);`
+- `$container-max-widths: (
+        sm: 960px,
+        md: 1140px,
+        lg: 1610px,
+        xl: 2200,
+        xxl: 2400
+);`
+
 
 #### Buttons
 
@@ -672,7 +693,7 @@ These colours are referring to the Dark theme. The Light theme has these values 
 
 Root variables are defined in the `_variables` `scss` file.
 
-###### Grays
+##### Grays
 
 - Change `$white` (bs-white, bs-emphasis, bs-table, border-white, text-light): `#eeeeeeff;`
 - Change `$gray-200` (secondary button background) ` #ddddddff;`
@@ -684,7 +705,7 @@ Root variables are defined in the `_variables` `scss` file.
 - Change `$gray-900` (background colour): `#030303ff;`
 - Add `--gray-200-rgb: 221, 221, 221;` to use the `gray-200` colour with opacity arguments with `rgba`
 
-###### Hues
+##### Hues
 
 For the dark theme, the colours are based on Paul Tol's Light palette except for `$cyan` which is an rBlind colour.
 - Change `$blue` `#77aaddff;`
@@ -695,11 +716,26 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Added `$orange` (for Atom highlighting): `#ee8866ff;`
 - Added `$teal` (for Atom highlighting): `bbcc33ff;`
 
-###### Other
+##### Links
+- Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
+- Override :dark or :light theme link colour variables. Added `a {
+color: var(--bs-info);
+}`
+- Fix bug in light mode where post titles and links become invisible due to a white color. Added `.link-dark {
+  color: var(--bs-gray-200) !important;
+    text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
+}`
+- Fix text decoration contrast on light mode `.link-dark:hover, .link-dark:focus {
+    text-decoration-color: var(--bs-gray-200) !important;
+  }`
+- Change the link primary colour only for post titles (pinned posts have the .link-primary class while non-pinned posts have .link-dark). Added `.post-title .link-primary {
+  color: var(--bs-info) !important;
+}`
+
+##### Buttons and UI Elements
 
 - Change check in checkbox to black instead of white due to colour contrast issues. Added `$form-check-input-checked-color: $gray-900;`
 - Make custom code yellow instead of a poorly contrasting red (note: may be overwritten by Atom variables): `$code-color: $yellow;`
-- Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
 - Changed the background color of disabled buttons and made the text italic as an additional visual indicator. Added `
 .btn:disabled, fieldset:disabled .btn {
   font-style: italic;
@@ -722,28 +758,25 @@ $btn-disabled-opacity: 0.65; // default`
 - Give placeholder text a higher contrast to the background. Added `.form-control::placeholder {
   color: var(--bs-gray-500);
 }`
-- Override :dark or :light theme link colour variables. Added `a {
-color: var(--bs-info);
-}`
-- Fix bug in light mode where post titles and links become invisible due to a white color. Added `.link-dark {
-  color: var(--bs-gray-200) !important;
-    text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
-}`
-- Fix text decoration contrast on light mode `.link-dark:hover, .link-dark:focus {
-    text-decoration-color: var(--bs-gray-200) !important;
-  }`
-  - Fix poor contrasting buttons on Light mode. Added `.card .btn-outline-dark {
+- Fix poor contrasting buttons on Light mode. Added `.card .btn-outline-dark {
   color: var(--bs-gray-200) !important;
 }`
 - Fix poor contrasting tabs in Administrator Settings on Light mode. Added `.nav-link:hover, .nav-link:focus {
   color: var(--bs-gray-200);
   border-color: var(--bs-white) !important;
 }`
-- Change the link primary colour only for post titles (pinned posts have the .link-primary class while non-pinned posts have .link-dark). Added `.post-title .link-primary {
-  color: var(--bs-info) !important;
+- Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select {
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}`
+- Fix colour contrast issue on Browse... File selection button. Added `.form-control::file-selector-button {
+  background-color: var(--bs-gray-800);
+}`
+- Remove the opacity from the mini overlay so the icons have higher contrast. Added `.mini-overlay {
+  background: var(--bs-gray-900);
+  background-color: var(--bs-gray-900);
 }`
 
-###### Hover
+##### Hover
 
 Invert the colours on dropdown menu hovers or focus.
 - Added `$dropdown-link-active-color: $gray-900;`
@@ -762,12 +795,27 @@ Change link visited colours for post titles.
 .nav-link {
 color: rgba(var(--bs-white-rgb), 0.8);
 }`
+- Fix the hover style on the Browse... File selection button. Added `.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: var(--bs-gray-700);
+}`
 
-###### Focus
+##### Focus
 
 - Added ` --rblind-focus-indicator: #7764d8;`
 - Added `$box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;`
 - Added `$focus-ring-color: var(--rblind-focus-indicator);`
+
+##### Layout
+- Fix colour contrast on the Mark class. Added `.mark {
+  color: var(--bs-white);
+  background-color: var(--bs-gray-800);
+}`
+- Darken the card background and lighten text (used behind post meta summaries and side panel text area) `.card, .card-body {
+  color: var(--bs-gray-200) !important;
+  background-color: var(--bs-gray-800) !important;
+  border-radius: var(--bs-border-radius);
+}
+- Make table colors visible. Added: `$table-color: $gray-200;`
 
 ##### Atom
 
@@ -845,53 +893,6 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
   text-decoration:underline;
 }`
 
-##### Overide
-
-- Make the down arrow on the dropdown select buttons white instead of gray. Added `.form-select {
-background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-}`
-- Fix colour contrast issue on Browse... File selection button. Added `.form-control::file-selector-button {
-  background-color: var(--bs-gray-800);
-}`
-- Fix the hover style on the Browse... File selection button. Added `.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: var(--bs-gray-700);
-}`
-- Remove the opacity from the mini overlay so the icons have higher contrast. Added `.mini-overlay {
-  background: var(--bs-gray-900);
-  background-color: var(--bs-gray-900);
-}`
-- Fix colour contrast on the Mark class. Added `.mark {
-  color: var(--bs-white);
-  background-color: var(--bs-gray-800);
-}`
-- Darken the card background and lighten text (used behind post meta summaries and side panel text area) `.card, .card-body {
-  color: var(--bs-gray-200) !important;
-  background-color: var(--bs-gray-800) !important;
-  border-radius: var(--bs-border-radius);
-}
-- Make table colors visible. Added: `$table-color: $gray-200;`
-
-
-#### Breakpoints
-
-Due to the larger font and button sizes, the breakpoints were altered so resolutions suitable for smaller screens occur at larger screen sizes.
-
-- `$grid-breakpoints: (
-        xs: 0,
-        sm: 768px,
-        md: 992px,
-        lg: 1200px,
-        xl: 1900px,
-        xxl: 2200px
-);`
-- `$container-max-widths: (
-        sm: 960px,
-        md: 1140px,
-        lg: 1610px,
-        xl: 2200,
-        xxl: 2400
-);`
-
 #### Cannot be changed
 
 - Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
@@ -919,6 +920,6 @@ The file `_variables.sccs` has the arguments:
 
 ### For Contributers
 
-This project is open to contributions and suggestions. Please submit a post in the Github forum.
+This project is open to contributions and suggestions. Please submit a post in the Github forum so everyone can see it.
 
-If you would like to contact the designer, please email Travis at hello@scopefilter.net.
+This document was authored by the designer, Travis. To contact him directly, please email hello@scopefilter.net.
