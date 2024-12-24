@@ -10,43 +10,55 @@ From [Our Blind](https://ourblind.com/):
 
 > OurBlind is a community of blind and visually impaired people, their family and friends, and allies, from around the world. Its members comprise the spectrum of age, gender, orientation, and geography, however we hold one thing in common: we live life with and around blindness in a sighted world. Though occasionally challenging, we know the blind can live fulfilling lives just as everyone else. Whether you’ve been blind or visually impaired since birth or are beginning your journey, or you’re sharing that journey with somebody else, we’re happy to have you.
 
-## rBlind Dark Theme
+## Theme Previews
 
-The rBlind Dark Theme is based on Darkly Compact.
+The following are screenshots to visually preview the Light and Dark themes. To skip past the screenshot previews, go to [History](#history).
 
-### Home Feed
+### rBlind Dark Theme
+
+The rBlind Dark Theme is based on Darkly Compact. 
+
+#### Home Feed
 
 <img src="./images/rblind-dark-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
 
-### Post and Comments
+#### Post and Comments
 
 <img src="./images/rblind-dark-post.jpg" width="1536" height="759" alt="Pinned post.">
 
 <img src="./images/rblind-dark-comments.jpg" width="1536" height="759" alt="Comment thread.">
 
-### Forms
+#### Forms
 
-### Focus
+<img src="./images/rblind-dark-create-post.jpg" width="1400" height="200" alt="Post style buttons, a text input, and an inactive Preview button with italics.">
+
+<img src="./images/rblind-dark-create-post-button.jpg" width="1400" height="200" alt="The Preview button is active the background is lighter and the text is not italic. Text in the input box reads: Look, the Preview button is active!">
+
+#### Focus
 
 <img src="./images/rblind-dark-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
 
-## rBlind Light Theme
+### rBlind Light Theme
 
 The rBlind Light Theme is based on Litely Compact.
 
-### Home Feed
+#### Home Feed
 
 <img src="./images/rblind-light-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
 
-### Post and Comments
+#### Post and Comments
 
 <img src="./images/rblind-light-post.jpg" width="1536" height="759" alt="Pinned post.">
 
 <img src="./images/rblind-light-comments.jpg" width="1536" height="759" alt="Comment thread.">
 
-### Forms
+#### Forms
 
-### Focus
+<img src="./images/rblind-light-create-post.jpg" width="1400" height="200" alt="Post style buttons, a text input, and an inactive Preview button with italics.">
+
+<img src="./images/rblind-light-create-post-button.jpg" width="1400" height="200" alt="The Preview button is active the background is darker and the text is not italic. Text in the input box reads: Look, the Preview button is active!">
+
+#### Focus
 
 <img src="./images/rblind-light-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
 
@@ -92,6 +104,8 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 
 ## Limitations
 
+### Accessibility
+
 Some accessibility issues or CSS styling cannot be corrected with CSS style sheets alone and require changes to the underlying Lemmy code. **Some** CSS-specific styling that cannot be changed without additional code or edits to `lemmy-ui` are listed in [Cannot Be Changed](#cannot-be-changed). 
 
 Styles that cannot be changed:
@@ -109,6 +123,10 @@ Issues that cannot be changed with CSS:
 
 Please report any accessibility issues with the underlying Lemmy codebase to [Lemmy UI Github Issues](https://github.com/LemmyNet/lemmy-ui/issues) tracker. To quick search `is:issue is:open accessibility OR accessible` see [Accessibility Issues Open on Lemmy UI's GitHub](https://github.com/LemmyNet/lemmy-ui/issues?q=is%3Aissue+is%3Aopen+accessibility+OR+accessible).
 
+### Hover Effects
+
+Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the result is that hover effects are less obvious than they were previously due to the base contrast and opaque level being increased so elements like visited links and disabled buttons have improved contrast (yes, some people want to be able to read what a disabled button says in case they want to figure out how to activate it). However hover effects are decorative most of the time, so the colours weren't changed.
+
 ## License
 
 This is open source software licensed under the [GNU General Public License (Version 3) (Markdown File)](./LICENSE.md).
@@ -117,7 +135,7 @@ If you prefer to read a HTML version you can read it at [GNU General Public Lice
 
 ## For Designers
 
-A guide for designers for how the colour palette was developed and why we based the themes on the Compact theme.
+A guide for designers.
 
 ### Colours 
 
@@ -127,7 +145,7 @@ The colours in the rBlind Lemmy Themes were a mixture of the following:
 - for dark mode, the Paul Tol Bright palette for the colour blind (luminance modified to improve contrast to the background)
 - for light mode, the Paul Tol Muted palette for the colour blind (luminance modified to improve contrast to the background)
 - the colour mixing that happens in the Bootstrap and upstream Lemmy `lemmy-ui` code that results in CSS `lighten` or `darken` or `opacity` operations being performed on colours to create `hover` or `focus` contrast effects and otherwise expand the colour palette. It would be labour intensive to manually override each colour so I aimed to provide a starting colour that was either light or dark enough that the CSS operations resulted in a sufficient level of contrast to the background.
-- for shades of gray, `Inkscape`'s Interpolation function was used to develop 15 shades between the rBlind darkest colour and lightest colour. A subset of these colours were used to overwrite the existing gray colours used by the Compact theme so they produce a reasonable level of contrast. A slightly different set of shades were used for the Light and Dark theme but the order is reversed for the Light theme (the `$black` variable is actually `white` and the darkest grey on the Dark theme is the lightest grey on the light theme).
+- for shades of gray, `Inkscape`'s [Interpolate](https://inkscape.org/doc/tutorials/interpolate/tutorial-interpolate.html) function was used to develop 15 equal-step shades between the rBlind darkest colour and lightest colour. A subset of these colours were used to overwrite the existing gray colours used by the Compact theme so they produce a reasonable level of contrast. A slightly different set of shades were used for the Light and Dark theme but the order is reversed for the Light theme (the `$black` variable is actually `white` and the darkest grey on the Dark theme is the lightest grey on the light theme).
 
 As a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text).
 
