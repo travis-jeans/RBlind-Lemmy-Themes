@@ -1,7 +1,7 @@
 # Changelog
 
-## 2024-12-XX
+## 2024-12-26
 
-# 1.0.1
+# 1.0.0
 
-- The code is made available on GitHub
+- The code is made available on GitHub.

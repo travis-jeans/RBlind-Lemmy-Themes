@@ -230,23 +230,24 @@ It might be helpful to those creating themes or for people who would like to edi
 
 ### Requirements
 
-#### Local Development
-
-If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder.
-
-Requirements:
-
-- Local instance of `lemmy-ui` and `lemmy`, which use [Bootstrap 5 code](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- Local instance of `lemmy-ui` and/or `lemmy`, which use [Bootstrap 5 code](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- A copy of the `themes` folder from the [lemmy-ui Github themes folder](https://github.com/LemmyNet/lemmy-ui/tree/main/src/assets/css/themes) (**note** if making a local copy of all `lemmy-ui` files you have already done this)
 - [Sass](https://sass-lang.com/) installation to process the `.scss` and `_variables.css` files
 - A browser add on such as [Stylus](https://add0n.com/stylus.html) to transiently preview and apply CSS styles quickly during development
 
+#### Local Development
+
+If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder as descirbed in the Local Development install instructions.
+
 #### CSS Only
 
-If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the rBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)). 
+If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the rBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the rBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
 
 This doubling of code was to overwrite some Lemmy class settings and variables. Mainly because the Lemmy CSS themes include a lot of variables defined with `!important` or within specific classes (`.btn` is a good example, different button types like `Alert` or `Danger` will redefine variables) which you can only overwrite by placing them after. Conversely, there were a lot of variables that could be defined upstream instead without using `!important`.
 
-What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of rBlind theme custom code **twice**.
+What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of rBlind theme custom code **twice**. This will probably be a little annoying.
+
+If you need upstream Bootstrap files you can download `lemmy-ui` from the [lemmy-ui Github main](https://github.com/LemmyNet/lemmy-ui).
 
 ### Getting Started
 
@@ -270,6 +271,8 @@ To work locally in a different directory to the `lemmy-ui` files, copy the follo
 - `litely.css`
 - `litely.scss`
 - `_variables.litely.scss`
+
+The Compact themes import theme and variable code from `darkly` or `litely`, so you need the files for both `darkly` and `darkly-compact` or `litely` and `litely-compact`.
 
 You do not need the default `.css` files to build the rblind-theme files but they can be a useful reference.
 
@@ -301,7 +304,7 @@ Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local dire
 
 #### Building the output CSS file
 
-Once you have made your desired changes to the scss variables, run one of the following commands from the same directory as your theme and variable files using your terminal: 
+Once you have made your desired changes to the `scss` files, run one of the following commands from the same directory as your theme and variable files using your terminal: 
 1. `sass rblind-light-loader.scss rblind-light.css`
 2. `sass rblind-dark-loader.scss rblind-dark.css`
 
