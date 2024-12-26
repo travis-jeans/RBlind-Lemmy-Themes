@@ -254,31 +254,38 @@ If possible, build the Lemmy theme with Sass variables so the theme files are fo
 
 #### Setting Up Your Working Directory
 
-To work locally in a different directory to the lemmy-ui files, copy the following files for darkly-compact and litely-compact and paste them in your chosen directory (e.g. Darkly-Compact):
+To work in the same directory as the `lemmy-ui` themes, set your `sass` directory to `/lemmy-ui/src/assets/css/themes`.
 
-- `darkly-compact.css`    
-- `darkly-compact.cssls.map`  
-- `darkly-compact.scss`             
+To work locally in a different directory to the `lemmy-ui` files, copy the following files for `darkly-compact` **and** `litely-compact` and paste them in your chosen directory:
+
+- `darkly-compact.css`
+- `darkly-compact.scss`
+- `_variables.darkly-compact.scss`
+- `darkly.css`
+- `darkly.scss`
 - `_variables.darkly.scss`
-- `darkly-compact.cssls`  
-- `darkly-compact.css.map`    
-- `_variables.darkly-compact.scss`  
-- `_variables.scss`
+- `litely-compact.css`
+- `litely-compact.scss`
+- `_variables.litely-compact.scss`
+- `litely.css`
+- `litely.scss`
+- `_variables.litely.scss`
 
-This is a backup of the default Darkly Compact theme. Do the same for the Litely Compact theme for the Light mode.
+You do not need the default `.css` files to build the rblind-theme files but they can be a useful reference.
 
-Make an additional copy and rename it to something else. This duplicate directory will be the one we edit.
+#### Paths
 
-#### Required files
+So the `sass` command will build, all paths need to be pointing to the correct locations.
 
-Once you have a copy of `lemmy-ui` copy the CSS theme files from `/lemmy-ui/src/assets/css/themes`
+If using a different directory to `lemmy-ui`, in line 5, `rblind-dark-loader.scss` or `rblind-light-loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
 
-- `darkly-compact.css` and its variable and scss files
-- `darkly.css` and its variable and scss files
-- `litely-compact.css` and its variable and scss files
-- `litely.css` and its variable and scss files
+From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
+
+**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
 
 ### rBlind Theme Files
+
+Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local directory.
 
 #### Dark
 
@@ -291,16 +298,6 @@ Once you have a copy of `lemmy-ui` copy the CSS theme files from `/lemmy-ui/src/
 - `rblind-theme.scss`
 - `rblind-light-loader.scss`
 - `_variables.rblind-light.scss`
-
-### Paths
-
-So the `sass` command will build, all paths need to be pointing to the correct locations.
-
-In line 5, `rblind-dark-loader.scss` or `rblind-light-loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
-
-From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
-
-**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
 
 #### Building the output CSS file
 
