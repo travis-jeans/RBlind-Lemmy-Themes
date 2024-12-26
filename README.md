@@ -49,8 +49,6 @@ Pinned post titles like the displayed <q>A Brief Introduction to rBlind</q> are 
 
 #### Post and Comments
 
-The post style buttons have outlines and are larger.
-
 <img src="./images/rblind-dark-post.jpg" width="1536" height="759" alt="Pinned post.">
 
 Comments are compact with enlarged buttons.
@@ -208,7 +206,9 @@ For the new themes, the greys were defined first so all foreground colours (text
 
 The usual process was to edit the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser [Contrast (from Flathub)](https://flathub.org/apps/org.gnome.design.Contrast) to check against the background before replacing the Lemmy Darkly named variables. Once loaded in the browser, the Waterfox Inspect Accessibility Properties was also used to check text contrast.
 
-As a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text).
+For a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text). 
+
+If you are interested in learning more about the Okabe and Ito palette, you can see [Set of colors that is unambiguous both to colorblinds and non-colorblinds](https://jfly.uni-koeln.de/color/), we considered this colour palette but didn't end up using it due the lack of semantic colours (`success` usually green, `danger` usually red).
 
 For more details about specific changes see [For Developers](#for-developers), but if you like colour codes, see [Colours](#Colours).
 
