@@ -48,35 +48,35 @@ Compared to the Darkly Compact theme, all elements have been enlarged and the ba
 
 Pinned post titles like the displayed <q>A Brief Introduction to rBlind</q> are in blue, the same colour as links which have been underlined.
 
-<img src="./images/rblind-dark-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
+![rBlind Lemmy homepage with Local selected.](./images/rblind-dark-home.jpg)
 
 #### Post and Comments
 
-<img src="./images/rblind-dark-post.jpg" width="1536" height="759" alt="Pinned post.">
+![Pinned post](./images/rblind-dark-post.jpg)
 
 Comments are compact with enlarged buttons.
 
-<img src="./images/rblind-dark-comments.jpg" width="1536" height="759" alt="Comment thread.">
+![Comment thread](./images/rblind-dark-comments.jpg)
 
 #### Forms
 
 Checkboxes have an outline, even when disabled. The checkmark within the checkbox contrasts with its background. Important `danger` buttons have a light pink colour.
 
-<img src="./images/rblind-dark-settings.jpg" width="1536" height="759" alt="The lower half of the User Settings menu from the select theme dialog to the save button.">
+![The lower half of the User Settings menu from the select theme dialog to the save button.](./images/rblind-dark-settings.jpg)
 
 A close up of the Create Post text area. The Preview button is disabled and placeholder text is visible.
 
-<img src="./images/rblind-dark-create-post.jpg" width="1400" height="200" alt="Post style buttons, a text input, and an inactive Preview button with italics.">
+![Post style buttons, a text input, and an inactive Preview button with italics.](./images/rblind-dark-create-post.jpg)
 
 When text is entered into the field, the Preview button is no longer disabled.
 
-<img src="./images/rblind-dark-create-post-button.jpg" width="1400" height="200" alt="The Preview button is active the background is lighter and the text is not italic. Text in the input box reads: Look, the Preview button is active!">
+![The Preview button is active the background is lighter and the text is not italic. Text in the input box reads: Look, the Preview button is active!](./images/rblind-dark-create-post-button.jpg)
 
 #### Focus
 
 Focus indicators have been added to all buttons.
 
-<img src="./images/rblind-dark-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
+![A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.](./images/rblind-dark-focus.jpg)
 
 ### rBlind Light Theme
 
@@ -84,25 +84,25 @@ The rBlind Light Theme is based on Litely Compact.
 
 #### Home Feed
 
-<img src="./images/rblind-light-home.jpg" width="1536" height="759" alt="rBlind Lemmy homepage with Local selected.">
+![rBlind Lemmy homepage with Local selected](./images/rblind-light-home.jpg)
 
 #### Post and Comments
 
-<img src="./images/rblind-light-post.jpg" width="1536" height="759" alt="Pinned post.">
+![Pinned post.](./images/rblind-light-post.jpg)
 
-<img src="./images/rblind-light-comments.jpg" width="1536" height="759" alt="Comment thread.">
+![Comment thread.](./images/rblind-light-comments.jpg)
 
 #### Forms
 
-<img src="./images/rblind-light-settings.jpg" width="1536" height="759" alt="The lower half of the User Settings menu from the select theme dialog to the save button.">
+![The lower half of the User Settings menu from the select theme dialog to the save button.](./images/rblind-light-settings.jpg)
 
-<img src="./images/rblind-light-create-post.jpg" width="1400" height="200" alt="Post style buttons, a text input, and an inactive Preview button with italics.">
+![Post style buttons, a text input, and an inactive Preview button with italics](./images/rblind-light-create-post.jpg)
 
-<img src="./images/rblind-light-create-post-button.jpg" width="1400" height="200" alt="The Preview button is active the background is darker and the text is not italic. Text in the input box reads: Look, the Preview button is active!">
+![The Preview button is active the background is darker and the text is not italic. Text in the input box reads: Look, the Preview button is active!](./images/rblind-light-create-post-button.jpg)
 
 #### Focus
 
-<img src="./images/rblind-light-focus.jpg" width="900" height="200" alt="A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.">
+![A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.](./images/rblind-light-focus.jpg)
 
 ## Background
 
