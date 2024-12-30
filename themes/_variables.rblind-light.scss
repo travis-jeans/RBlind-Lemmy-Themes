@@ -112,3 +112,5 @@ $nav-tabs-link-active-color: $white; // for light theme only
 $table-color: $gray-200;
 $btn-disabled-color: $gray-200;
 $btn-disabled-opacity: 0.8;
+$enable-dark-mode: false; // disable data-bs-theme="dark"
+$enable-light-mode: true; // enable data-bs-theme="light"

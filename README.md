@@ -163,6 +163,8 @@ Issues that cannot be changed with CSS:
 - non-accessible HTML code
 - and more
 
+The themes may not fully conform to the user's High Contrast modes or other custom style sheets, owing to the `!important` variables within the CSS theme to overwrite the Lemmy theme `!important` variables. This has been observed with hover effects and other colour styles.
+
 Please report any accessibility issues with the underlying Lemmy codebase to [Lemmy UI Github Issues](https://github.com/LemmyNet/lemmy-ui/issues) tracker. To quick search `is:issue is:open accessibility OR accessible` see [Accessibility Issues Open on Lemmy UI's GitHub](https://github.com/LemmyNet/lemmy-ui/issues?q=is%3Aissue+is%3Aopen+accessibility+OR+accessible).
 
 ### Hover Effects
@@ -895,6 +897,15 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 - Added `.hljs-link {
   text-decoration:underline;
 }`
+
+#### Light and Dark Modes
+
+Within the default themes Darkly and Litely there are `data-bs-theme` toggles for a `light` and `dark` mode, as specified within Bootstrap ([Color modes](https://getbootstrap.com/docs/5.3/customize/color-modes/)).
+
+To try disable unpredictable behaviour from colour mode switching, the variables toggling the light and dark mode have been changed for the `rblind-light` and `rblind-dark` themes.
+
+- Added `$enable-dark-mode: true; $enable-light-mode: false;` to `_variables.rblind-dark.scss`
+- Added `$enable-dark-mode: false; $enable-light-mode: true;` to `_variables.rblind-light.scss`
 
 #### Cannot be changed
 

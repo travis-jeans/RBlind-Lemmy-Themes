@@ -109,4 +109,6 @@ $border-color: $gray-500 !important;
 $table-color: $gray-200;
 $btn-disabled-color: $gray-200;
 $btn-disabled-opacity: 0.65; // default
+$enable-dark-mode: true; // enable data-bs-theme="dark"
+$enable-light-mode: false; // disable data-bs-theme="light"
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Copyright 2024, 2025 Travis Jeans
 
@@ -10,8 +11,18 @@ rBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHO
 You should have received a copy of the GNU General Public License along with rBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
 
 */
+/*
+Copyright 2024, 2025 Travis Jeans
 
-@charset "UTF-8";
+This file is part of rBlind Lemmy Themes.
+
+rBlind Lemmy Themes is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+rBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with rBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
+
+*/
 /* 
 RBLIND THEME
 */
@@ -21,6 +32,18 @@ RBLIND THEME
   --icon-outline-opacity: 0.7;
 }
 
+/*
+Copyright 2024, 2025 Travis Jeans
+
+This file is part of rBlind Lemmy Themes.
+
+rBlind Lemmy Themes is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+rBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with rBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
+
+*/
 /*
     GENERAL
 */
@@ -701,62 +724,6 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
   --bs-form-valid-border-color: #007bff;
   --bs-form-invalid-color: #530d1a;
   --bs-form-invalid-border-color: #530d1a;
-}
-
-[data-bs-theme=dark] {
-  color-scheme: dark;
-  --bs-body-color: #242424;
-  --bs-body-color-rgb: 36, 36, 36;
-  --bs-body-bg: #ededed;
-  --bs-body-bg-rgb: 237, 237, 237;
-  --bs-emphasis-color: #030303;
-  --bs-emphasis-color-rgb: 3, 3, 3;
-  --bs-secondary-color: rgba(36, 36, 36, 0.75);
-  --bs-secondary-color-rgb: 36, 36, 36;
-  --bs-secondary-bg: #dbdbdb;
-  --bs-secondary-bg-rgb: 219, 219, 219;
-  --bs-tertiary-color: rgba(36, 36, 36, 0.5);
-  --bs-tertiary-color-rgb: 36, 36, 36;
-  --bs-tertiary-bg: #e4e4e4;
-  --bs-tertiary-bg-rgb: 228, 228, 228;
-  --bs-primary-text-emphasis: rgb(109.2, 153.6, 124.2);
-  --bs-secondary-text-emphasis: rgb(113.4, 113.4, 113.4);
-  --bs-success-text-emphasis: rgb(109.2, 153.6, 124.2);
-  --bs-info-text-emphasis: rgb(118.2, 139.2, 172.8);
-  --bs-warning-text-emphasis: rgb(159, 153, 124.2);
-  --bs-danger-text-emphasis: rgb(151.8, 109.8, 117.6);
-  --bs-light-text-emphasis: #f8f9fa;
-  --bs-dark-text-emphasis: #242424;
-  --bs-primary-bg-subtle: rgb(2.4, 17.2, 7.4);
-  --bs-secondary-bg-subtle: rgb(3.8, 3.8, 3.8);
-  --bs-success-bg-subtle: rgb(2.4, 17.2, 7.4);
-  --bs-info-bg-subtle: rgb(5.4, 12.4, 23.6);
-  --bs-warning-bg-subtle: rgb(19, 17, 7.4);
-  --bs-danger-bg-subtle: rgb(16.6, 2.6, 5.2);
-  --bs-light-bg-subtle: #dbdbdb;
-  --bs-dark-bg-subtle: #ededed;
-  --bs-primary-border-subtle: rgb(7.2, 51.6, 22.2);
-  --bs-secondary-border-subtle: rgb(11.4, 11.4, 11.4);
-  --bs-success-border-subtle: rgb(7.2, 51.6, 22.2);
-  --bs-info-border-subtle: rgb(16.2, 37.2, 70.8);
-  --bs-warning-border-subtle: rgb(57, 51, 22.2);
-  --bs-danger-border-subtle: rgb(49.8, 7.8, 15.6);
-  --bs-light-border-subtle: #c9c9c9;
-  --bs-dark-border-subtle: #dbdbdb;
-  --bs-heading-color: inherit;
-  --bs-link-color: rgb(109.2, 153.6, 124.2);
-  --bs-link-hover-color: rgb(138.36, 173.88, 150.36);
-  --bs-link-color-rgb: 109, 154, 124;
-  --bs-link-hover-color-rgb: 138, 174, 150;
-  --bs-code-color: rgb(159, 153, 124.2);
-  --bs-highlight-color: #242424;
-  --bs-highlight-bg: #333;
-  --bs-border-color: #c9c9c9;
-  --bs-border-color-translucent: rgba(3, 3, 3, 0.15);
-  --bs-form-valid-color: rgb(109.2, 153.6, 124.2);
-  --bs-form-valid-border-color: rgb(109.2, 153.6, 124.2);
-  --bs-form-invalid-color: rgb(151.8, 109.8, 117.6);
-  --bs-form-invalid-border-color: rgb(151.8, 109.8, 117.6);
 }
 
 *,
@@ -2873,10 +2840,6 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius-lg);
 }
 
-[data-bs-theme=dark] .form-select {
-  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23242424' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-}
-
 .form-check {
   display: block;
   min-height: 1.5rem;
@@ -3001,10 +2964,6 @@ textarea.form-control-lg {
   pointer-events: none;
   filter: none;
   opacity: 0.8;
-}
-
-[data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus) {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%283, 3, 3, 0.25%29'/%3e%3c/svg%3e");
 }
 
 .form-range {
@@ -4840,10 +4799,6 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%283, 3, 3, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-[data-bs-theme=dark] .navbar-toggler-icon {
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%283, 3, 3, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -5162,11 +5117,6 @@ textarea.form-control-lg {
 }
 .accordion-flush > .accordion-item > .accordion-collapse {
   border-radius: 0;
-}
-
-[data-bs-theme=dark] .accordion-button::after {
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb%28109.2, 153.6, 124.2%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb%28109.2, 153.6, 124.2%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .breadcrumb {
@@ -5856,10 +5806,6 @@ textarea.form-control-lg {
 }
 
 .btn-close-white {
-  filter: var(--bs-btn-close-white-filter);
-}
-
-[data-bs-theme=dark] .btn-close {
   filter: var(--bs-btn-close-white-filter);
 }
 
@@ -6671,18 +6617,6 @@ textarea.form-control-lg {
   background-color: white;
 }
 .carousel-dark .carousel-caption {
-  color: white;
-}
-
-[data-bs-theme=dark] .carousel .carousel-control-prev-icon,
-[data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark].carousel .carousel-control-prev-icon,
-[data-bs-theme=dark].carousel .carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
-}
-[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
-  background-color: white;
-}
-[data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {
   color: white;
 }
 
@@ -12399,6 +12333,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/*
+Copyright 2024, 2025 Travis Jeans
+
+This file is part of rBlind Lemmy Themes.
+
+rBlind Lemmy Themes is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+rBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with rBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
+
+*/
 /*
     GENERAL
 */
