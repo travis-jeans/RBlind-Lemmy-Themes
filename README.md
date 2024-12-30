@@ -4,6 +4,7 @@ The rBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source
 
 These themes are in alpha and currently being tested and developed further with feedback from the community.
 
+
 ## Contents
 
 1. [About Our Blind](#about-our-blind)
@@ -30,6 +31,8 @@ These themes are in alpha and currently being tested and developed further with 
 From [Our Blind](https://ourblind.com/):
 
 > OurBlind is a community of blind and visually impaired people, their family and friends, and allies, from around the world. Its members comprise the spectrum of age, gender, orientation, and geography, however we hold one thing in common: we live life with and around blindness in a sighted world. Though occasionally challenging, we know the blind can live fulfilling lives just as everyone else. Whether you’ve been blind or visually impaired since birth or are beginning your journey, or you’re sharing that journey with somebody else, we’re happy to have you.
+
+This project abides by the Our Blind Community Guidelines. All contributors are encouraged to read and abide by them: [Community Guidelines (Our Blind)](https://ourblind.com/comunity-guidelines/).
 
 ## Theme Previews
 
