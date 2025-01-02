@@ -2,8 +2,9 @@
 
 The rBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source themes developed for the Lemmy instance [rBlind](https://rblind.com/), run by [Our Blind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
 
-These themes are in alpha and currently being tested and developed further with feedback from the community.
+These themes are in alpha and currently being tested and developed further with feedback from the community. 
 
+This repository is being hosted on Github and Codeberg. The reasons are explained in [About The Repositories](#about-the-repositories).
 
 ## Contents
 
@@ -25,6 +26,7 @@ These themes are in alpha and currently being tested and developed further with 
     4. [Paths](#paths)
     5. [Theme Variables and Classes](#theme-variables-and-classes)
 9. [For Contributers](#for-contributers)
+10. [About The Repositories](#about-the-repositories)
 
 ## About Our Blind
 
@@ -323,7 +325,7 @@ To fix this, an order of uploading files using the dark theme as an example `rbl
 1. `@import "variables.darkly-compact";`
 2. `@import "./variables.rblind-dark";`
 3. `@import "./rblind-theme.scss";` our custom code
-4. `@import "/lemmy-ui/node_modules/bootstrap/scss/bootstrap";`
+4. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
 5. `@import "rblind-theme.scss";` our custom code
 
 This will insert your custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
@@ -932,8 +934,18 @@ The file `_variables.sccs` has the arguments:
 
 `$min-contrast-ratio` is not a SCSS variable but is read by a bootstrap function `color-contrast()` in `/lemmy-ui/node_modules/bootstrap/scss/_functions.scss`.
 
-### For Contributers
+## For Contributers
 
-This project is open to contributions and suggestions. Please submit a post in the Github forum so everyone can see it.
+This project is open to contributions and suggestions. Please submit a post in the discussion forum so everyone can see it.
 
 This document was authored by the designer, Travis. To contact him directly, please email hello@scopefilter.net.
+
+## About The Repositories
+
+The repository is simultaneously maintained on Github and Codeberg.
+
+It is uploaded to Github for accessibility reasons.
+
+As Codeberg is an open source platform, it is more suitable for copyleft licenses like the ones we have used. For more discussion about this issue please read [Please don't upload my code to Github](https://nogithub.codeberg.page/). 
+
+We would prefer contributors to use Codeberg as the primary platform, but Github is provided as an accessible alternative in case Codeberg isn't suitable. Both forums will be monitored.
