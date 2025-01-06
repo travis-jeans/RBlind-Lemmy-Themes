@@ -4,7 +4,7 @@ The RBlind Lemmy Themes `RBlind-Dark.css` and `RBlind-Light.css` are open source
 
 These themes are in alpha and currently being tested and developed further with feedback from the community. 
 
-This repository is being hosted on Github and Codeberg. The reasons are explained in [About The Repositories](#about-the-repositories).
+This repository is being hosted on [Github (RBlind-Lemmy-Themes)](https://github.com/travis-jeans/RBlind-Lemmy-Themes) and [Codeberg (RBlind-Lemmy-Themes)](https://codeberg.org/travis-jeans/RBlind-Lemmy-Themes). The reasons are explained in [About The Repositories](#about-the-repositories).
 
 ## Contents
 
