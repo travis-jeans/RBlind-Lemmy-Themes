@@ -1,6 +1,6 @@
-# rblind-lemmy-themes
+# RBlind-Lemmy-Themes
 
-The RBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source themes developed for the Lemmy instance [RBlind](https://rblind.com/), run by [OurBlind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
+The RBlind Lemmy Themes `RBlind-Dark.css` and `RBlind-Light.css` are open source themes developed for the Lemmy instance [RBlind](https://rblind.com/), run by [OurBlind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
 
 These themes are in alpha and currently being tested and developed further with feedback from the community. 
 
@@ -129,7 +129,7 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 
 - All links except post titles are underlined to help with identification [Consistent Identification (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
 - All buttons have an outline (e.g. buttons under posts, post style options) to help with visual identification and separation 
-- All icon links have an outline to make them appear as UI elements, tooltips remain without outlines (e.g. RSS link on the homepage)
+- All icon links have an outline to make them appear as UI elements (e.g. RSS link on the homepage), tooltips remain without outlines
 
 ### Buttons
 
@@ -171,7 +171,7 @@ Please report any accessibility issues with the underlying Lemmy codebase to [Le
 
 ### Hover Effects
 
-Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the result is that hover effects are less obvious than they were previously due to the base contrast and opaque level being increased so elements like visited links and disabled buttons have improved contrast (yes, some people want to be able to read what a disabled button says in case they want to figure out how to activate it). However hover effects are decorative most of the time, so the colours weren't changed.
+Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the result is that hover effects are less obvious than they were previously due to the base contrast and opaque level being increased so elements like visited links and disabled buttons have improved contrast (sometimes people want to be able to read what a disabled button says in case they want to figure out how to activate it). However hover effects are decorative most of the time, so the colours weren't changed.
 
 ## License
 
@@ -209,9 +209,9 @@ In the above image, from top to bottom, are the following colour swatches:
 7. RBlind Light
 8. Lemmy Darkly Colours (non-exhaustive)
 
-For the new themes, the greys were defined first so all foreground colours (text, buttons, UI) were in reference to those background colours. 
+For the new themes, the greys were defined first so all foreground colours and their contrast (text, buttons, UI) were in reference to those background colours. 
 
-The usual process was to edit the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser [Contrast (from Flathub)](https://flathub.org/apps/org.gnome.design.Contrast) to check against the background before replacing the Lemmy Darkly named variables. Once loaded in the browser, the Waterfox Inspect Accessibility Properties was also used to check text contrast.
+The process was to edit the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser [Contrast (from Flathub)](https://flathub.org/apps/org.gnome.design.Contrast) to check against the background before replacing the Lemmy Darkly named variables. Once loaded in the browser, the Waterfox Inspect Accessibility Properties was also used to check text contrast.
 
 For a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text). 
 
@@ -225,13 +225,13 @@ We decided to base the theme on the Darkly and Litely Compact themes as these ga
 
 Other considerations:
 
-- Increasing the size of text and buttons necessitated more room to hold those buttons
+- Increasing the size of text and buttons necessitated more room to hold those elements
 - Further reducing the size of margins of the main content area additionally provides more space for the main content
 - The padding between buttons (e.g. on the home page) is small to try prevent as many buttons from wrapping to the next line when the screen size is small
 
 ## For Developers
 
-This section is a guide to producing the CSS in the RBlind Lemmy themes and a code-specific overview of the visual changes.
+This section is a guide to producing the CSS in the RBlind Lemmy Themes and a code-specific overview of the visual changes.
 
 It might be helpful to those creating themes or for people who would like to edit the existing RBlind themes.
 
@@ -244,17 +244,17 @@ It might be helpful to those creating themes or for people who would like to edi
 
 #### Local Development
 
-If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder as descirbed in the Local Development install instructions.
+If you plan to develop a theme locally, the Lemmy Docs has a section with instructions to install a local instance of Lemmy for [Local Development](https://join-lemmy.org/docs/contributors/02-local-development.html) so you can create mock up posts to test font styles in a controlled way, or use the Browser Inspector or Development Tools with minimal server delay. To do this, you will need to install both the Lemmy Frontend with the `lemmy-ui` folder and Lemmy Backend with the `lemmy` folder as described in the Local Development install instructions.
 
 #### CSS Only
 
-If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the RBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the RBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
+If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the RBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `RBlind-Dark-Loader.scss` or `RBlind-Light-Loader.scss` files, that the output CSS files include 2 copies of the RBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
 
 This doubling of code was to overwrite some Lemmy class settings and variables. Mainly because the Lemmy CSS themes include a lot of variables defined with `!important` or within specific classes (`.btn` is a good example, different button types like `Alert` or `Danger` will redefine variables) which you can only overwrite by placing them after. Conversely, there were a lot of variables that could be defined upstream instead without using `!important`.
 
 What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of RBlind theme custom code **twice**. This will probably be a little annoying.
 
-If you need upstream Bootstrap files you can download `lemmy-ui` from the [lemmy-ui Github main](https://github.com/LemmyNet/lemmy-ui).
+The best option is to copy the upstream Bootstrap files and use `Sass` you can download `lemmy-ui` from the [lemmy-ui Github main](https://github.com/LemmyNet/lemmy-ui).
 
 ### Getting Started
 
@@ -262,7 +262,7 @@ If possible, build the Lemmy theme with Sass variables so the theme files are fo
 
 #### Setting Up Your Working Directory
 
-To work in the same directory as the `lemmy-ui` themes, set your `sass` directory to `/lemmy-ui/src/assets/css/themes`.
+To work in the same directory as the `lemmy-ui` themes, set your `Sass` directory to `/lemmy-ui/src/assets/css/themes`.
 
 To work locally in a different directory to the `lemmy-ui` files, copy the following files for `darkly-compact` **and** `litely-compact` and paste them in your chosen directory:
 
@@ -281,17 +281,17 @@ To work locally in a different directory to the `lemmy-ui` files, copy the follo
 
 The Compact themes import theme and variable code from `darkly` or `litely`, so you need the files for both `darkly` and `darkly-compact` or `litely` and `litely-compact`.
 
-You do not need the default `.css` files to build the rblind-theme files but they can be a useful reference.
+You do not need the default `.css` files to build the RBlind Theme files but they can be a useful reference.
 
 #### Paths
 
 So the `sass` command will build, all paths need to be pointing to the correct locations.
 
-If using a different directory to `lemmy-ui`, in line 5, `rblind-dark-loader.scss` or `rblind-light-loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
+If using a different directory to `lemmy-ui`, in line 5, `RBlind-Dark-Loader.scss` or `RBlind-Light-Loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
 
 From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
 
-**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
+**IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the `lemmy-ui` folder.
 
 ### RBlind Theme Files
 
@@ -299,42 +299,42 @@ Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local dire
 
 #### Dark
 
-- `rblind-theme.scss`
-- `rblind-dark-loader.scss`
-- `_variables.rblind-dark.scss`
+- `RBlind-Theme.scss`
+- `RBlind-Dark-Loader.scss`
+- `_variables.RBlind-Dark.scss`
 
 #### Light
 
-- `rblind-theme.scss`
-- `rblind-light-loader.scss`
-- `_variables.rblind-light.scss`
+- `RBlind-Theme.scss`
+- `RBlind-Light-Loader.scss`
+- `_variables.RBlind-Light.scss`
 
 #### Building the output CSS file
 
 Once you have made your desired changes to the `scss` files, run one of the following commands from the same directory as your theme and variable files using your terminal: 
-1. `sass rblind-light-loader.scss rblind-light.css`
-2. `sass rblind-dark-loader.scss rblind-dark.css`
+1. `sass RBlind-Light-Loader.scss RBlind-Light.css`
+2. `sass RBlind-Dark-Loader.scss RBlind-Dark.css`
 
 #### Order of Inheritance
 
-The `loader` files will import variables to be added to the output CSS file.
+The Loader files will import variables to be added to the output CSS file.
 If the bootstrap source is loaded too early, custom styles will not be applied. 
 Conversley, if the bootstrap source is loaded last, the upstream bootstrap `!important` styles will override your custom CSS classes.
-To fix this, an order of uploading files using the dark theme as an example `rblind-dark-loader.scss` is:
+To fix this, an order of uploading files using the dark theme as an example `RBlind-Dark-Loader.scss` is:
 
 1. `@import "variables.darkly-compact";`
-2. `@import "./variables.rblind-dark";`
-3. `@import "./rblind-theme.scss";` our custom code
+2. `@import "variables.RBlind-Dark";`
+3. `@import "RBlind-Theme.scss";` our custom code
 4. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
-5. `@import "rblind-theme.scss";` our custom code
+5. `@import "RBlind-Theme.scss";` our custom code
 
-This will insert your custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
-Note that both `loader` files have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
+This will insert the custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
+Note that both Loader files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
 
 ### Theme Variables and Classes
 
-All variables defined with the SASS variable indicator `$` are in `_variables.darkly.scss`.
-All classes defined are in `rblind-theme.scss`.
+All variables defined with the Sass variable indicator `$` or as CSS root variables (starting with `--`) are in `_variables.RBlind-Dark.scss` or `_variables.RBlind-Light.scss`.
+All classes defined are in `RBlind-Theme.scss`.
 
 #### Fonts
 
@@ -904,14 +904,14 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 
 Within the default themes Darkly and Litely there are `data-bs-theme` toggles for a `light` and `dark` mode, as specified within Bootstrap ([Color modes](https://getbootstrap.com/docs/5.3/customize/color-modes/)).
 
-To try disable unpredictable behaviour from colour mode switching, the variables toggling the light and dark mode have been changed for the `rblind-light` and `rblind-dark` themes.
+To try disable unpredictable behaviour from colour mode switching, the variables toggling the light and dark mode have been changed for the `RBlind-Light` and `RBlind-Dark` themes.
 
-- Added `$enable-dark-mode: true; $enable-light-mode: false;` to `_variables.rblind-dark.scss`
-- Added `$enable-dark-mode: false; $enable-light-mode: true;` to `_variables.rblind-light.scss`
+- Added `$enable-dark-mode: true; $enable-light-mode: false;` to `_variables.RBlind-Dark.scss`
+- Added `$enable-dark-mode: false; $enable-light-mode: true;` to `_variables.RBlind-Light.scss`
 
 #### Cannot be changed
 
-- Add Allowed Instances and Blocked Instances buttons on the Site Configuraiton page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
+- Add Allowed Instances and Blocked Instances buttons on the Site Configuration page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
 - The dropdown box Registration Mode on Site Settings cannot be edited by changing the padding values in `select option`, Javascript is required to change as the styling of the options is determined by the browser
 - The Rate Limit change up and down buttons within the input box cannot be changed and requires Javascript. The following code does not work `input#rate-limit::after {
  min-height: 44px;
@@ -938,7 +938,7 @@ The file `_variables.sccs` has the arguments:
 
 This project is open to contributions and suggestions. Please submit a post in the discussion forum so everyone can see it.
 
-This document was authored by the designer, Travis. To contact him directly, please email hello@scopefilter.net.
+This document was authored by the designer, Travis Jeans. To contact him directly, please email hello@scopefilter.net.
 
 ## About The Repositories
 
@@ -948,4 +948,4 @@ It is uploaded to Github for accessibility reasons.
 
 As Codeberg is an open source platform, it is more suitable for copyleft licenses like the ones we have used. For more discussion about this issue please read [Please don't upload my code to Github](https://nogithub.codeberg.page/). 
 
-We would prefer contributors to use Codeberg as the primary platform, but Github is provided as an accessible alternative in case Codeberg isn't suitable. Both forums will be monitored.
+The designer would prefer contributors to use Codeberg as the primary platform, but Github is provided as an accessible alternative in case Codeberg isn't suitable. Both forums will be monitored.
