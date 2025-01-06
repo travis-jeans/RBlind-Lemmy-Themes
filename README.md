@@ -1,6 +1,6 @@
 # rblind-lemmy-themes
 
-The rBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source themes developed for the Lemmy instance [rBlind](https://rblind.com/), run by [Our Blind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
+The RBlind Lemmy themes `rblind-dark.css` and `rblind-light.css` are open source themes developed for the Lemmy instance [RBlind](https://rblind.com/), run by [OurBlind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
 
 These themes are in alpha and currently being tested and developed further with feedback from the community. 
 
@@ -8,10 +8,10 @@ This repository is being hosted on Github and Codeberg. The reasons are explaine
 
 ## Contents
 
-1. [About Our Blind](#about-our-blind)
+1. [About OurBlind](#about-our-blind)
 2. [Theme Previews](#theme-previews)
-    1. [rBlind Dark Theme](#rblind-dark-theme)
-    2. [rBlind Light Theme](#rblind-light-theme)
+    1. [RBlind Dark Theme](#rblind-dark-theme)
+    2. [RBlind Light Theme](#rblind-light-theme)
 3. [Background](#background)
 4. [Features](#features)
 5. [Limitations](#limitations)
@@ -22,35 +22,35 @@ This repository is being hosted on Github and Codeberg. The reasons are explaine
 8. [For Developers](#for-developers)
     1. [Requirements](#requirements)
     2. [Getting Started](#getting-started)
-    3. [rBlind Theme Files](#rblind-theme-files)
+    3. [RBlind Theme Files](#rblind-theme-files)
     4. [Paths](#paths)
     5. [Theme Variables and Classes](#theme-variables-and-classes)
 9. [For Contributers](#for-contributers)
 10. [About The Repositories](#about-the-repositories)
 
-## About Our Blind
+## About OurBlind
 
-From [Our Blind](https://ourblind.com/):
+From [OurBlind](https://ourblind.com/):
 
 > OurBlind is a community of blind and visually impaired people, their family and friends, and allies, from around the world. Its members comprise the spectrum of age, gender, orientation, and geography, however we hold one thing in common: we live life with and around blindness in a sighted world. Though occasionally challenging, we know the blind can live fulfilling lives just as everyone else. Whether you’ve been blind or visually impaired since birth or are beginning your journey, or you’re sharing that journey with somebody else, we’re happy to have you.
 
-This project abides by the Our Blind Community Guidelines. All contributors are encouraged to read and abide by them: [Community Guidelines (Our Blind)](https://ourblind.com/comunity-guidelines/).
+This project abides by the OurBlind Community Guidelines. All contributors are encouraged to read and abide by them: [Community Guidelines (OurBlind)](https://ourblind.com/comunity-guidelines/).
 
 ## Theme Previews
 
 The following are screenshots to visually preview the Light and Dark themes. To skip past the screenshot previews, go to [Background](#background).
 
-### rBlind Dark Theme
+### RBlind Dark Theme
 
-The rBlind Dark Theme is based on Darkly Compact. 
+The RBlind Dark Theme is based on Darkly Compact. 
 
 #### Home Feed
 
 Compared to the Darkly Compact theme, all elements have been enlarged and the background and foreground colours have higher contrast. Thumbnail images are enlarged to span roughly the height of an average post.
 
-Pinned post titles like the displayed <q>A Brief Introduction to rBlind</q> are in blue, the same colour as links which have been underlined.
+Pinned post titles like the displayed <q>A Brief Introduction to RBlind</q> are in blue, the same colour as links which have been underlined.
 
-![rBlind Lemmy homepage with Local selected.](./images/rblind-dark-home.jpg)
+![RBlind Lemmy homepage with Local selected.](./images/rblind-dark-home.jpg)
 
 #### Post and Comments
 
@@ -80,13 +80,13 @@ Focus indicators have been added to all buttons.
 
 ![A large pastel purple focus border is around the Plus Show More toggle button next to the Pinned Post.](./images/rblind-dark-focus.jpg)
 
-### rBlind Light Theme
+### RBlind Light Theme
 
-The rBlind Light Theme is based on Litely Compact.
+The RBlind Light Theme is based on Litely Compact.
 
 #### Home Feed
 
-![rBlind Lemmy homepage with Local selected](./images/rblind-light-home.jpg)
+![RBlind Lemmy homepage with Local selected](./images/rblind-light-home.jpg)
 
 #### Post and Comments
 
@@ -108,11 +108,11 @@ The rBlind Light Theme is based on Litely Compact.
 
 ## Background
 
-A representative from Our Blind hired the freelance graphic designer Travis to develop a light and dark mode CSS theme. It aims to improve accessibility of the interface to the vision impaired and to make the design consistent with the Our Blind website.
+A representative from OurBlind contracted the freelance graphic designer Travis to develop a light and dark mode CSS theme. It aims to improve accessibility of the interface to the vision impaired and to make the design consistent with the OurBlind website.
 
-OurBlind released an ad seeking designers within the Our Blind community to develop the CSS themes. The designer was chosen and themes were developed in December 2024.
+OurBlind released an ad seeking designers within the OurBlind community to develop the CSS themes. The designer was chosen and themes were developed in December 2024.
 
-The theme is being released to the public to get feedback from the Our Blind community, as well as making the source code available for others to adopt.
+The theme is being released to the public to get feedback from the OurBlind community, as well as making the source code available for others to adopt.
 
 While developing these themes, a couple of accessibility issues with `lemmy-ui` were identified and will be reported to `lemmy-ui` for possible correction for all users.
 
@@ -185,18 +185,18 @@ A guide for designers.
 
 ### Colours 
 
-The colours in the rBlind Lemmy Themes were a mixture of the following:
+The colours in the RBlind Lemmy Themes were a mixture of the following:
 
-- the colours from the Our Blind website's light and dark modes (background colour, foreground colour, focus indicator)
+- the colours from the OurBlind website's light and dark modes (background colour, foreground colour, focus indicator)
 - for dark mode, the Paul Tol Bright palette for the colour blind (luminance modified to improve contrast to the background)
 - for light mode, the Paul Tol Muted palette for the colour blind (luminance modified to improve contrast to the background)
 - for light mode, the `$danger` or `$red` colour is a much darker version of the Paul Tol Vibrant red since the hue was identifiable (for those with colour vision) rather than fuschia.
 - the colour mixing that happens in the Bootstrap and upstream Lemmy `lemmy-ui` code that results in CSS `lighten` or `darken` or `opacity` operations being performed on colours to create `hover` or `focus` contrast effects and otherwise expand the colour palette. It would be labour intensive to manually override each colour so I aimed to provide a starting colour that was either light or dark enough that the CSS operations resulted in a sufficient level of contrast to the background.
-- for shades of gray, `Inkscape`'s [Interpolate](https://inkscape.org/doc/tutorials/interpolate/tutorial-interpolate.html) function was used to develop 15 equal-step shades between the rBlind darkest colour and lightest colour. A subset of these colours were used to overwrite the existing gray colours used by the Compact theme so they produce a reasonable level of contrast. A slightly different set of shades were used for the Light and Dark theme but the order is reversed for the Light theme (the `$black` variable is actually `white` and the darkest grey on the Dark theme is the lightest grey on the light theme).
+- for shades of gray, `Inkscape`'s [Interpolate](https://inkscape.org/doc/tutorials/interpolate/tutorial-interpolate.html) function was used to develop 15 equal-step shades between the RBlind darkest colour and lightest colour. A subset of these colours were used to overwrite the existing gray colours used by the Compact theme so they produce a reasonable level of contrast. A slightly different set of shades were used for the Light and Dark theme but the order is reversed for the Light theme (the `$black` variable is actually `white` and the darkest grey on the Dark theme is the lightest grey on the light theme).
 
 As a brief overview:
 
-<img src="./images/colour-options.jpg" width="842" height="596" alt="Five example colour blind palettes, the Our Blind colours, and some of the colours in the Lemmy Darkly theme.">
+<img src="./images/colour-options.jpg" width="842" height="596" alt="Five example colour blind palettes, the OurBlind colours, and some of the colours in the Lemmy Darkly theme.">
 
 In the above image, from top to bottom, are the following colour swatches:
 
@@ -205,8 +205,8 @@ In the above image, from top to bottom, are the following colour swatches:
 3. Paul Tol Muted
 4. Paul Tol Light
 5. Okabe and Ito
-6. rBlind Dark
-7. rBlind Light
+6. RBlind Dark
+7. RBlind Light
 8. Lemmy Darkly Colours (non-exhaustive)
 
 For the new themes, the greys were defined first so all foreground colours (text, buttons, UI) were in reference to those background colours. 
@@ -231,9 +231,9 @@ Other considerations:
 
 ## For Developers
 
-This section is a guide to producing the CSS in the rBlind Lemmy themes and a code-specific overview of the visual changes.
+This section is a guide to producing the CSS in the RBlind Lemmy themes and a code-specific overview of the visual changes.
 
-It might be helpful to those creating themes or for people who would like to edit the existing rBlind themes.
+It might be helpful to those creating themes or for people who would like to edit the existing RBlind themes.
 
 ### Requirements
 
@@ -248,11 +248,11 @@ If you plan to develop a theme locally, the Lemmy Docs has a section with instru
 
 #### CSS Only
 
-If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the rBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the rBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
+If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the RBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `rblind-dark-loader.scss` or `rblind-light-loader.scss` files, that the output CSS files include 2 copies of the RBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
 
 This doubling of code was to overwrite some Lemmy class settings and variables. Mainly because the Lemmy CSS themes include a lot of variables defined with `!important` or within specific classes (`.btn` is a good example, different button types like `Alert` or `Danger` will redefine variables) which you can only overwrite by placing them after. Conversely, there were a lot of variables that could be defined upstream instead without using `!important`.
 
-What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of rBlind theme custom code **twice**. This will probably be a little annoying.
+What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of RBlind theme custom code **twice**. This will probably be a little annoying.
 
 If you need upstream Bootstrap files you can download `lemmy-ui` from the [lemmy-ui Github main](https://github.com/LemmyNet/lemmy-ui).
 
@@ -293,7 +293,7 @@ From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your
 
 **IMPORTANT** This relative path will need to be reverted back to the original once you have finished your edits and it is uploaded to the lemmy-ui folder.
 
-### rBlind Theme Files
+### RBlind Theme Files
 
 Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local directory.
 
