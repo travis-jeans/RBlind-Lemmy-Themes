@@ -378,10 +378,15 @@ code.hljs {
 .hljs-strong {
   font-weight:700;
 }
+
 .hljs-link {
   text-decoration:underline;
 }
 
+/* Give the text !main@blind.com search field snippet a darker background in the spirit of .hljs for code */
+code.user-select-all {
+  background-color: var(--bs-black);
+}
 
 .btn-sm .icon, .btn-group-sm > .btn .icon, .btn .icon,
 a.sort-select-icon .icon,

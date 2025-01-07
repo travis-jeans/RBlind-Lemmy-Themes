@@ -16,17 +16,20 @@ This repository is being hosted on [Github (RBlind-Lemmy-Themes)](https://github
 4. [Features](#features)
 5. [Limitations](#limitations)
 6. [License](#license)
-7. [For Designers](#for-designers)
+7. [Installation](#installation)
+    1. [For Lemmy Administrators](#for-lemmy-administrators)
+    2. [For Lemmy Users](#for-lemmy-users)
+8. [For Designers](#for-designers)
     1. [Colours](#colours)
     2. [Layout](#layout)
-8. [For Developers](#for-developers)
+9. [For Developers](#for-developers)
     1. [Requirements](#requirements)
     2. [Getting Started](#getting-started)
     3. [RBlind Theme Files](#rblind-theme-files)
     4. [Paths](#paths)
     5. [Theme Variables and Classes](#theme-variables-and-classes)
-9. [For Contributers](#for-contributers)
-10. [About The Repositories](#about-the-repositories)
+10. [For Contributers](#for-contributers)
+11. [About The Repositories](#about-the-repositories)
 
 ## About OurBlind
 
@@ -176,6 +179,16 @@ Please report any accessibility issues with the underlying Lemmy codebase to [Le
 This is open source software licensed under the [GNU General Public License (Version 3) (Markdown File)](./LICENSE.md).
 
 If you prefer to read a HTML version you can read it at [GNU General Public License (HTML Stand Alone version)](https://www.gnu.org/licenses/gpl-3.0-standalone.html).
+
+## Installation 
+
+### For Lemmy Administrators
+
+Add the `.css` theme of your choosing to `/lemmy-ui/src/assets/css/themes` or the `lemmy-ui/extra_themes` folder. More information is available at [Theming Guide (Join-Lemmy)](https://join-lemmy.org/docs/administration/theming.html).
+
+### For Lemmy Users
+
+Copy the contents of the `.css` theme of your choosing to a browser add on like [Stylus](https://add0n.com/stylus.html). Remember to toggle it off when you visit other websites.
 
 ## For Designers
 
@@ -819,7 +832,7 @@ color: rgba(var(--bs-white-rgb), 0.8);
   color: var(--bs-gray-200) !important;
   background-color: var(--bs-gray-800) !important;
   border-radius: var(--bs-border-radius);
-}
+}`
 - Make table colors visible. Added: `$table-color: $gray-200;`
 
 ##### Atom
@@ -896,6 +909,9 @@ Atom styles control the colours within `<code>` snippets as a part of syntax hig
 }`
 - Added `.hljs-link {
   text-decoration:underline;
+}`
+- Give the text `!main@blind.com` `<code>` in the sidebar during log out the same background as `.hljs` for code. Added `code.user-select-all {
+  background-color: var(--bs-black);
 }`
 
 #### Light and Dark Modes
