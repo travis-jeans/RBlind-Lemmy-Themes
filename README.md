@@ -570,7 +570,7 @@ a[title=RSS] .icon,
 a[title="sorting help"] .icon,
 a.nav-link .icon {
   box-sizing: content-box !important;
-}` [Github issue #2894](https://github.com/LemmyNet/lemmy-ui/issues/2894)
+}` Reported the lack of `icon-link` class to [Github issue #2894](https://github.com/LemmyNet/lemmy-ui/issues/2894)
 - Rounded the edges of buttons. Added `.btn {
   border-radius: 0.5rem;
 }` 
@@ -587,12 +587,12 @@ a[title="sorting help"] .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
-}` [Github issue #2895](https://github.com/LemmyNet/lemmy-ui/issues/2895)
+}` Missing `.btn` class on Reveal/Hide icon reported to [Github issue #2895](https://github.com/LemmyNet/lemmy-ui/issues/2895)
 - Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
   border-radius: var(--bs-border-radius);
-}` [Github issue #2893](https://github.com/LemmyNet/lemmy-ui/issues/2893)
+}` Missing `.btn` class on burger menu / navbar-toggler button reported to [Github issue #2893](https://github.com/LemmyNet/lemmy-ui/issues/2893)
 - Remove the outline from the navbar-toggler .icon. Added `.navbar-toggler .icon {
   outline: 0rem !important;
 }`
