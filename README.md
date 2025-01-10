@@ -1,5 +1,7 @@
 # RBlind-Lemmy-Themes
 
+![The OurBlind Light and Dark theme homepage previews stacked with the RBlind and Lemmy logo on top.](./images/theme-preview.jpg)
+
 The RBlind Lemmy Themes `RBlind-Dark.css` and `RBlind-Light.css` are open source themes developed for the Lemmy instance [RBlind](https://rblind.com/), run by [OurBlind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
 
 These themes are in alpha and currently being tested and developed further with feedback from the community. 
