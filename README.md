@@ -393,7 +393,7 @@ For links in the main area, ignoring the navigation bar and the footer.
 
 - Add an underline text decoration to all links in the main area of the document. Where pages are missing a `<main>` element, apply to the broadest relevant named class. Added ` main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
     text-decoration: underline;
-  }`
+  }` Issue relating to lack of `<main>` elements reported under [Github issue #2891](https://github.com/LemmyNet/lemmy-ui/issues/2891)
 - Ensure that links inside buttons do not have an underline. Added `main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
     text-decoration: none;
   }`
@@ -440,7 +440,7 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
 }`
 - Change the focus colour and add a focus indicator to tabs and buttons that previously had no focus indicator like the Posts/Comments and Show Hidden Posts / Hide Hidden Posts tabs. Added `.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-}`
+}` [Github issue #2892](https://github.com/LemmyNet/lemmy-ui/issues/2892)
 - Added a focus indicator to the User Profile toggle dropdown. Added `.dropdown-toggle:focus-visible {
     box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   }`
@@ -570,7 +570,7 @@ a[title=RSS] .icon,
 a[title="sorting help"] .icon,
 a.nav-link .icon {
   box-sizing: content-box !important;
-}`
+}` [Github issue #2894](https://github.com/LemmyNet/lemmy-ui/issues/2894)
 - Rounded the edges of buttons. Added `.btn {
   border-radius: 0.5rem;
 }` 
@@ -587,12 +587,12 @@ a[title="sorting help"] .icon,
 #navMessages {
   padding: 0.7rem 0.7rem !important;
   outline: 1px solid rgba(var(--gray-200-rgb), 0.5) !important;
-}`
+}` [Github issue #2895](https://github.com/LemmyNet/lemmy-ui/issues/2895)
 - Fix box model of the icon in the inbox and round the outline and the navbar-toggler which is also missing a btn style. Added `.inbox .private-message ul.list-inline.mb-0.text-muted.small li:last-child .icon,
 .navbar-toggler .icon {
   box-sizing: content-box;
   border-radius: var(--bs-border-radius);
-}`
+}` [Github issue #2893](https://github.com/LemmyNet/lemmy-ui/issues/2893)
 - Remove the outline from the navbar-toggler .icon. Added `.navbar-toggler .icon {
   outline: 0rem !important;
 }`
@@ -927,7 +927,7 @@ To try disable unpredictable behaviour from colour mode switching, the variables
 
 #### Cannot be changed
 
-- Add Allowed Instances and Blocked Instances buttons on the Site Configuration page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher
+- Add Allowed Instances and Blocked Instances buttons on the Site Configuration page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher. [Github issue #2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
 - The dropdown box Registration Mode on Site Settings cannot be edited by changing the padding values in `select option`, Javascript is required to change as the styling of the options is determined by the browser
 - The Rate Limit change up and down buttons within the input box cannot be changed and requires Javascript. The following code does not work `input#rate-limit::after {
  min-height: 44px;
@@ -936,7 +936,7 @@ To try disable unpredictable behaviour from colour mode switching, the variables
 - Post nesting left-border width is defined inline and inserted by Javascript. See `/lemmy-ui/src/shared/components/comment/comment-node.tsx` on line 386 `border-left: 2px ${moreRepliesBorderColor} solid !important`. Border colour is defined on line 182-184: `const moreRepliesBorderColor = this.props.node.depth
       ? colorList[this.props.node.depth % colorList.length]
       : colorList[0];` Colour can be changed by altering colorList values
-. Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts`
+. Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts` [Github issue #2889](https://github.com/LemmyNet/lemmy-ui/issues/2889), [#2890](https://github.com/LemmyNet/lemmy-ui/issues/2890)
 - Cannot change the background colour of currently selected `select option` in the Language Select in Settings which leads to a low contrast colour combination.
 
 #### Other
