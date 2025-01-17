@@ -37,3 +37,7 @@
 ../../../.extra-themes/
 main.css
 /main/
+\#*#
+/themes/\#*#
+/themes/.#*
+README.html~

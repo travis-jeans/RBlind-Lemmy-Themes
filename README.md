@@ -795,6 +795,16 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
   background: var(--bs-gray-900);
   background-color: var(--bs-gray-900);
 }`
+- Add a variable to change post and comment divider color: `--divider: var(--bs-gray-700);`
+- Improve the contrast of the post dividers. Added: `hr {
+      border-top: var(--bs-border-width) solid var(--divider);
+      opacity: 1;
+  }`
+- Improve the contrast of comment dividers. Added: `li.comment article.comment-node.border-top {
+      border-top-color: var(--divider) !important;
+  }`
+
+
 
 ##### Hover
 

@@ -30,6 +30,7 @@ RBLIND THEME
   --rblind-focus-indicator: #7764d8;
   --gray-200-rgb: 221, 221, 221;
   --icon-outline-opacity: 0.5;
+  --divider: var(--bs-gray-700);
 }
 
 /*
@@ -602,6 +603,15 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
 
 .community-sidebar ul li .btn {
   margin-bottom: 0.25rem;
+}
+
+hr {
+  border-top: var(--bs-border-width) solid var(--divider);
+  opacity: 1;
+}
+
+li.comment article.comment-node.border-top {
+  border-top-color: var(--divider) !important;
 }
 
 /*!
@@ -12998,6 +13008,15 @@ main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, 
 
 .community-sidebar ul li .btn {
   margin-bottom: 0.25rem;
+}
+
+hr {
+  border-top: var(--bs-border-width) solid var(--divider);
+  opacity: 1;
+}
+
+li.comment article.comment-node.border-top {
+  border-top-color: var(--divider) !important;
 }
 
 .form-select {

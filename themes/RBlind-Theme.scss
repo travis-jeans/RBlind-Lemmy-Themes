@@ -679,3 +679,13 @@ a.person-listing + .btn,
   .community-sidebar ul li .btn {
     margin-bottom: 0.25rem;
   }
+
+  // improve the contrast of the post and comment dividers
+  hr {
+      border-top: var(--bs-border-width) solid var(--divider);
+      opacity: 1;
+  }
+
+  li.comment article.comment-node.border-top {
+      border-top-color: var(--divider) !important;
+  }

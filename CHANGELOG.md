@@ -1,5 +1,11 @@
 # Changelog
 
+## 2025-01-17
+
+### 1.0.2
+
+- Improved contrast on post and comment dividers
+
 ## 2025-01-10
 
 - Added Github issues to the README
