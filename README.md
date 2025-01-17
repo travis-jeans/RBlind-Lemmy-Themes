@@ -151,6 +151,10 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 - Left-align forms and images attached to image posts
 - Some forms take up more space on the screen
 
+### Other
+
+- A different colour for the Original Poster (OP) marker on comments
+
 ## Limitations
 
 ### Accessibility
@@ -820,8 +824,10 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 - Improve the contrast of comment dividers. Added: `li.comment article.comment-node.border-top {
       border-top-color: var(--divider) !important;
   }`
-
-
+- Make the <abbr title="Original Poster">OP</abbr> comment marker to be a light colour (so it does not share the same colour as links). Added: `span[aria-label=creator] {
+      color: var(--bs-white) !important;
+      border-color: var(--bs-white) !important;
+  }`
 
 ##### Hover
 

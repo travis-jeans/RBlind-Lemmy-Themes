@@ -689,3 +689,9 @@ a.person-listing + .btn,
   li.comment article.comment-node.border-top {
       border-top-color: var(--divider) !important;
   }
+
+  // Change the OP colour to something different than link colours
+  span[aria-label=creator] {
+      color: var(--bs-white) !important;
+      border-color: var(--bs-white) !important;
+  }

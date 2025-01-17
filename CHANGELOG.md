@@ -6,6 +6,7 @@
 
 - Improved contrast on post and comment dividers
 - Added advice to handle theme variable conflicts under Limitations, External Style Sheets
+- Changed the Original Poster (OP) marker to be a lighter colour to distinguish it from the poster name colour
 
 ## 2025-01-10
 
