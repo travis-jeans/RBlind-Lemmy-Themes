@@ -5,6 +5,7 @@
 ### 1.0.2
 
 - Improved contrast on post and comment dividers
+- Added advice to handle theme variable conflicts under Limitations, External Style Sheets
 
 ## 2025-01-10
 

@@ -155,6 +155,25 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 
 ### Accessibility
 
+#### External Style Sheets
+
+If using an external style sheet to load these themes, note that theme compatibility depends on the default or selected theme on a Lemmy instance. If your Lemmy admin does not have the RBlind themes installed, we recommend for the best compability to log in to your Lemmy account, and set the default theme to:
+
+- Darkly or Darkly Compact if you plan to load `RBlind-Dark.css` with an external style sheet
+- Litely or Litely Compact if you plan to load `RBlind-Light.css` with an external style sheet
+
+#### High Contrast Modes
+
+To improve compability with alternate colour modes like High Contrast Mode, we have minimized the use of `!important` CSS variables. However, less `!important` variables can cause conflicts with some default Lemmy themes. Follow the advice above in [External Style Sheets](#external-style-sheets) to have the best experience with these themes.
+
+The themes may not fully conform to the user's High Contrast modes or other custom style sheets, owing to the `!important` variables within the CSS theme to overwrite the Lemmy theme `!important` variables. This has been observed with hover effects and other colour styles. 
+
+#### Hover Effects
+
+Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the result is that hover effects are less obvious than they were previously due to the base contrast and opaque level being increased so elements like visited links and disabled buttons have improved contrast (sometimes people want to be able to read what a disabled button says in case they want to figure out how to activate it). However hover effects are decorative most of the time, so the colours weren't changed.
+
+#### Existing Lemmy-UI Issues
+
 Some accessibility issues and CSS cannot be corrected with CSS style sheets alone and require changes to the underlying Lemmy code. **Some** CSS-specific styling that cannot be changed without additional code or edits to `lemmy-ui` are listed in [Cannot Be Changed](#cannot-be-changed). 
 
 Styles that cannot be changed:
@@ -169,10 +188,6 @@ Issues that cannot be changed with CSS:
 - missing landmarks
 - non-accessible HTML code
 - and more
-
-The themes may not fully conform to the user's High Contrast modes or other custom style sheets, owing to the `!important` variables within the CSS theme to overwrite the Lemmy theme `!important` variables. This has been observed with hover effects and other colour styles.
-
-Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the result is that hover effects are less obvious than they were previously due to the base contrast and opaque level being increased so elements like visited links and disabled buttons have improved contrast (sometimes people want to be able to read what a disabled button says in case they want to figure out how to activate it). However hover effects are decorative most of the time, so the colours weren't changed.
 
 Please report any accessibility issues with the underlying Lemmy codebase to [Lemmy UI Github Issues](https://github.com/LemmyNet/lemmy-ui/issues) tracker. To quick search `is:issue is:open accessibility OR accessible` see [Accessibility Issues Open on Lemmy UI's GitHub](https://github.com/LemmyNet/lemmy-ui/issues?q=is%3Aissue+is%3Aopen+accessibility+OR+accessible).
 
@@ -191,6 +206,8 @@ Add the `.css` theme of your choosing to `/lemmy-ui/src/assets/css/themes` or th
 ### For Lemmy Users
 
 Copy the contents of the `.css` theme of your choosing to a browser add on like [Stylus](https://add0n.com/stylus.html). Remember to toggle it off when you visit other websites.
+
+Follow the advice above in [External Style Sheets](#external-style-sheets) for best compatibility with these themes.
 
 ## For Designers
 
