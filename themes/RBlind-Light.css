@@ -514,6 +514,17 @@ a.person-listing + .btn,
   word-break: break-all;
 }
 
+@media (max-width: 430px) {
+  .community-link .overflow-wrap-anywhere {
+    overflow-wrap: break-word;
+  }
+  .community-link picture, .community-link small.text-muted, .community-link .text-muted.small {
+    display: block;
+  }
+  #community_table th.text-right {
+    overflow-wrap: anywhere;
+  }
+}
 .person-listing {
   display: inline !important;
 }
@@ -12834,6 +12845,17 @@ a.person-listing + .btn,
   word-break: break-all;
 }
 
+@media (max-width: 430px) {
+  .community-link .overflow-wrap-anywhere {
+    overflow-wrap: break-word;
+  }
+  .community-link picture, .community-link small.text-muted, .community-link .text-muted.small {
+    display: block;
+  }
+  #community_table th.text-right {
+    overflow-wrap: anywhere;
+  }
+}
 .person-listing {
   display: inline !important;
 }

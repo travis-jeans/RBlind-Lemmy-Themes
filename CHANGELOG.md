@@ -1,5 +1,11 @@
 # Changelog
 
+## 2025-02-24
+
+### 1.0.3
+
+- Improved appearance of community list names on very small screens
+
 ## 2025-01-27
 
 ### 1.0.2
