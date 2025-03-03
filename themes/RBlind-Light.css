@@ -65,13 +65,13 @@ RBLIND THEME
   --icon-outline-opacity: 0.7;
   --divider: var(--bs-gray-700);
   --comment-border-width: 3px;
-  --comment-node-1-color: hsla(349, 73%, 19%, 0.70);
-  --comment-node-2-color: hsla(349, 33%, 36%, 0.85);
-  --comment-node-3-color: hsla(50, 44%, 26%, 0.90);
-  --comment-node-4-color: hsla(140, 76%, 19%, 0.80);
-  --comment-node-5-color: hsla(170, 43%, 21%, 0.80);
-  --comment-node-6-color: hsla(217, 63%, 28%, 0.75);
-  --comment-node-7-color: hsla(250, 60%, 33%, 0.70);
+  --comment-node-1-color: hsla(50, 44%, 26%, 0.90);
+  --comment-node-2-color: hsla(56, 25%, 26%, 0.917);
+  --comment-node-3-color: hsla(83, 9%, 28%, 0.933);
+  --comment-node-4-color: hsla(195, 12%, 27%, 0.95);
+  --comment-node-5-color: hsla(211, 30%, 27%, 0.967);
+  --comment-node-6-color: hsla(215, 46%, 28%, 0.983);
+  --comment-node-7-color: hsla(217, 63%, 28%, 1);
 }
 
 /*
