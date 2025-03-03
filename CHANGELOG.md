@@ -1,5 +1,12 @@
 # Changelog
 
+## 2025-03-03
+
+### 1.0.3
+
+- Author changed the contact email on the README
+
+
 ## 2025-01-27
 
 ### 1.0.2

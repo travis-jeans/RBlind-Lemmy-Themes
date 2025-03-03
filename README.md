@@ -987,7 +987,7 @@ The file `_variables.sccs` has the arguments:
 
 This project is open to contributions and suggestions. Please submit a post in the discussion forum so everyone can see it.
 
-This document was authored by the designer, Travis Jeans. To contact him directly, please email hello@scopefilter.net.
+This document was authored by the designer, Travis Jeans. To contact him directly, please email hello@futurehorizondesign.net.au.
 
 ## About The Repositories
 
