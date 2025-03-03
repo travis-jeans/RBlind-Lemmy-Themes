@@ -37,14 +37,15 @@ $font-size-root: 120%;
  --gray-200-rgb: 221, 221, 221;
  --icon-outline-opacity: 0.5;
  --divider: var(--bs-gray-700);
-  --comment-border-width: 3px !important;
-  --comment-node-1-color: var(--bs-red) !important;
-  --comment-node-2-color: var(--bs-orange) !important;
-  --comment-node-3-color: var(--bs-yellow) !important;
-  --comment-node-4-color: var(--bs-teal) !important;
-  --comment-node-5-color: var(--bs-green) !important;
-  --comment-node-6-color: var(--bs-cyan) !important;
-  --comment-node-7-color: var(--bs-blue) !important;
+ --comment-border-width: 3px;
+ --comment-border-margin: 2.5rem;
+  --comment-node-1-color: hsla(348, 100%, 83%, 0.65); 	// bs-red with opacity
+  --comment-node-2-color: hsla(15, 80%, 67%, 0.75);		// bs-orange with opacity
+  --comment-node-3-color: hsla(50, 75%, 73%, 0.65);		// bs-yellow with opacity
+  --comment-node-4-color: hsla(67, 60%, 50%, 0.65);		// bs-green with opacity
+  --comment-node-5-color: hsla(163, 47%, 50%, 0.75);	// bs-cyan
+  --comment-node-6-color: hsla(200, 100%, 72%, 0.65);	// bs-blue
+  --comment-node-7-color: hsla(210, 60%, 67%, 0.75);
 }
 
 // Breakpoints
