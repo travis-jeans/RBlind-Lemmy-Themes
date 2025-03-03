@@ -65,7 +65,6 @@ RBLIND THEME
   --icon-outline-opacity: 0.5;
   --divider: var(--bs-gray-700);
   --comment-border-width: 3px;
-  --comment-border-margin: 2.5rem;
   --comment-node-1-color: hsla(348, 100%, 83%, 0.65);
   --comment-node-2-color: hsla(15, 80%, 67%, 0.75);
   --comment-node-3-color: hsla(50, 75%, 73%, 0.65);
@@ -172,10 +171,6 @@ small, .small {
 .offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
-}
-
-.ms-1 {
-  margin-left: 0.25rem !important;
 }
 
 .container-lg {
@@ -12582,10 +12577,6 @@ small, .small {
 .offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
-}
-
-.ms-1 {
-  margin-left: 0.25rem !important;
 }
 
 .container-lg {

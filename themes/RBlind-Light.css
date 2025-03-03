@@ -64,6 +64,14 @@ RBLIND THEME
   --gray-200-rgb: 21, 21, 21;
   --icon-outline-opacity: 0.7;
   --divider: var(--bs-gray-700);
+  --comment-border-width: 3px;
+  --comment-node-1-color: hsla(349, 73%, 19%, 0.70);
+  --comment-node-2-color: hsla(349, 33%, 36%, 0.85);
+  --comment-node-3-color: hsla(50, 44%, 26%, 0.90);
+  --comment-node-4-color: hsla(140, 76%, 19%, 0.80);
+  --comment-node-5-color: hsla(170, 43%, 21%, 0.80);
+  --comment-node-6-color: hsla(217, 63%, 28%, 0.75);
+  --comment-node-7-color: hsla(250, 60%, 33%, 0.70);
 }
 
 /*
@@ -163,10 +171,6 @@ small, .small {
 .offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
-}
-
-.ms-1 {
-  margin-left: 0.25rem !important;
 }
 
 .container-lg {
@@ -12483,10 +12487,6 @@ small, .small {
 .offset-sm-3 {
   margin-left: 0% !important;
   margin-right: 25% !important;
-}
-
-.ms-1 {
-  margin-left: 0.25rem !important;
 }
 
 .container-lg {
