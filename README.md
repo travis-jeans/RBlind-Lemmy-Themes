@@ -525,9 +525,6 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
 }` 
-- Reduced the left margin for nested posts. Added `.ms-1 {
-  margin-left: 0.2rem !important;
-}` 
 - Make forms take up more space on the screen so labels aren't flowing onto a new line. Added `@media (min-width: 1200px) {
 .col-lg-6 {
   flex: 0 0 auto;
