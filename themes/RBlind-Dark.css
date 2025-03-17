@@ -66,11 +66,11 @@ RBLIND THEME
   --divider: var(--bs-gray-700);
   --comment-border-width: 3px;
   --comment-node-1-color: #006394;
-  --comment-node-2-color: #2f7d97;
-  --comment-node-3-color: #4f979c;
-  --comment-node-4-color: #72b0a1;
-  --comment-node-5-color: #9ac8a9;
-  --comment-node-6-color: #c8deb2;
+  --comment-node-2-color: #167f96;
+  --comment-node-3-color: #2b9b97;
+  --comment-node-4-color: #41b799;
+  --comment-node-5-color: #80cda5;
+  --comment-node-6-color: #c0e0b2;
   --comment-node-7-color: #fcf2be;
 }
 
