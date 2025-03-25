@@ -64,7 +64,7 @@ RBLIND THEME
   --gray-200-rgb: 21, 21, 21;
   --icon-outline-opacity: 0.7;
   --divider: var(--bs-gray-700);
-  --comment-border-width: 3px;
+  --comment-border-width: 2px;
   --comment-node-1-color: #05030dff;
   --comment-node-2-color: #021c45ff;
   --comment-node-3-color: #0e3d35ff;
