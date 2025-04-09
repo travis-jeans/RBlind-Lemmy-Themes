@@ -457,18 +457,6 @@ color: var(--bs-info);
   color: var(--bs-gray-500);
 }
 
-// default is var(--bs-btn-focus-box-shadow)
-// changed to the same value as the other buttons
-// this affects the Posts / Comments
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-}
-
-  // The username dropdown toggle "li id="dropdownUser" does not have a focus indicator
-  .dropdown-toggle:focus-visible {
-    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-  }
-
 // margin that determines the automatic spacing
 nav ul#navbarLinks {
   margin-right: auto !important; 

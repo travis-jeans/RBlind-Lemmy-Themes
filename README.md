@@ -459,12 +459,6 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   border-color: var(--rblind-focus-indicator);
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
-- Change the focus colour and add a focus indicator to tabs and buttons that previously had no focus indicator like the Posts/Comments and Show Hidden Posts / Hide Hidden Posts tabs. Added `.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-}` [Github issue #2892](https://github.com/LemmyNet/lemmy-ui/issues/2892)
-- Added a focus indicator to the User Profile toggle dropdown. Added `.dropdown-toggle:focus-visible {
-    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-  }`
 - Ensure the navigation bar is correctly spaced. Added `nav ul#navbarLinks {
   margin-right: auto !important; 
 }`
