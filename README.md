@@ -960,20 +960,20 @@ To try disable unpredictable behaviour from colour mode switching, the variables
 
 #### Cannot be changed
 
-- Add Allowed Instances and Blocked Instances buttons on the Site Configuration page has an inline style `width= 2rem; height: 2rem;` and cannot be changed as far as I know. Their target areas are 38x38px due to other style changes but it cannot go higher. [Github issue #2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
+Below are those with no known solution, those with solutions are in Closed issues.
+
 - The dropdown box Registration Mode on Site Settings cannot be edited by changing the padding values in `select option`, Javascript is required to change as the styling of the options is determined by the browser
 - The Rate Limit change up and down buttons within the input box cannot be changed and requires Javascript. The following code does not work `input#rate-limit::after {
  min-height: 44px;
  min-width: 44px;
 }`
-- Post nesting left-border width is defined inline and inserted by Javascript. See `/lemmy-ui/src/shared/components/comment/comment-node.tsx` on line 386 `border-left: 2px ${moreRepliesBorderColor} solid !important`. Border colour is defined on line 182-184: `const moreRepliesBorderColor = this.props.node.depth
-      ? colorList[this.props.node.depth % colorList.length]
-      : colorList[0];` Colour can be changed by altering colorList values
-. Color list is defined in this file: `/lemmy-ui/src/shared/utils/app/color-list.ts` [Github issue #2889](https://github.com/LemmyNet/lemmy-ui/issues/2889), [#2890](https://github.com/LemmyNet/lemmy-ui/issues/2890)
 - Cannot change the background colour of currently selected `select option` in the Language Select in Settings which leads to a low contrast colour combination.
 
-#### Other
+##### Closed issues
+- Remove inline styles from Allowed Instances and Blocked Instances buttons on the Site Configuration. [Github issue #2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
+- Post nesting left-border width and colour is now defined in CSS. [Github issue #2889](https://github.com/LemmyNet/lemmy-ui/issues/2889), [#2890](https://github.com/LemmyNet/lemmy-ui/issues/2890)
 
+#### Other
 As a side note, there is an in-built function to automatically generate contrast pairs with a minimum of 3:1. I did not try changing this since I manually determined high contrasting pairs depending on context (not all colours need to be high contrasting pairs, but those for text should be).
 
 The file `_variables.sccs` has the arguments: 
