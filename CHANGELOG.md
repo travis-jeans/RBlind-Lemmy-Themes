@@ -5,10 +5,11 @@
 ### 1.0.3
 
 - Improved appearance of community list names on very small screens
+- Updated the themes to the latest copies at lemmy-ui which include the comment thread left border and widths as variables [Pull Request 2946](https://github.com/LemmyNet/lemmy-ui/pull/2946), [Pull Request 2945](https://github.com/LemmyNet/lemmy-ui/pull/2945)
 - Reverted "Only moderators can post to community" checkbox size to normal due to [Pull Request 3046](https://github.com/LemmyNet/lemmy-ui/pull/3046)
 - Removed superfluous focus indicator additions to navigation button and Show/Hide Hidden Posts buttons due to [Pull Request 4038](https://github.com/LemmyNet/lemmy-ui/pull/3048) and [Pull Request 3047](https://github.com/LemmyNet/lemmy-ui/pull/3047)
 - Removed overly specific class selectors for underlining links due to the addition of the main element on more pages [Pull Request 2944](https://github.com/LemmyNet/lemmy-ui/pull/2944)
-- Updated the Cannot Be Changed section to remove some issues due to lemmy-ui CSS fixes: [Pull Request 2946](https://github.com/LemmyNet/lemmy-ui/pull/2946), [Pull Request 2945](https://github.com/LemmyNet/lemmy-ui/pull/2945), and [Closed Issue 2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
+- Updated the Cannot Be Changed section to remove some issues due to lemmy-ui CSS fixes: The comment left and width variable changes as mentioned above plus [Closed Issue 2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
 - Stopped loading the RBlind-Theme.scss file twice and added instructions for users to re-add it if noticing style issues with external stylesheets
 - Changed author email listed in the README due to changed domain
 

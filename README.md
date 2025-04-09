@@ -4,7 +4,7 @@
 
 The RBlind Lemmy Themes `RBlind-Dark.css` and `RBlind-Light.css` are open source themes developed for the Lemmy instance [RBlind](https://rblind.com/), run by [OurBlind](https://ourblind.com/). The themes aim to be accessible to the vision impaired and blind community.
 
-These themes are in alpha and currently being tested and developed further with feedback from the community. 
+These themes are in alpha and currently being tested and developed further with feedback from the community.
 
 This repository is being hosted on [Github (RBlind-Lemmy-Themes)](https://github.com/travis-jeans/RBlind-Lemmy-Themes) and [Codeberg (RBlind-Lemmy-Themes)](https://codeberg.org/travis-jeans/RBlind-Lemmy-Themes). The reasons are explained in [About The Repositories](#about-the-repositories).
 
@@ -12,24 +12,24 @@ This repository is being hosted on [Github (RBlind-Lemmy-Themes)](https://github
 
 1. [About OurBlind](#about-our-blind)
 2. [Theme Previews](#theme-previews)
-    1. [RBlind Dark Theme](#rblind-dark-theme)
-    2. [RBlind Light Theme](#rblind-light-theme)
+   1. [RBlind Dark Theme](#rblind-dark-theme)
+   2. [RBlind Light Theme](#rblind-light-theme)
 3. [Background](#background)
 4. [Features](#features)
 5. [Limitations](#limitations)
 6. [License](#license)
 7. [Installation](#installation)
-    1. [For Lemmy Administrators](#for-lemmy-administrators)
-    2. [For Lemmy Users](#for-lemmy-users)
+   1. [For Lemmy Administrators](#for-lemmy-administrators)
+   2. [For Lemmy Users](#for-lemmy-users)
 8. [For Designers](#for-designers)
-    1. [Colours](#colours)
-    2. [Layout](#layout)
+   1. [Colours](#colours)
+   2. [Layout](#layout)
 9. [For Developers](#for-developers)
-    1. [Requirements](#requirements)
-    2. [Getting Started](#getting-started)
-    3. [RBlind Theme Files](#rblind-theme-files)
-    4. [Paths](#paths)
-    5. [Theme Variables and Classes](#theme-variables-and-classes)
+   1. [Requirements](#requirements)
+   2. [Getting Started](#getting-started)
+   3. [RBlind Theme Files](#rblind-theme-files)
+   4. [Paths](#paths)
+   5. [Theme Variables and Classes](#theme-variables-and-classes)
 10. [For Contributers](#for-contributers)
 11. [About The Repositories](#about-the-repositories)
 
@@ -47,7 +47,7 @@ The following are screenshots to visually preview the Light and Dark themes. To 
 
 ### RBlind Dark Theme
 
-The RBlind Dark Theme is based on Darkly Compact. 
+The RBlind Dark Theme is based on Darkly Compact.
 
 #### Home Feed
 
@@ -133,7 +133,7 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 ### Links
 
 - All links except post titles are underlined to help with identification [Consistent Identification (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification)
-- All buttons have an outline (e.g. buttons under posts, post style options) to help with visual identification and separation 
+- All buttons have an outline (e.g. buttons under posts, post style options) to help with visual identification and separation
 - All icon links have an outline to make them appear as UI elements (e.g. RSS link on the homepage), tooltips remain without outlines
 
 ### Buttons
@@ -170,7 +170,7 @@ If using an external style sheet to load these themes, note that theme compatibi
 
 To improve compability with alternate colour modes like High Contrast Mode, we have minimized the use of `!important` CSS variables. However, less `!important` variables can cause conflicts with some default Lemmy themes. Follow the advice above in [External Style Sheets](#external-style-sheets) to have the best experience with these themes.
 
-The themes may not fully conform to the user's High Contrast modes or other custom style sheets, owing to the `!important` variables within the CSS theme to overwrite the Lemmy theme `!important` variables. This has been observed with hover effects and other colour styles. 
+The themes may not fully conform to the user's High Contrast modes or other custom style sheets, owing to the `!important` variables within the CSS theme to overwrite the Lemmy theme `!important` variables. This has been observed with hover effects and other colour styles.
 
 #### Hover Effects
 
@@ -178,7 +178,7 @@ Because of the way `lemmy-ui` creates hover effects using `opacity` effects, the
 
 #### Existing Lemmy-UI Issues
 
-Some accessibility issues and CSS cannot be corrected with CSS style sheets alone and require changes to the underlying Lemmy code. **Some** CSS-specific styling that cannot be changed without additional code or edits to `lemmy-ui` are listed in [Cannot Be Changed](#cannot-be-changed). 
+Some accessibility issues and CSS cannot be corrected with CSS style sheets alone and require changes to the underlying Lemmy code. **Some** CSS-specific styling that cannot be changed without additional code or edits to `lemmy-ui` are listed in [Cannot Be Changed](#cannot-be-changed).
 
 Styles that cannot be changed:
 
@@ -201,7 +201,7 @@ This is open source software licensed under the [GNU General Public License (Ver
 
 If you prefer to read a HTML version you can read it at [GNU General Public License (HTML Stand Alone version)](https://www.gnu.org/licenses/gpl-3.0-standalone.html).
 
-## Installation 
+## Installation
 
 ### For Lemmy Administrators
 
@@ -217,7 +217,7 @@ Follow the advice above in [External Style Sheets](#external-style-sheets) for b
 
 A guide for designers.
 
-### Colours 
+### Colours
 
 The colours in the RBlind Lemmy Themes were a mixture of the following:
 
@@ -243,17 +243,17 @@ In the above image, from top to bottom, are the following colour swatches:
 7. RBlind Light
 8. Lemmy Darkly Colours (non-exhaustive)
 
-For the new themes, the greys were defined first so all foreground colours and their contrast (text, buttons, UI) were in reference to those background colours. 
+For the new themes, the greys were defined first so all foreground colours and their contrast (text, buttons, UI) were in reference to those background colours.
 
 The process was to edit the swatches in `Inkscape` before copying the RGBA swatches to a colour contrast analyser [Contrast (from Flathub)](https://flathub.org/apps/org.gnome.design.Contrast) to check against the background before replacing the Lemmy Darkly named variables. Once loaded in the browser, the Waterfox Inspect Accessibility Properties was also used to check text contrast.
 
-For a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text). 
+For a reference to the Paul Tol colour palettes, see [Paul Tol's Qualitative Colour Schemes](https://personal.sron.nl/~pault/#sec:qualitative) post. Note that despite the colour palettes originally being designed for the colour blind, the luminance separation between colours within each scheme is not 3:1 contrast. In the context of the Lemmy theme, they don't need to be as the meaning of the colours is usually indicated in another way in the interface (with text).
 
 If you are interested in learning more about the Okabe and Ito palette, you can see [Set of colors that is unambiguous both to colorblinds and non-colorblinds](https://jfly.uni-koeln.de/color/), we considered this colour palette but didn't end up using it due the lack of semantic colours (`success` usually green, `danger` usually red).
 
 For more details about specific changes see [For Developers](#for-developers), but if you like colour codes, see [Colours](#Colours).
 
-### Layout 
+### Layout
 
 We decided to base the theme on the Darkly and Litely Compact themes as these gave a good starting point for making use of the space on the screen. For users who might be using screen magnification, ensuring a more compact design with less inter-element or inter-column spacing means they do not have to scroll horizontally as much.
 
@@ -341,13 +341,14 @@ Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local dire
 
 #### Building the output CSS file
 
-Once you have made your desired changes to the `scss` files, run one of the following commands from the same directory as your theme and variable files using your terminal: 
+Once you have made your desired changes to the `scss` files, run one of the following commands from the same directory as your theme and variable files using your terminal:
+
 1. `sass RBlind-Light-Loader.scss RBlind-Light.css`
 2. `sass RBlind-Dark-Loader.scss RBlind-Dark.css`
 
 #### Order of Inheritance
 
-The Loader files will import variables to be added to the output CSS file. It must load after the bootstrap import for styles to appear correctly. 
+The Loader files will import variables to be added to the output CSS file. It must load after the bootstrap import for styles to appear correctly.
 If the bootstrap node_modules are loaded last, the upstream bootstrap `!important` styles will override the custom CSS classes.
 The correct order of uploading files using the dark theme as an example `RBlind-Dark-Loader.scss` is:
 
@@ -381,14 +382,15 @@ All classes defined are in `RBlind-Theme.scss`.
 - Added `h5-font-size` changed from `1.25rem` to `1.5rem`
 - Added `h6-font-size` changed from `1rem` to `1.25rem`
 - Overwrite `h6` value in posts since without this it is larger than `h5`. Added `.md-div h6 {
-    font-size: 1.1rem;
-  }`
+  font-size: 1.1rem;
+}`
 
 ##### Size
+
 - Increased the root font size from `100%` to `120%`. Added `$font-size-root` from `_variables.scss`.
 - Increases the post author line size. Added `small, .small {
   font-size: 1.25rem !important;
-}` 
+}`
 
 ##### Paragraphs
 
@@ -397,7 +399,7 @@ All classes defined are in `RBlind-Theme.scss`.
   margin-bottom: 1.5em !important;
 }`
 - Increase the line height of post cards as they are wrapped in `<div>` tags not `<p>` tags. Added:
-`.card-text {
+  `.card-text {
   line-height: 1.5em;
 }`
 
@@ -408,21 +410,21 @@ All classes defined are in `RBlind-Theme.scss`.
 For links in the main area, ignoring the navigation bar and the footer.
 
 - Add an underline text decoration to all links in the main area of the document. Added ` main a {
-    text-decoration: underline;
-  }`
+  text-decoration: underline;
+}`
 - Ensure that links inside buttons do not have an underline. Added `main a.btn {
-    text-decoration: none;
-  }`
+  text-decoration: none;
+}`
 - Ensure links share the same link colour as the text. Add `.communities a, .person-listing a small {
-    text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important; // 
-  }`
+  text-decoration-color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important; // 
+}`
 - Make post title link underline and link post link underline the same as the text when visited. Added ` .post-title a:visited:not(:hover), .post-title + p a:visited:not(:hover) {
-    text-decoration-color: var(--bs-gray) !important;
-  }`
+  text-decoration-color: var(--bs-gray) !important;
+}`
 - Remove the underline on post titles specifically both in the main feed and as metadata under link posts, as it is assumed users are familiar with the convention of clicking the title of a post to visit the post. Added `  .post-title a,
-  .post-metadata-card .card-body .card-title a {
-    text-decoration: none;
-  }`
+.post-metadata-card .card-body .card-title a {
+  text-decoration: none;
+}`
 
 ##### Navigation
 
@@ -431,7 +433,7 @@ For links in the main area, ignoring the navigation bar and the footer.
 }`
 - Change navigation link spacing `nav ul#navbarLinks a.nav-link {
   margin-right: 0.75rem !important;
-}` 
+}`
 - Increase the padding so the navigation links are above 44x44px but so the links are aligned with the Support Lemmy icon button and the instance banner. Added `nav ul#navbarLinks a.nav-link {
   padding: 0.9rem 0rem 0.1rem 0rem !important;
 }`
@@ -476,7 +478,6 @@ nav ul#navbarIcons a.nav-link[title="Sign Up"] {
   }
 }`
 
-
 ##### Skip Link
 
 - Due to increasing button sizes, the Skip Link needs to be moved further up or the button will be partially visible before being brought into focus. Added `.skip-link {
@@ -488,7 +489,6 @@ left: 0.25rem !important;
 text-decoration: underline;
 box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
-
 
 #### Images
 
@@ -506,17 +506,17 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 
 - Increased the spacing below the post title, as with larger outlined buttons the text and buttons are too close to the following line. Added `.post-title {
   margin-bottom: 0.5rem;
-}` 
+}`
 - Reduced the spacing beneath the extra link after the post title on link posts. Added `.post-title + p.small {
   margin-bottom: 0.75rem !important;
 }`
 - Removed the white space margins on certain screen breakpoints. Added `.container-lg {
     margin-right: 0 !important;
     margin-left: 0 !important;
-}` 
+}`
 - Reduced the left margin for nested posts. Added `.ms-1 {
   margin-left: 0.2rem !important;
-}` 
+}`
 - Make forms take up more space on the screen so labels aren't flowing onto a new line. Added `@media (min-width: 1200px) {
 .col-lg-6 {
   flex: 0 0 auto;
@@ -556,8 +556,8 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
   display: inline !important;
 }`
 - Prevent the toggle button in the Subscribed sidebar from overflowing from its container. Added `#sidebarSubscribedHeader {
-    flex-wrap: wrap;
-  }`
+  flex-wrap: wrap;
+}`
 - Reduce padding on posts. `.post-listing {
   padding: 0.1rem 0.25rem 0.1rem 0.25rem; // default value is 1.5rem
 }`
@@ -582,7 +582,6 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
         xxl: 2400
 );`
 
-
 #### Buttons
 
 ##### Sizes
@@ -595,7 +594,7 @@ a.nav-link .icon {
 }` Reported the lack of `icon-link` class to [Github issue #2894](https://github.com/LemmyNet/lemmy-ui/issues/2894)
 - Rounded the edges of buttons. Added `.btn {
   border-radius: 0.5rem;
-}` 
+}`
 - Increased the size of the button's icons. Added `.icon {
   height: 1em;
   font-size: 1.2em !important;
@@ -643,6 +642,7 @@ The following selectors are to specific some buttons, but not others (e.g. post 
   margin-right: 0.25rem;
 }`
 - Increase spacing to the left of specific buttons:
+
 1. Those following badges (e.g. <abbr title="Original Poster">OP</abbr>, <abbr title="Moderator">M</abbr>, or <abbr title="Administrator">A</abbr>) on the post author line
 2. Those following the post author when there are no badges
 3. The button following the post title; by adding: `a.person-listing ~ span + .btn,
@@ -650,11 +650,12 @@ a.person-listing + .btn,
 .post-title .btn {
   margin-left: 0.25rem;
 }`
+
 - Increased the spacing below the author line so buttons below do not touch the text descenders. Added `.post-title,
 .post-title + div,
 .post-title + p + div {
   margin-bottom: 0.5rem !important;
-}`  (**Note** If you try to apply this to `small, .small` it will apply to `.icon`)
+}` (**Note** If you try to apply this to `small, .small` it will apply to `.icon`)
 - Add spacing above and below the vote number. Added `.post-score {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -667,8 +668,8 @@ a.person-listing + .btn,
   margin-bottom: 1rem;
 }`
 - Increase the spacing between wrapping list buttons in the sidebar. Added `.community-sidebar ul li .btn {
-    margin-bottom: 0.25rem;
-  }`
+  margin-bottom: 0.25rem;
+}`
 
 ###### Padding
 
@@ -691,13 +692,13 @@ a[title="sorting help"]:focus svg,
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
 - Made so the down vote icon changes colour when the button area is hovered, not just the icon. Made this happen when the button is focused as well. Added `.downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
-  .downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
-    color: var(--bs-danger);
-  }`
+.downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
+  color: var(--bs-danger);
+}`
 - Same as above but with the upvote button. Added `.upvote:hover, .btn:hover .upvote, .btn:focus .upvote,
-  .upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
-    color: var(--bs-info);
-  }`
+.upvote:focus, .btn:focus .upvote, .btn:focus .upvote {
+  color: var(--bs-info);
+}`
 - Give unselected tabs (like Comment) the same focus outline as other buttons. Added `.btn-check:focus-visible + .btn {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
@@ -743,6 +744,7 @@ Root variables are defined in the `_variables` `scss` file.
 ##### Hues
 
 For the dark theme, the colours are based on Paul Tol's Light palette except for `$cyan` which is an rBlind colour.
+
 - Change `$blue` `#77aaddff;`
 - Change `$red` (bs-danger, danger red):`#ffaabbff;`
 - Change `$yellow` (bs-alert): `#eedd88ff;`
@@ -752,6 +754,7 @@ For the dark theme, the colours are based on Paul Tol's Light palette except for
 - Added `$teal` (for Atom highlighting): `bbcc33ff;`
 
 ##### Links
+
 - Make links `cyan` instead of `success`. Changed `$link-color: $cyan;`
 - Override :dark or :light theme link colour variables. Added `a {
 color: var(--bs-info);
@@ -761,8 +764,8 @@ color: var(--bs-info);
     text-decoration-color: RGBA(var(--bs-gray-200), var(--bs-link-underline-opacity, 1)) !important; // need to define text-underline too
 }`
 - Fix text decoration contrast on light mode `.link-dark:hover, .link-dark:focus {
-    text-decoration-color: var(--bs-gray-200) !important;
-  }`
+  text-decoration-color: var(--bs-gray-200) !important;
+}`
 - Change the link primary colour only for post titles (pinned posts have the .link-primary class while non-pinned posts have .link-dark). Added `.post-title .link-primary {
   color: var(--bs-info) !important;
 }`
@@ -812,25 +815,26 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }`
 - Add a variable to change post and comment divider color: `--divider: var(--bs-gray-700);`
 - Improve the contrast of the post dividers. Added: `hr {
-      border-top: var(--bs-border-width) solid var(--divider);
-      opacity: 1;
-  }`
+    border-top: var(--bs-border-width) solid var(--divider);
+    opacity: 1;
+}`
 - Improve the contrast of comment dividers. Added: `li.comment article.comment-node.border-top {
-      border-top-color: var(--divider) !important;
-  }`
+    border-top-color: var(--divider) !important;
+}`
 - Make the <abbr title="Original Poster">OP</abbr> comment marker to be a light colour (so it does not share the same colour as links). Added: `span[aria-label=creator] {
-      color: var(--bs-white) !important;
-      border-color: var(--bs-white) !important;
-  }`
+    color: var(--bs-white) !important;
+    border-color: var(--bs-white) !important;
+}`
 
 ##### Hover
 
 Invert the colours on dropdown menu hovers or focus.
+
 - Added `$dropdown-link-active-color: $gray-900;`
 - Added `$dropdown-link-active-bg: $gray-200;`
 - Added `$dropdown-link-hover-bg: $gray-200;`
 - Added `$dropdown-link-hover-color: $gray-900;`
-Change link visited colours for post titles.
+  Change link visited colours for post titles.
 - Change visited link colour due to low contrast default is --bs-gray. Added `.post-title a:visited:not(:hover) {
   color: var(--bs-gray-500) !important;
 }`
@@ -853,6 +857,7 @@ color: rgba(var(--bs-white-rgb), 0.8);
 - Added `$focus-ring-color: var(--rblind-focus-indicator);`
 
 ##### Layout
+
 - Fix colour contrast on the Mark class. Added `.mark {
   color: var(--bs-white);
   background-color: var(--bs-gray-800);
@@ -964,13 +969,16 @@ Below are those with no known solution, those with solutions are in Closed issue
 - Cannot change the background colour of currently selected `select option` in the Language Select in Settings which leads to a low contrast colour combination.
 
 ##### Closed issues
+
 - Remove inline styles from Allowed Instances and Blocked Instances buttons on the Site Configuration. [Github issue #2888](https://github.com/LemmyNet/lemmy-ui/issues/2888)
 - Post nesting left-border width and colour is now defined in CSS. [Github issue #2889](https://github.com/LemmyNet/lemmy-ui/issues/2889), [#2890](https://github.com/LemmyNet/lemmy-ui/issues/2890)
 
 #### Other
+
 As a side note, there is an in-built function to automatically generate contrast pairs with a minimum of 3:1. I did not try changing this since I manually determined high contrasting pairs depending on context (not all colours need to be high contrasting pairs, but those for text should be).
 
-The file `_variables.sccs` has the arguments: 
+The file `_variables.sccs` has the arguments:
+
 - `$link-decoration: none;`
 - `$min-contrast-ratio: 3;`
 - `$font-size-root: 100%;`
@@ -989,6 +997,6 @@ The repository is simultaneously maintained on Github and Codeberg.
 
 It is uploaded to Github for accessibility reasons.
 
-As Codeberg is an open source platform, it is more suitable for copyleft licenses like the ones we have used. For more discussion about this issue please read [Please don't upload my code to Github](https://nogithub.codeberg.page/). 
+As Codeberg is an open source platform, it is more suitable for copyleft licenses like the ones we have used. For more discussion about this issue please read [Please don't upload my code to Github](https://nogithub.codeberg.page/).
 
 The designer would prefer contributors to use Codeberg as the primary platform, but Github is provided as an accessible alternative in case Codeberg isn't suitable. Both forums will be monitored.
