@@ -564,6 +564,23 @@ a.person-listing + .btn,
   word-break: break-all; // no default value
 }
 
+// stop community names from breaking up into letters
+@media (max-width: 430px) {
+    .community-link .overflow-wrap-anywhere {
+	overflow-wrap: break-word;
+    }
+
+    .community-link picture, .community-link small.text-muted {
+	display: block;
+    }
+
+    // try give more space in the table by breaking the headers instead
+    #community_table th.text-right {
+	overflow-wrap: anywhere;
+    }
+    
+}
+
 // stop flex display from making overflowing letters from becoming stuck in their containers
 .person-listing {
   display: inline !important;

@@ -551,6 +551,21 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 - Ensure text reflow for very long usernames in the Sidebar. Added `.person-listing picture + span + small {
   word-break: break-all;
 }`
+- Prevent community names being broken up into letters on very small screens and improve sizing of the first column. Added `@media (max-width: 430px) {
+    .community-link .overflow-wrap-anywhere {
+	overflow-wrap: break-word;
+    }
+
+    .community-link picture, .community-link small.text-muted {
+	display: block;
+    }
+
+    // try give more space in the table by breaking the headers instead
+    #community_table th.text-right {
+	overflow-wrap: anywhere;
+    }
+    
+}`
 - Stop flex display from making overflowing usernames from becoming stuck in their containers. Added `.person-listing {
   display: inline !important;`
 }
