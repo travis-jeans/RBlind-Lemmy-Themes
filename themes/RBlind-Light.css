@@ -259,10 +259,6 @@ nav a.nav-link .icon {
   cursor: default;
 }
 
-.form-check > input#community-only-mods-can-post[type=checkbox] {
-  padding: 22px;
-}
-
 .form-control::file-selector-button {
   background-color: var(--bs-gray-800);
 }
@@ -12576,10 +12572,6 @@ nav a.nav-link .icon {
 
 .form-check[disabled] > * {
   cursor: default;
-}
-
-.form-check > input#community-only-mods-can-post[type=checkbox] {
-  padding: 22px;
 }
 
 .form-control::file-selector-button {

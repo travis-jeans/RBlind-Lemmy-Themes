@@ -282,11 +282,6 @@ nav a.nav-link .icon {
   cursor: default;
 }
 
-// increase size of the alone checkbox on Create Community page
-.form-check > input#community-only-mods-can-post[type=checkbox] {
-  padding: 22px; // half of minimum AAA target size 44px
-}
-
 // change Browse... button
 .form-control::file-selector-button {
   background-color: var(--bs-gray-800);

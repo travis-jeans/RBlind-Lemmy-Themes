@@ -727,9 +727,6 @@ a[title="sorting help"]:focus svg,
 - Disable cursor change to pointer when buttons are disabled. Added `.form-check[disabled] > * {
   cursor: default;
 }`
-- Increased size of the alone checkbox on Create Community page with a missing label. **Note** A temporary measure until the label can be associated with the checkbox, thereby increasing the target size. Added `.form-check > input#community-only-mods-can-post[type=checkbox] {
-  padding: 22px; // half of minimum AAA target size 44px
-}`
 
 #### Colours
 
