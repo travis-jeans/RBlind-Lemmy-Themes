@@ -544,20 +544,17 @@ box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
     .community-link .overflow-wrap-anywhere {
 	overflow-wrap: break-word;
     }
-
     .community-link picture, .community-link small.text-muted {
 	display: block;
     }
-
     // try give more space in the table by breaking the headers instead
     #community_table th.text-right {
 	overflow-wrap: anywhere;
     }
-    
 }`
 - Stop flex display from making overflowing usernames from becoming stuck in their containers. Added `.person-listing {
-  display: inline !important;`
-}
+  display: inline !important;
+}`
 - Prevent the toggle button in the Subscribed sidebar from overflowing from its container. Added `#sidebarSubscribedHeader {
     flex-wrap: wrap;
   }`
