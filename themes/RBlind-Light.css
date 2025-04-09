@@ -568,11 +568,11 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   color: var(--bs-info);
 }
 
-main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
+main a {
   text-decoration: underline;
 }
 
-main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+main a.btn {
   text-decoration: none;
 }
 
@@ -12888,11 +12888,11 @@ label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   color: var(--bs-info);
 }
 
-main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
+main a {
   text-decoration: underline;
 }
 
-main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+main a.btn {
   text-decoration: none;
 }
 
