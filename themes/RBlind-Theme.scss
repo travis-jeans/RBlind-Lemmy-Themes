@@ -618,13 +618,6 @@ a.person-listing + .btn,
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important; //--bs-btn-focus-box-shadow default
 }
 
-  // focus-within gives the "eye" show hidden posts buttons a focus indicator whereas previously they had none
-  // tippy tooltip cannot be controlled unless using javascript
-  // eye and no eye
-  label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
-    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-  }
-
   // Added everything after .downvote:hover so the effects apply to when the button area is hovered not just the icon
   // Also made this happen on focus too
   .downvote:hover, .btn:hover .downvote, .btn:focus .downvote,

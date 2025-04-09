@@ -557,10 +557,6 @@ a.person-listing + .btn,
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 
-label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
-  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-}
-
 .downvote:hover, .btn:hover .downvote, .btn:focus .downvote,
 .downvote:focus, .btn:focus .downvote, .btn:focus .downvote {
   color: var(--bs-danger);
@@ -12877,10 +12873,6 @@ a.person-listing + .btn,
 }
 
 .btn-check:checked:focus-visible + .btn {
-  box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-}
-
-label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }
 

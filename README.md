@@ -718,10 +718,6 @@ a[title="sorting help"]:focus svg,
 - Make the currently selected tab focus indicator the same colour as other buttons. Added `.btn-check:checked:focus-visible + .btn {
   box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
 }`
-- Add a focus indicator to the eye icon tabs (Show / Hide Posts). Added `label.btn:focus-visible, label.btn:focus, label.btn:focus-within {
-    box-shadow: 0 0 0 0.25rem var(--rblind-focus-indicator) !important;
-  }`
-
 
 #### Forms
 
