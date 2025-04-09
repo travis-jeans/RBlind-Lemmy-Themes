@@ -282,11 +282,7 @@ If you plan to develop a theme locally, the Lemmy Docs has a section with instru
 
 #### CSS Only
 
-If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the RBlind output CSS files with Stylus. Keep in mind that due to the way the files are set up with the `RBlind-Dark-Loader.scss` or `RBlind-Light-Loader.scss` files, that the output CSS files include 2 copies of the RBlind custom code - at the start and end of the file (explained in [Setting Up Your Working Directory](#setting-up-your-working-directory)).
-
-This doubling of code was to overwrite some Lemmy class settings and variables. Mainly because the Lemmy CSS themes include a lot of variables defined with `!important` or within specific classes (`.btn` is a good example, different button types like `Alert` or `Danger` will redefine variables) which you can only overwrite by placing them after. Conversely, there were a lot of variables that could be defined upstream instead without using `!important`.
-
-What this means is if you decide to go the CSS only route, you will need to `Search and Replace` every instance of RBlind theme custom code **twice**. This will probably be a little annoying.
+If you are using an operating system (OS) that does not allow you to make a Lemmy Instance or for some reason you can't use Sass or Bootstrap, you can still develop a theme by manually editing the RBlind output CSS files with Stylus.
 
 The best option is to copy the upstream Bootstrap files and use `Sass` you can download `lemmy-ui` from the [lemmy-ui Github main](https://github.com/LemmyNet/lemmy-ui).
 
@@ -351,19 +347,18 @@ Once you have made your desired changes to the `scss` files, run one of the foll
 
 #### Order of Inheritance
 
-The Loader files will import variables to be added to the output CSS file.
-If the bootstrap source is loaded too early, custom styles will not be applied. 
-Conversley, if the bootstrap source is loaded last, the upstream bootstrap `!important` styles will override your custom CSS classes.
-To fix this, an order of uploading files using the dark theme as an example `RBlind-Dark-Loader.scss` is:
+The Loader files will import variables to be added to the output CSS file. It must load after the bootstrap import for styles to appear correctly. 
+If the bootstrap node_modules are loaded last, the upstream bootstrap `!important` styles will override the custom CSS classes.
+The correct order of uploading files using the dark theme as an example `RBlind-Dark-Loader.scss` is:
 
 1. `@import "variables.darkly-compact";`
 2. `@import "variables.RBlind-Dark";`
-3. `@import "RBlind-Theme.scss";` our custom code
-4. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
-5. `@import "RBlind-Theme.scss";` our custom code
+3. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
+4. `@import "RBlind-Theme.scss";` our custom code
 
-This will insert the custom code at the beginning **and** the end of the output CSS file, meaning your styles will be applied correctly and the upstream bootstrap styles won't break.
 Note that both Loader files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
+
+If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "RBlind-Theme.scss` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
 
 ### Theme Variables and Classes
 
