@@ -11,6 +11,17 @@ RBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHO
 You should have received a copy of the GNU General Public License along with RBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
 
 */
+:root {
+  --comment-border-width: 2px;
+  --comment-node-1-color: hsla(0, 35%, 50%, 0.5);
+  --comment-node-2-color: hsla(50, 35%, 50%, 0.5);
+  --comment-node-3-color: hsla(100, 35%, 50%, 0.5);
+  --comment-node-4-color: hsla(150, 35%, 50%, 0.5);
+  --comment-node-5-color: hsla(200, 35%, 50%, 0.5);
+  --comment-node-6-color: hsla(250, 35%, 50%, 0.5);
+  --comment-node-7-color: hsla(300, 35%, 50%, 0.5);
+}
+
 /*
 Copyright 2024, 2025 Travis Jeans
 
@@ -23,6 +34,28 @@ RBlind Lemmy Themes is distributed in the hope that it will be useful, but WITHO
 You should have received a copy of the GNU General Public License along with RBlind Lemmy Themes. If not, see <https://www.gnu.org/licenses/>. 
 
 */
+:root {
+  --comment-border-width: 2px;
+  --comment-node-1-color: hsla(0, 35%, 50%, 0.5);
+  --comment-node-2-color: hsla(50, 35%, 50%, 0.5);
+  --comment-node-3-color: hsla(100, 35%, 50%, 0.5);
+  --comment-node-4-color: hsla(150, 35%, 50%, 0.5);
+  --comment-node-5-color: hsla(200, 35%, 50%, 0.5);
+  --comment-node-6-color: hsla(250, 35%, 50%, 0.5);
+  --comment-node-7-color: hsla(300, 35%, 50%, 0.5);
+}
+
+:root {
+  --comment-border-width: 2px;
+  --comment-node-1-color: hsla(0, 35%, 50%, 0.5);
+  --comment-node-2-color: hsla(50, 35%, 50%, 0.5);
+  --comment-node-3-color: hsla(100, 35%, 50%, 0.5);
+  --comment-node-4-color: hsla(150, 35%, 50%, 0.5);
+  --comment-node-5-color: hsla(200, 35%, 50%, 0.5);
+  --comment-node-6-color: hsla(250, 35%, 50%, 0.5);
+  --comment-node-7-color: hsla(300, 35%, 50%, 0.5);
+}
+
 /* 
 RBLIND THEME
 */
