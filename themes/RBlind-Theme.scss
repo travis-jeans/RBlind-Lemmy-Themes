@@ -632,20 +632,17 @@ a.person-listing + .btn,
     color: var(--bs-info);
   }
 
-  // every other page is missing a <main> element, so classes need to be added individually
-  // need to verify .inbox, .person-reports, .registration-applications a
-  main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
+  // add underlines to links
+  main a {
     text-decoration: underline;
   }
 
     // make sure links that appear as buttons don't have an underline
-  main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+  main a.btn {
     text-decoration: none;
   }
 
-  // remove underline from post title specifically as it is assumed users understand that clicking the post title will navigate to the post
-  // remove underline from the link title (not the URL) in Link Posts to improve legibility of links with long names
-  // Link title and URL go to the same locations and they are right next to each other
+  // remove underline from post title to improve legibility
   .post-title a,
   .post-metadata-card .card-body .card-title a {
     text-decoration: none;
