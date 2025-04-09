@@ -412,10 +412,10 @@ All classes defined are in `RBlind-Theme.scss`.
 
 For links in the main area, ignoring the navigation bar and the footer.
 
-- Add an underline text decoration to all links in the main area of the document. Where pages are missing a `<main>` element, apply to the broadest relevant named class. Added ` main a, #sidebarContainer a, .communities a, .admin-settings a, .person-profile a, .inbox a, .person-reports a, .registration-applications a {
+- Add an underline text decoration to all links in the main area of the document. Added ` main a {
     text-decoration: underline;
-  }` Issue relating to lack of `<main>` elements reported under [Github issue #2891](https://github.com/LemmyNet/lemmy-ui/issues/2891)
-- Ensure that links inside buttons do not have an underline. Added `main a.btn, #sidebarContainer a.btn, .communities a.btn, .admin-settings a.btn, .person-profile a.btn, .inbox a.btn, .person-reports a.btn, .registration-applications a.btn {
+  }`
+- Ensure that links inside buttons do not have an underline. Added `main a.btn {
     text-decoration: none;
   }`
 - Ensure links share the same link colour as the text. Add `.communities a, .person-listing a small {
