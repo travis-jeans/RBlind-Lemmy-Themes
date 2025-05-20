@@ -1,4 +1,5 @@
 code-themes/
+themes/.sass-cache/
 themes/darkly.css
 themes/darkly.scss
 themes/darkly-compact.css
@@ -44,3 +45,4 @@ themes/\#*#
 themes/.#*
 README.html~
 themes/build-themes.sh
+themes/*.css.map
