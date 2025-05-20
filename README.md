@@ -154,6 +154,7 @@ These themes aim to improve the accessibility of the default Lemmy Compact theme
 ### Other
 
 - A different colour for the Original Poster (OP) marker on comments
+- Comment thread lines have better contrast against the background (note: if using a copy of lemmy-ui with the merged [Pull Request #2946](https://github.com/LemmyNet/lemmy-ui/pull/2946)), later than 19 February.
 
 ## Limitations
 
@@ -317,7 +318,7 @@ You do not need the default `.css` files to build the RBlind Theme files but the
 
 So the `sass` command will build, all paths need to be pointing to the correct locations.
 
-If using a different directory to `lemmy-ui`, in line 5, `RBlind-Dark-Loader.scss` or `RBlind-Light-Loader.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
+If using a different directory to `lemmy-ui`, in line 5, `RBlind-Dark.scss` or `RBlind-Light.scss` change the relative location of the bootstrap theme to an absolute path to prevent errors:
 
 From `../../../../node_modules/bootstrap/scss/bootstrap` to the location of your lemmy-ui folder `/lemmy-ui/node_modules/bootstrap/scss/bootstrap`
 
@@ -330,34 +331,34 @@ Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local dire
 #### Dark
 
 - `RBlind-Theme.scss`
-- `RBlind-Dark-Loader.scss`
+- `RBlind-Dark.scss`
 - `_variables.RBlind-Dark.scss`
 
 #### Light
 
 - `RBlind-Theme.scss`
-- `RBlind-Light-Loader.scss`
+- `RBlind-Light.scss`
 - `_variables.RBlind-Light.scss`
 
 #### Building the output CSS file
 
 Once you have made your desired changes to the `scss` files, run one of the following commands from the same directory as your theme and variable files using your terminal:
 
-1. `sass RBlind-Light-Loader.scss RBlind-Light.css`
-2. `sass RBlind-Dark-Loader.scss RBlind-Dark.css`
+1. `sass RBlind-Light.scss RBlind-Light.css`
+2. `sass RBlind-Dark.scss RBlind-Dark.css`
 
 #### Order of Inheritance
 
-The Loader files will import variables to be added to the output CSS file. It must load after the bootstrap import for styles to appear correctly.
+The Theme-Name.scss files will import variables to be added to the output CSS file. It must load after the bootstrap import for styles to appear correctly.
 If the bootstrap node_modules are loaded last, the upstream bootstrap `!important` styles will override the custom CSS classes.
-The correct order of uploading files using the dark theme as an example `RBlind-Dark-Loader.scss` is:
+The correct order of uploading files using the dark theme as an example `RBlind-Dark.scss` is:
 
 1. `@import "variables.darkly-compact";`
 2. `@import "variables.RBlind-Dark";`
 3. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
 4. `@import "RBlind-Theme.scss";` our custom code
 
-Note that both Loader files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
+Note that both Theme-Name.scss files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
 
 If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "RBlind-Theme.scss` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
 

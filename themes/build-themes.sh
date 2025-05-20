@@ -1,8 +1,4 @@
 echo "Building custom themes with Sass."
-sass RBlind-Dark-Loader.scss RBlind-Dark.css && sass RBlind-Light-Loader.scss RBlind-Light.css
+sass RBlind-Dark.scss RBlind-Dark.css && sass RBlind-Light.scss RBlind-Light.css
 echo "Moving custom themes to /.extra_themes/"
-<<<<<<< HEAD
 cp RBlind-Dark.css RBlind-Light.css ../../../../../lemmy-ui/.extra_themes/
-=======
-cp RBlind-Dark.css RBlind-Light.css ../../../../.extra_themes/
->>>>>>> rainboworiginal

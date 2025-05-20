@@ -7,7 +7,7 @@
 - Updated the comment thread line colours to use root variables in accordance with [Pull Request 2946](https://github.com/LemmyNet/lemmy-ui/pull/2946)
 - Relating to the above, changed the comment thread colours to a value adjusted version dependent on the theme (light/dark) and step (gradually increase or decrease in brightness)
 - Additional branches are variations on the colour theme.
-- 
+- Renamed the RBlind-Dark-Loader.scss and RBlind-Light-Loader.scss files to RBlind-Dark.scss and RBlind-Light.scss, respectively.
 
 ## 2025-04-09
 
