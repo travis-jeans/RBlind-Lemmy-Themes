@@ -360,11 +360,11 @@ The correct order of uploading files using the dark theme as an example `RBlind-
 1. `@import "variables.darkly-compact";`
 2. `@import "variables.RBlind-Dark";`
 3. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
-4. `@import "../RBlind-Theme.css";` our custom code
+4. `@import "../RBlind-Theme";` our custom code
 
 Note that both Theme-Name.scss files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
 
-If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "../RBlind-Theme.css` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
+If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "../RBlind-Theme` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
 
 ### Theme Variables and Classes
 
