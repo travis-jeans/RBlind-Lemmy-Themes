@@ -46,3 +46,4 @@ themes/.#*
 README.html~
 themes/build-themes.sh
 themes/*.css.map
+.sass-cache
