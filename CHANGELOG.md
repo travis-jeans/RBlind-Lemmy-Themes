@@ -1,5 +1,15 @@
 # Changelog
 
+## 2025-05-21
+
+The following changes are to make the RBlind theme files suitable to upload to lemmy-ui as noted in [Pull Request 3159](https://github.com/LemmyNet/lemmy-ui/pull/3159).
+
+- Renamed `RBlind-Theme.css` to `RBlind-Theme.scss`
+- Moved `RBlind-Theme.css` to the directory above
+- Removed the author line and license statement from the code files (note: the license still applies!)
+- Changed the import directory for `RBlind-Theme.scss` to be a directory above in `RBlind-Light.scss` and `RBlind-Dark.scss`.
+- Finally added a version tag to the release.
+
 ## 2025-05-20
 
 ### 1.0.4

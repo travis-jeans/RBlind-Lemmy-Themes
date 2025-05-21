@@ -330,15 +330,17 @@ Copy the following files to `/lemmy-ui/src/assets/css/themes` or your local dire
 
 #### Dark
 
-- `RBlind-Theme.scss`
 - `RBlind-Dark.scss`
 - `_variables.RBlind-Dark.scss`
 
+`RBlind-Theme.css` goes to the directory above themes.
+
 #### Light
 
-- `RBlind-Theme.scss`
 - `RBlind-Light.scss`
 - `_variables.RBlind-Light.scss`
+
+`RBlind-Theme.css` goes to the directory above themes.
 
 #### Building the output CSS file
 
@@ -346,6 +348,8 @@ Once you have made your desired changes to the `scss` files, run one of the foll
 
 1. `sass RBlind-Light.scss RBlind-Light.css`
 2. `sass RBlind-Dark.scss RBlind-Dark.css`
+
+Note if using the `sassc` library the argument will be `sassc` instead. Note that importing css files (like `RBlind-Theme.css`) must exclude the extension `.css`. This method does not work with ruby based sass libraries as noted in this [Stack Overflow thread](https://stackoverflow.com/questions/7111610/import-regular-css-file-in-scss-file).
 
 #### Order of Inheritance
 
@@ -356,16 +360,16 @@ The correct order of uploading files using the dark theme as an example `RBlind-
 1. `@import "variables.darkly-compact";`
 2. `@import "variables.RBlind-Dark";`
 3. `@import "../../../../node_modules/bootstrap/scss/bootstrap";`
-4. `@import "RBlind-Theme.scss";` our custom code
+4. `@import "../RBlind-Theme.css";` our custom code
 
 Note that both Theme-Name.scss files themselves have a small amount of code afterward to redefine colours manually of SVG icons, which cannot use variables.
 
-If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "RBlind-Theme.scss` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
+If you are loading the themes with an external style sheet and notice it has not applied correctly, try adding `@import "../RBlind-Theme.css` before the bootstrap import so it is loaded twice. When loaded as a local theme in Settings the additional import is not required.
 
 ### Theme Variables and Classes
 
 All variables defined with the Sass variable indicator `$` or as CSS root variables (starting with `--`) are in `_variables.RBlind-Dark.scss` or `_variables.RBlind-Light.scss`.
-All classes defined are in `RBlind-Theme.scss`.
+All classes defined are in `RBlind-Theme.css`, located in the directory above (it will be next to the Lemmy css file `main.css` if you are using the lemmy-ui directory structure).
 
 #### Fonts
 
