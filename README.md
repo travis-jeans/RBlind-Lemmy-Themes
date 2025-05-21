@@ -579,7 +579,7 @@ Due to the larger font and button sizes, the breakpoints were altered so resolut
 - `$container-max-widths: (
         sm: 960px,
         md: 1140px,
-        lg: 1610px,
+        lg: 1920px,
         xl: 2200,
         xxl: 2400
 );`

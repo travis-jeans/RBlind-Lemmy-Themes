@@ -2,6 +2,11 @@
 
 ## 2025-05-21
 
+### 1.0.6
+
+- Moved a bootstrap variable from `RBlind-Theme.css` to the `_variables` files for the light and dark theme
+- Ran prettier on the files again
+
 ### 1.0.5
 
 The following changes are to make the RBlind theme files suitable to upload to lemmy-ui as noted in [Pull Request 3159](https://github.com/LemmyNet/lemmy-ui/pull/3159).
