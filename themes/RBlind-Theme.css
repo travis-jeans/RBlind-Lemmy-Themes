@@ -7,14 +7,6 @@ $container-max-widths: (
   lg: 1920px,
 );
 
-/*
-/* Media Query originally 576px, 768px */
-/* @media (min-width: 768px) { */
-/* .d-none { */
-    /* display: none !important; */
-/* } */
-/* } */
-
 /* Reduce hr height */
 hr.my-3 {
   margin-top: 0.5rem !important;
