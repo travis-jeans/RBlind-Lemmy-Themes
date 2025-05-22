@@ -1,5 +1,13 @@
 # Changelog
 
+## 2025-05-22
+
+### 1.0.7
+
+- Renamed `RBlind-Theme.css` to `RBlind.css` as it is not a theme
+- Moved `RBlind.css` to a custom directory `/rblind/` in the lemmy-ui `themes` folder. This is to distinguish it from the globally inherited lemmy-ui main.css.
+- Updated paths in the scss files.
+
 ## 2025-05-21
 
 ### 1.0.6
